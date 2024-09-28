@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morey Digital - Portfolio</title>
+    <title>Morey Digital - Services</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
@@ -104,52 +104,63 @@
             font-size: 1.2em;
         }
 
-        .portfolio {
+        .service-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .service {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .service img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .service h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        /* Icon Section */
+        .icon-section {
+            display: flex;
+            justify-content: space-between;
             max-width: 1200px;
             width: 100%;
-            margin-top: 30px;
+            margin-top: 40px;
+            padding: 0 20px;
         }
 
-        .project {
-            background-color: rgba(255, 255, 255, 0.1);
-            margin: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 300px;
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            transition: transform 0.3s;
         }
 
-        .project:hover {
-            transform: scale(1.05);
-        }
-
-        .project img {
-            width: 100%;
-            height: auto;
-        }
-
-        .project h3 {
-            margin: 15px 0 10px 0;
-            font-size: 1.5em;
-        }
-
-        .project a.button {
-            display: inline-block;
+        .icon img {
+            width: 60px;
+            height: 60px;
             margin-bottom: 15px;
-            padding: 10px 20px;
-            background-color: #ff6600;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 20px;
-            transition: background-color 0.3s;
         }
 
-        .project a.button:hover {
-            background-color: #e65c00;
+        .icon p {
+            font-size: 1.1em;
         }
 
         footer {
@@ -169,7 +180,6 @@
                 font-size: 2em;
             }
 
-            /* Hide the nav menu and display the hamburger icon */
             nav ul {
                 display: none;
                 flex-direction: column;
@@ -194,8 +204,17 @@
                 display: block;
             }
 
-            .project {
-                width: 90%;
+            .service-section {
+                width: 100%;
+            }
+
+            .icon-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .icon {
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -212,42 +231,57 @@
         <nav>
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#" class="active">Portfolio</a></li>
+                <li><a href="#" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Our Portfolio</h2>
-        <p>Here are some of our recent projects. Click on the images to visit the websites.</p>
-        <div class="portfolio">
-            <!-- Project 1 -->
-            <div class="project">
-                <a href="https://aviationlogisticsolutions.ie/" target="_blank">
-                    <img src="images/als.png" alt="Aviation Logistic Solutions">
-                </a>
-                <h3>Aviation Logistic Solutions</h3>
-                <a href="https://aviationlogisticsolutions.ie/" target="_blank" class="button">Visit Site</a>
+        <h2>Our Services</h2>
+        <p>At Morey Digital, we provide a range of services to ensure your website runs at peak performance. Explore our offerings below.</p>
+
+        <!-- Service Section -->
+        <div class="service-section">
+            <div class="service">
+                <img src="images/morey.jpg" alt="Conor Morey">
+                <div>
+                    <h3>Website Maintenance & Support</h3>
+                    <p>Ensure your website stays secure, updated, and running smoothly. We provide regular software updates, backups, and technical support to keep your site live and performing well.</p>
+                </div>
             </div>
-            <!-- Project 2 -->
-            <div class="project">
-                <a href="https://evolvedauto.ie/" target="_blank">
-                    <img src="images/evolved.png" alt="Evolved Auto">
-                </a>
-                <h3>Evolved Auto</h3>
-                <a href="https://evolvedauto.ie/" target="_blank" class="button">Visit Site</a>
+
+            <div class="service">
+                <img src="images/enterprise-hosting.jpg" alt="Enterprise Hosting">
+                <div>
+                    <h3>Enterprise Level Hosting</h3>
+                    <p>Our high-speed hosting ensures your site stays up and running with fast load times and uptime monitoring. We provide advanced hosting solutions tailored to your business needs.</p>
+                </div>
             </div>
-            <!-- Project 3 -->
-            <div class="project">
-                <a href="https://vamplingerie.com/" target="_blank">
-                    <img src="images/vamp.png" alt="Vamp Lingerie">
-                </a>
-                <h3>Vamp Lingerie</h3>
-                <a href="https://vamplingerie.com/" target="_blank" class="button">Visit Site</a>
+        </div>
+
+        <!-- Icon Section -->
+        <div class="icon-section">
+            <div class="icon">
+                <img src="images/icon-hosting.png" alt="Hosting Icon">
+                <p><strong>Enterprise Level Hosting</strong><br> Reliable, fast, and scalable hosting services.</p>
             </div>
-            <!-- Additional projects can be added here -->
+
+            <div class="icon">
+                <img src="images/icon-monitoring.png" alt="Monitoring Icon">
+                <p><strong>Uptime Monitoring</strong><br> We monitor your site 24/7 for any issues, ensuring uptime.</p>
+            </div>
+
+            <div class="icon">
+                <img src="images/icon-security.png" alt="Security Icon">
+                <p><strong>Maintenance & Security</strong><br> Security updates and routine maintenance to keep your site safe.</p>
+            </div>
+
+            <div class="icon">
+                <img src="images/icon-support.png" alt="Support Icon">
+                <p><strong>Non-Technical Support</strong><br> No need to worry about technical aspects, we handle it for you.</p>
+            </div>
         </div>
     </main>
 
