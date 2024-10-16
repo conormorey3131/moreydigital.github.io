@@ -69,6 +69,9 @@
             padding: 20px;
             position: relative;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
@@ -79,13 +82,21 @@
         }
 
         header h1 a {
-            color: #ffffff;
-            text-decoration: none;
-        }
+    color: #ffffff; /* Ensures the text color is white */
+    text-decoration: none; /* Removes the underline */
+}
 
-        /* Navbar Styles */
+header h1 a:hover {
+    color: #ffffff; /* Keeps it white on hover */
+    text-decoration: none; /* Prevents underline on hover */
+}
+
+
+        /* Updated Navbar Styles */
         nav {
-            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end; /* Align the navigation to the right */
+            flex-grow: 1;
         }
 
         nav ul {
@@ -179,7 +190,7 @@
             }
 
             header h1 {
-                font-size: 2.5em;
+                font-size: 2em;
             }
 
             /* Hide the nav menu and display the hamburger icon */
@@ -189,7 +200,7 @@
                 background-color: rgba(0, 0, 0, 0.9);
                 position: absolute;
                 top: 70px;
-                left: 0;
+                right: 0; /* Ensure menu appears from the right */
                 width: 100%;
                 padding: 0;
             }
@@ -220,7 +231,7 @@
 <body>
 
     <header>
-        <h1><a href="index.html">Morey Digital</a></h1>
+        <h1><a href="#">Morey Digital</a></h1>
         <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
             <div></div>
             <div></div>
@@ -228,10 +239,8 @@
         </div>
         <nav>
             <ul id="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -240,7 +249,7 @@
         <div class="content">
             <h2>Welcome to Morey Digital</h2>
             <p>Your one-stop solution for all things digital. Whether it's <strong>web development</strong>, <strong>digital marketing</strong>, or <strong>ecommerce solutions</strong>, we have you covered.</p>
-            <button class="cta-button" onclick="window.location.href='contact.html'">Get Started</button>
+            <button class="cta-button" onclick="window.location.href='contact.html'">Contact Us</button>
         </div>
     </main>
 

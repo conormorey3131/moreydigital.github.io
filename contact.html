@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morey Digital - Portfolio</title>
+    <title>Morey Digital - Contact Us</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
@@ -94,66 +94,48 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            text-align: center;
         }
 
         h2 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-align: center;
         }
 
         p {
             max-width: 800px;
-            text-align: center;
             font-size: 1.2em;
+            margin-bottom: 30px;
         }
 
-        .portfolio {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1200px;
-            width: 100%;
-            margin-top: 30px;
+        .contact-info {
+            font-size: 1.2em;
+            margin-bottom: 30px;
         }
 
-        .project {
-            background-color: rgba(255, 255, 255, 0.1);
-            margin: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s;
+        .contact-info a {
+            color: #ffcc00;
+            text-decoration: none;
         }
 
-        .project:hover {
-            transform: scale(1.05);
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
-        .project img {
-            width: 100%;
-            height: auto;
+        .socials {
+            margin-top: 20px;
         }
 
-        .project h3 {
-            margin: 15px 0 10px 0;
-            font-size: 1.5em;
-        }
-
-        .project a.button {
-            display: inline-block;
-            margin-bottom: 15px;
-            padding: 10px 20px;
-            background-color: #ff6600;
+        .socials a {
             color: #ffffff;
             text-decoration: none;
-            border-radius: 20px;
-            transition: background-color 0.3s;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: color 0.3s;
         }
 
-        .project a.button:hover {
-            background-color: #e65c00;
+        .socials a:hover {
+            color: #ffcc00;
         }
 
         footer {
@@ -198,8 +180,12 @@
                 display: block;
             }
 
-            .project {
-                width: 90%;
+            .socials {
+                flex-direction: column;
+            }
+
+            .socials a {
+                margin: 10px 0;
             }
         }
     </style>
@@ -215,42 +201,28 @@
         </div>
         <nav>
             <ul id="nav-links">
-                <li><a href="#" class="active">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="#" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Our Portfolio</h2>
-        <p>Here are some of our recent projects. Click on the images to visit the websites.</p>
-        <div class="portfolio">
-            <!-- Project 1 -->
-            <div class="project">
-                <a href="https://aviationlogisticsolutions.ie/" target="_blank">
-                    <img src="images/als.png" alt="Aviation Logistic Solutions">
-                </a>
-                <h3>Aviation Logistic Solutions</h3>
-                <a href="https://aviationlogisticsolutions.ie/" target="_blank" class="button">Visit Site</a>
-            </div>
-            <!-- Project 2 -->
-            <div class="project">
-                <a href="https://vamplingerie.com/" target="_blank">
-                    <img src="images/vamp.png" alt="Vamp Lingerie">
-                </a>
-                <h3>Vamp Lingerie</h3>
-                <a href="https://vamplingerie.com/" target="_blank" class="button">Visit Site</a>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project">
-                <a href="https://evolvedauto.ie/" target="_blank">
-                    <img src="images/evolved.png" alt="Evolved Auto">
-                </a>
-                <h3>Evolved Auto</h3>
-                <a href="https://evolvedauto.ie/" target="_blank" class="button">Visit Site</a>
-            </div>
-            <!-- Additional projects can be added here -->
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you're in Ireland or anywhere in the world, we're ready to meet your digital needs.</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:conor@moreydigital.ie">conor@moreydigital.ie</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+353873999296">+353 87 399 9296</a></p>
+            <p><strong>Location:</strong> Based in Sixmilebridge, available for meetings in surrounding areas and worldwide remotely.</p>
+        </div>
+        <div class="socials">
+            <p>Follow us on:</p>
+            <a href="https://instagram.com/moreydigital" target="_blank" aria-label="Instagram">
+                <img src="images/instagram-icon.png" alt="Instagram" width="40" height="40">
+            </a>
+            <a href="https://tiktok.com/@moreydigital" target="_blank" aria-label="TikTok">
+                <img src="images/tiktok-icon.png" alt="TikTok" width="40" height="40">
+            </a>
         </div>
     </main>
 
