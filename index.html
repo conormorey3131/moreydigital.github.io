@@ -57,8 +57,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Montserrat', sans-serif;
-      background: #ffffff; /* White background */
-      color: #333333; /* Dark text for readability */
+      background: #ffffff;
+      color: #333333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -87,11 +87,10 @@
     }
     
     header h1 a:hover {
-      color: #333333;
       text-decoration: none;
     }
     
-    /* Updated Navbar Styles */
+    /* Navbar Styles */
     nav {
       display: flex;
       justify-content: flex-end;
@@ -175,6 +174,68 @@
       background-color: #e65c00;
     }
     
+    /* Featured Portfolio Section */
+    .featured-portfolio {
+      padding: 40px 20px;
+      background: #f9f9f9;
+    }
+    
+    .featured-portfolio h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .project {
+      background-color: #fff;
+      margin: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .project img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .project h3 {
+      margin: 15px 0 10px;
+      font-size: 1.5em;
+      color: #333333;
+    }
+    
+    .project a.button {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      background-color: #ff6600;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s;
+    }
+    
+    .project a.button:hover {
+      background-color: #e65c00;
+    }
+    
     footer {
       background-color: transparent;
       color: #333333;
@@ -192,7 +253,6 @@
         font-size: 2em;
       }
       
-      /* Hide the nav menu and display the hamburger icon */
       nav ul {
         display: none;
         flex-direction: column;
@@ -224,6 +284,10 @@
       .content p {
         font-size: 1em;
       }
+      
+      .project {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -251,6 +315,34 @@
       <button class="cta-button" onclick="window.location.href='contact.html'">Contact Us</button>
     </div>
   </main>
+  
+  <!-- New Featured Portfolio Section -->
+  <section class="featured-portfolio">
+    <h2>Our Featured Projects</h2>
+    <div class="portfolio">
+      <div class="project">
+        <a href="https://vamplingerie.com/" target="_blank">
+          <img src="images/vamp_up.png" alt="Vamp Lingerie">
+        </a>
+        <h3>Vamp Lingerie</h3>
+        <a href="https://vamplingerie.com/" target="_blank" class="button">Visit Site</a>
+      </div>
+      <div class="project">
+        <a href="https://cruzireland.com/" target="_blank">
+          <img src="images/cruz.png" alt="Cruz Ireland">
+        </a>
+        <h3>Cruz Ireland</h3>
+        <a href="https://cruzireland.com/" target="_blank" class="button">Visit Site</a>
+      </div>
+      <div class="project">
+        <a href="https://motormeets.ie/" target="_blank">
+          <img src="images/motor.png" alt="Motor Meets">
+        </a>
+        <h3>Motor Meets</h3>
+        <a href="https://motormeets.ie/" target="_blank" class="button">Visit Site</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Morey Digital. All Rights Reserved.</p>
