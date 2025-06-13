@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Services Limerick: Web, E-commerce, SEO | Morey Digital</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="Morey Digital offers expert web design, e-commerce development, SEO, and digital marketing services in Limerick to grow your business online.">
+  <meta name="keywords" content="Morey Digital, web design Limerick, e-commerce Limerick, SEO services Limerick, digital marketing Ireland, web development services, online store solutions, ongoing website support, marketing strategy">
+  <meta name="author" content="Morey Digital">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Digital Services Limerick: Web, E-commerce, SEO | Morey Digital">
+  <meta property="og:description" content="Morey Digital offers expert web design, e-commerce development, SEO, and digital marketing services in Limerick.">
+  <meta property="og:image" content="https://www.moreydigital.ie/images/og-services.jpg"> <!-- Placeholder OG image -->
+  <meta property="og:url" content="https://www.moreydigital.ie/services.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Digital Services Limerick: Web, E-commerce, SEO | Morey Digital">
+  <meta name="twitter:description" content="Morey Digital offers expert web design, e-commerce development, SEO, and digital marketing services in Limerick.">
+  <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-services.jpg"> <!-- Placeholder Twitter image -->
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.moreydigital.ie/services.html">
+
+  <!-- Structured Data Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage", 
+    "name": "Digital Services Limerick: Web, E-commerce, SEO | Morey Digital",
+    "description": "Morey Digital offers expert web design, e-commerce development, SEO, and digital marketing services in Limerick to grow your business online.",
+    "url": "https://www.moreydigital.ie/services.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Morey Digital",
+      "url": "https://www.moreydigital.ie/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.moreydigital.ie/favicon.ico"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/morey-digital/",
+        "https://instagram.com/moreydigital",
+        "https://www.tiktok.com/@moreydigital"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Limerick",
+        "addressCountry": "IE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+353-87-399-9296",
+        "contactType": "Customer Service",
+        "areaServed": "IE",
+        "availableLanguage": ["en"]
+      }
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "Web Design & Development",
+          "description": "Custom, high-performance websites tailored to your brand and goals."
+        },
+        {
+          "@type": "Service",
+          "name": "E-com & Online Store Solutions",
+          "description": "Scalable online stores built to convert and grow your business."
+        },
+        {
+          "@type": "Service",
+          "name": "Ongoing Support & Maintenance",
+          "description": "Reliable updates, fixes, and optimisations—so your site runs smoothly 24/7."
+        },
+        {
+          "@type": "Service",
+          "name": "Marketing Strategy",
+          "description": "Smart, data-driven strategies to boost your reach and drive results."
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    background-color: transparent;
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  header h1 a {
+    color: #333333;
+    text-decoration: none;
+  }
+
+  header h1 a:hover {
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav li {
+    margin: 0 15px;
+  }
+
+  nav a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  nav a:hover,
+  nav a.active {
+    text-decoration: underline;
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+
+  .menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: #333333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    background: url('https://via.placeholder.com/1500x600.png?text=Hero+Background') no-repeat center center/cover; /* Placeholder */
+    color: #333333; /* Changed from #ffffff to a dark color */
+    padding: 100px 20px;
+    text-align: left;
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-section h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .hero-section p {
+    font-size: 1.2em;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  /* Services Overview Section */
+  .services-overview {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .services-overview .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .services-overview h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .services-overview .intro-text {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+  }
+
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .service-item {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: calc(33.333% - 20px); /* Three items per row, accounting for 30px gap */
+    min-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .service-item .icon {
+    font-size: 2.5em; /* Placeholder for icon */
+    margin-bottom: 15px;
+    color: #ff6600;
+  }
+
+  .service-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .service-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Testimonial Section */
+  .testimonial-section {
+    background: url('https://via.placeholder.com/1500x500.png?text=Testimonial+Background') no-repeat center center/cover; /* Placeholder */
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .testimonial-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+    padding: 40px;
+    border-radius: 10px;
+  }
+
+  .testimonial-section .quote {
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .testimonial-section .author {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+  
+  .testimonial-section .company {
+    font-size: 0.9em;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+
+  .cta-section h3 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .cta-button:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #222222; /* Dark background for the new footer */
+    color: #f0f0f0; /* Light text color */
+    padding: 50px 20px;
+    font-size: 0.9em;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  .footer-column {
+    flex: 1;
+    min-width: 200px; /* Minimum width for columns */
+    margin-bottom: 30px;
+  }
+
+  .footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    color: #cccccc;
+    text-decoration: none;
+    line-height: 1.6;
+  }
+
+  .footer-column a:hover {
+    color: #ff6600; /* Accent color on hover */
+    text-decoration: underline;
+  }
+
+  .footer-social-icons a {
+    margin-right: 15px;
+    display: inline-block;
+    color: #cccccc;
+  }
+  .footer-social-icons a svg {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+  }
+
+  .footer-social-icons a:hover svg {
+    fill: #ff6600;
+  }
+  
+  .footer-stay-in-touch input[type="email"] {
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+
+  .footer-stay-in-touch button {
+    background-color: #00aaff; /* Bright blue for send button */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .footer-stay-in-touch button:hover {
+    background-color: #0088cc;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444444;
+    font-size: 0.9em; /* Made a bit bigger */
+    color: #aaaaaa;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 70px; /* Adjusted based on typical header height */
+      right: 0;
+      width: 100%;
+      padding: 0;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    nav li {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+    
+    .hero-section {
+      padding: 60px 20px;
+      height: auto;
+      text-align: center;
+    }
+    .hero-section h2 {
+      font-size: 2.5em;
+    }
+    .hero-section p {
+      font-size: 1.1em;
+    }
+
+    .services-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+    .service-item {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+    .testimonial-section .container {
+        padding: 20px;
+    }
+    .testimonial-section .quote {
+        font-size: 1.1em;
+    }
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align:center;
+    }
+    .footer-column {
+      min-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-36R7DYFRZD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-36R7DYFRZD');
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1><a href="index.html">Morey Digital</a></h1>
+    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Services</h1>
+        <p>At Morey Digital, we offer more than just websites—we craft tailored digital solutions built to perform. From sleek designs to high-converting funnels, our services are designed to elevate your brand, engage your audience, and drive measurable growth.</p>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="services-overview">
+      <div class="container">
+        <h3>Explore Our Full Range of Web & Digital Services</h3>
+        <p class="intro-text">At Morey Digital, we offer more than just websites—we deliver end-to-end digital solutions designed to help your business grow. From eye-catching design and robust development to strategic marketing and SEO, our services are built to elevate your brand, engage your audience, and drive meaningful results. Explore our full suite of services and see how Morey Digital can bring your digital vision to life.</p>
+        <div class="services-grid">
+          <div class="service-item">
+            <div class="icon">🌐</div> <!-- Placeholder Icon -->
+            <h4>Web Design & Development</h4>
+            <p>Custom, high-performance websites tailored to your brand and goals.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">🛒</div> <!-- Placeholder Icon -->
+            <h4>E-com & Online Store Solutions</h4>
+            <p>Scalable online stores built to convert and grow your business.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">🎧</div> <!-- Placeholder Icon -->
+            <h4>Ongoing Support & Maintenance</h4>
+            <p>Reliable updates, fixes, and optimisations—so your site runs smoothly 24/7.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">🚩</div> <!-- Placeholder Icon -->
+            <h4>Marketing Strategy</h4>
+            <p>Smart, data-driven strategies to boost your reach and drive results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h3>Have a project in mind?</h3>
+        <a href="contact.html" class="cta-button">Contact Us Today →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Morey Digital</h4>
+        <p>Your one-stop solution for all things digital.</p>
+        <div class="footer-social-icons">
+          <a href="https://www.linkedin.com/company/morey-digital/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
+              <title>LinkedIn</title>
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.038-1.852-3.038-1.853 0-2.136 1.445-2.136 2.941v5.666H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.6 0 4.266 2.368 4.266 5.452v6.287zM5.337 7.433a2.064 2.064 0 11.001-4.128 2.064 2.064 0 010 4.128zM6.86 20.452H3.814V9h3.046v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.207 24 24 23.229 24 22.271V1.723C24 .771 23.207 0 22.225 0z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/moreydigital" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
+              <title>Instagram</title>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.977.24 2.427.402.59.221 1.01.48 1.457.927.446.447.705.867.927 1.457.162.45.348 1.257.402 2.427.058 1.266.069 1.646.069 4.85s-.011 3.584-.069 4.85c-.054 1.17-.24 1.977-.402 2.427-.221.59-.48 1.01-.927 1.457-.447.446-.867.705-1.457.927-.45.162-1.257.348-2.427.402-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.17-.054-1.977-.24-2.427-.402-.59-.221-1.01-.48-1.457-.927-.446-.447-.705-.867-.927-1.457-.162-.45-.348-1.257-.402-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.977.402-2.427.221-.59.48-1.01.927-1.457.447-.446.867-.705 1.457-.927.45-.162 1.257-.348 2.427-.402C8.416 2.175 8.796 2.163 12 2.163zm0 1.379c-3.17 0-3.549.011-4.792.069-1.04.047-1.602.217-1.974.363-.497.192-.853.422-1.229.798-.376.376-.606.732-.798 1.229-.146.372-.316.934-.363 1.974-.058 1.243-.069 1.622-.069 4.792s.011 3.549.069 4.792c.047 1.04.217 1.602.363 1.974.192.497.422.853.798 1.229.376.376.732.606 1.229.798.372.146.934.316 1.974.363 1.243.058 1.622.069 4.792.069s3.549-.011 4.792-.069c1.04-.047 1.602-.217 1.974-.363.497-.192-.853.422 1.229-.798.376-.376.606-.732.798-1.229.146-.372.316.934.363-1.974.058-1.243.069-1.622.069-4.792s-.011-3.549-.069-4.792c-.047-1.04-.217-1.602-.363-1.974-.192-.497-.422-.853-.798-1.229-.376-.376-.732-.606-1.229-.798-.372-.146-.934-.316-1.974-.363-1.243-.058-1.622-.069-4.792-.069zm0 5.838a4.001 4.001 0 100 8.002 4.001 4.001 0 000-8.002zm0 6.623a2.623 2.623 0 110-5.246 2.623 2.623 0 010 5.246zm5.223-6.769a.958.958 0 11-1.917 0 .958.958 0 011.917 0z"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@moreydigital" target="_blank" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" role="img">
+              <title>TikTok</title>
+              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2.373A2.99 2.99 0 0 1 7 9.5v-1.598A3 3 0 0 0 4 5.037V0H6v6.037A3 3 0 0 0 9 9V0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Location Details</h4>
+        <p>Limerick, Ireland</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Interested in working with us?</p>
+        <p><a href="mailto:conor@moreydigital.ie">conor@moreydigital.ie</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Morey Digital. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById('nav-links');
+      var menuIcon = document.querySelector('.menu-icon');
+      navLinks.classList.toggle('show');
+      var isExpanded = navLinks.classList.contains('show');
+      menuIcon.setAttribute('aria-expanded', isExpanded);
+    }
+  </script>
+
+</body>
+</html>

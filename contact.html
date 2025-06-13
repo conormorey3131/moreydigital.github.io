@@ -3,8 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Morey Digital</title>
+  <title>Contact Morey Digital | Web Design & SEO Limerick</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="description" content="Get in touch with Morey Digital in Limerick for expert web development, SEO, and digital marketing services. Let's discuss your project today!">
+  <meta name="keywords" content="contact Morey Digital, Limerick web design contact, web development Limerick, SEO Limerick, digital marketing inquiry, get a quote, Morey Digital phone, Morey Digital email">
+  <meta name="author" content="Morey Digital">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact Morey Digital | Web Design & SEO Limerick">
+  <meta property="og:description" content="Get in touch with Morey Digital in Limerick for expert web development, SEO, and digital marketing services.">
+  <meta property="og:image" content="https://www.moreydigital.ie/images/og-contact.jpg"> <!-- Placeholder OG image -->
+  <meta property="og:url" content="https://www.moreydigital.ie/contact.html">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Morey Digital | Web Design & SEO Limerick">
+  <meta name="twitter:description" content="Get in touch with Morey Digital in Limerick for expert web development, SEO, and digital marketing services.">
+  <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-contact.jpg"> <!-- Placeholder Twitter image -->
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.moreydigital.ie/contact.html">
+
+  <!-- Structured Data Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["WebPage", "ContactPage"],
+    "name": "Contact Morey Digital | Web Design & SEO Limerick",
+    "description": "Get in touch with Morey Digital in Limerick for expert web development, SEO, and digital marketing services. Let's discuss your project today!",
+    "url": "https://www.moreydigital.ie/contact.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Morey Digital",
+      "url": "https://www.moreydigital.ie/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.moreydigital.ie/favicon.ico"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/morey-digital/",
+        "https://instagram.com/moreydigital",
+        "https://www.tiktok.com/@moreydigital"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Limerick",
+        "addressCountry": "IE"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+353-87-399-9296",
+          "contactType": "Customer Service",
+          "areaServed": "IE",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "conor@moreydigital.ie",
+          "contactType": "Customer Service",
+          "availableLanguage": ["en"]
+        }
+      ]
+    }
+  }
+  </script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
@@ -140,10 +205,94 @@
     }
 
     footer {
-      background-color: transparent;
-      color: #333333;
-      text-align: center;
+      background-color: #222222; /* Dark background for the new footer */
+      color: #f0f0f0; /* Light text color */
+      padding: 50px 20px;
+      font-size: 0.9em;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px; /* Minimum width for columns */
+      margin-bottom: 30px;
+      text-align: center; /* Center content within columns */
+    }
+
+    .footer-column h4 {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      color: #cccccc;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-column a:hover {
+      color: #ff6600; /* Accent color on hover */
+      text-decoration: underline;
+    }
+
+    .footer-social-icons a {
+      margin-right: 7px; /* Adjusted for centering */
+      margin-left: 7px;  /* Adjusted for centering */
+      display: inline-block;
+      color: #cccccc;
+    }
+    .footer-social-icons a svg {
+      width: 24px; /* Adjust icon size */
+      height: 24px;
+    }
+
+    .footer-social-icons a:hover svg {
+      fill: #ff6600;
+    }
+    
+    .footer-stay-in-touch input[type="email"] {
+      width: calc(100% - 22px); /* Adjust for padding and border */
       padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #555555;
+      background-color: #333333;
+      color: #ffffff;
+      border-radius: 5px;
+    }
+
+    .footer-stay-in-touch button {
+      background-color: #00aaff; /* Bright blue for send button */
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer-stay-in-touch button:hover {
+      background-color: #0088cc;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #444444;
+      font-size: 0.9em; /* Made a bit bigger */
+      color: #aaaaaa;
     }
 
     /* Responsive Styles */
@@ -210,14 +359,17 @@
     </div>
     <nav>
       <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#" class="active">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h2>Contact Us</h2>
+    <h1>Contact Us</h1>
     <p>We'd love to hear from you! Whether you're in Ireland or anywhere in the world, we're ready to meet your digital needs.</p>
     <div class="contact-info">
       <p><strong>Email:</strong> <a href="mailto:conor@moreydigital.ie">conor@moreydigital.ie</a></p>
@@ -250,7 +402,7 @@
             -.069 1.622-.069 4.792s.011 3.549.069 4.792c.047 1.04.217 1.602.363 1.974.192.497
             .422.853.798 1.229.376.376.732.606 1.229.798.372.146.934.316 1.974.363 1.243.058
             1.622.069 4.792.069s3.549-.011 4.792-.069c1.04-.047 1.602-.217 1.974-.363.497-.192
-            .853-.422 1.229-.798.376-.376.606-.732.798-1.229.146-.372.316-.934.363-1.974.058
+            .853-.422 1.229-.798.376-.376.606-.732.798-1.229.146-.372.316.934.363-1.974.058
             -1.243.069-1.622.069-4.792s-.011-3.549-.069-4.792c-.047-1.04-.217-1.602-.363-1.974
             -.192-.497-.422-.853-.798-1.229-.376-.376-.732-.606-1.229-.798-.372-.146-.934-.316
             -1.974-.363-1.243-.058-1.622-.069-4.792-.069zm0 5.838a4.001 4.001 0 100 8.002 
@@ -264,11 +416,54 @@
           <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.038-1.852-3.038-1.853 0-2.136 1.445-2.136 2.941v5.666H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.6 0 4.266 2.368 4.266 5.452v6.287zM5.337 7.433a2.064 2.064 0 11.001-4.128 2.064 2.064 0 010 4.128zM6.86 20.452H3.814V9h3.046v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.207 24 24 23.229 24 22.271V1.723C24 .771 23.207 0 22.225 0z"/>
         </svg>
       </a>
+      <a href="https://www.tiktok.com/@moreydigital" target="_blank" aria-label="TikTok">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16" role="img">
+          <title>TikTok</title>
+          <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2.373A2.99 2.99 0 0 1 7 9.5v-1.598A3 3 0 0 0 4 5.037V0H6v6.037A3 3 0 0 0 9 9V0z"/>
+        </svg>
+      </a>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Morey Digital. All Rights Reserved.</p>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Morey Digital</h4>
+        <p>Your one-stop solution for all things digital.</p>
+        <div class="footer-social-icons">
+          <a href="https://www.linkedin.com/company/morey-digital/" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
+              <title>LinkedIn</title>
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.038-1.852-3.038-1.853 0-2.136 1.445-2.136 2.941v5.666H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.6 0 4.266 2.368 4.266 5.452v6.287zM5.337 7.433a2.064 2.064 0 11.001-4.128 2.064 2.064 0 010 4.128zM6.86 20.452H3.814V9h3.046v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.207 24 24 23.229 24 22.271V1.723C24 .771 23.207 0 22.225 0z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/moreydigital" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
+              <title>Instagram</title>
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.977.24 2.427.402.59.221 1.01.48 1.457.927.446.447.705.867.927 1.457.162.45.348 1.257.402 2.427.058 1.266.069 1.646.069 4.85s-.011 3.584-.069 4.85c-.054 1.17-.24 1.977-.402 2.427-.221.59-.48 1.01-.927 1.457-.447.446-.867.705-1.457.927-.45.162-1.257.348-2.427.402-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.17-.054-1.977-.24-2.427-.402-.59-.221-1.01-.48-1.457-.927-.446-.447-.705-.867-.927-1.457-.162-.45-.348-1.257-.402-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.977.402-2.427.221-.59.48-1.01.927-1.457.447-.446.867-.705 1.457-.927.45-.162 1.257-.348 2.427-.402C8.416 2.175 8.796 2.163 12 2.163zm0 1.379c-3.17 0-3.549.011-4.792.069-1.04.047-1.602.217-1.974.363-.497.192-.853.422-1.229.798-.376.376-.606.732-.798 1.229-.146.372-.316.934-.363 1.974-.058 1.243-.069 1.622-.069 4.792s.011 3.549.069 4.792c.047 1.04.217 1.602.363 1.974.192.497.422.853.798 1.229.376.376.732.606 1.229.798.372.146.934.316 1.974.363 1.243.058 1.622.069 4.792.069s3.549-.011 4.792-.069c1.04-.047 1.602-.217 1.974-.363.497-.192-.853.422 1.229-.798.376-.376.606-.732.798-1.229.146-.372.316.934.363-1.974.058-1.243.069-1.622.069-4.792s-.011-3.549-.069-4.792c-.047-1.04-.217-1.602-.363-1.974-.192-.497-.422-.853-.798-1.229-.376-.376-.732-.606-1.229-.798-.372-.146-.934-.316-1.974-.363-1.243-.058-1.622-.069-4.792-.069zm0 5.838a4.001 4.001 0 100 8.002 4.001 4.001 0 000-8.002zm0 6.623a2.623 2.623 0 110-5.246 2.623 2.623 0 010 5.246zm5.223-6.769a.958.958 0 11-1.917 0 .958.958 0 011.917 0z"/>
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@moreydigital" target="_blank" aria-label="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" role="img">
+              <title>TikTok</title>
+              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2.373A2.99 2.99 0 0 1 7 9.5v-1.598A3 3 0 0 0 4 5.037V0H6v6.037A3 3 0 0 0 9 9V0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4>Location Details</h4>
+        <p>Limerick, Ireland</p>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Interested in working with us?</p>
+        <p><a href="mailto:conor@moreydigital.ie">conor@moreydigital.ie</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Morey Digital. All Rights Reserved.</p>
+    </div>
   </footer>
 
   <script>
