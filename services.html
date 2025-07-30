@@ -12,7 +12,7 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Digital Services Limerick: Web, E-commerce, SEO | Morey Digital">
   <meta property="og:description" content="Morey Digital offers expert web design, e-commerce development, SEO, and digital marketing services in Limerick.">
-  <meta property="og:image" content="https://www.moreydigital.ie/images/og-services.jpg"> <!-- Placeholder OG image -->
+  <meta property="og:image" content="https://www.moreydigital.ie/images/og-default.svg">
   <meta property="og:url" content="https://www.moreydigital.ie/services.html">
   <meta property="og:type" content="website">
 
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Digital Services Limerick: Web, E-commerce, SEO | Morey Digital">
   <meta name="twitter:description" content="Morey Digital offers expert web design, e-commerce development, SEO, and digital marketing services in Limerick.">
-  <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-services.jpg"> <!-- Placeholder Twitter image -->
+  <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-default.svg">
 
   <!-- Canonical Link -->
   <link rel="canonical" href="https://www.moreydigital.ie/services.html">
@@ -88,242 +88,586 @@
   </script>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background: #ffffff;
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+    /* CSS Variables for consistent theming */
+    :root {
+      --primary-color: #333333;
+      --accent-color: #ff6600;
+      --accent-hover: #e65c00;
+      --background: #ffffff;
+      --text-light: #666666;
+      --text-lighter: #888888;
+      --border-color: #e1e5e9;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --shadow-hover: rgba(0, 0, 0, 0.2);
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      --border-radius: 12px;
+      --spacing: 1rem;
+    }
 
-  header {
-    background-color: transparent;
-    padding: 20px;
-    position: relative;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+    /* Mobile-first base styles */
+    body {
+      margin: 0;
+      padding: 80px 0 0 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
 
-  header h1 a {
-    color: #333333;
-    text-decoration: none;
-  }
+    /* Preloader animation */
+    .page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+    }
 
-  header h1 a:hover {
-    text-decoration: none;
-  }
+    .page-loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
 
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-  }
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--border-color);
+      border-top: 3px solid var(--accent-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
 
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
-  nav li {
-    margin: 0 15px;
-  }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
 
-  nav a {
-    color: #333333;
-    text-decoration: none;
-    font-weight: 700;
-  }
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
 
-  nav a:hover,
-  nav a.active {
-    text-decoration: underline;
-  }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  .menu-icon {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-  }
+    /* Mobile-first header */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
 
-  .menu-icon div {
-    width: 30px;
-    height: 4px;
-    background-color: #333333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    }
 
-  main {
-    flex: 1;
-  }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  /* Hero Section */
-  .hero-section {
-    background: url('https://via.placeholder.com/1500x600.png?text=Hero+Background') no-repeat center center/cover; /* Placeholder */
-    color: #333333; /* Changed from #ffffff to a dark color */
-    padding: 100px 20px;
-    text-align: left;
-    height: 400px;
-    display: flex;
-    align-items: center;
-  }
+    header h1 a {
+      color: var(--primary-color);
+      text-decoration: none;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: var(--transition);
+    }
+    
+    header h1 a:hover {
+      background: var(--gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transform: scale(1.05);
+    }
 
-  .hero-section .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    /* Mobile-first navigation */
+    nav {
+      display: none;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 2rem 0;
+      transform: translateY(-100%);
+      transition: var(--transition);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    nav ul.show {
+      transform: translateY(0);
+    }
+    
+    nav li {
+      margin: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInNav 0.5s ease-out forwards;
+    }
+    
+    nav li:nth-child(1) { animation-delay: 0.1s; }
+    nav li:nth-child(2) { animation-delay: 0.2s; }
+    nav li:nth-child(3) { animation-delay: 0.3s; }
+    nav li:nth-child(4) { animation-delay: 0.4s; }
+    nav li:nth-child(5) { animation-delay: 0.5s; }
+    
+    @keyframes slideInNav {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    nav a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      display: block;
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    nav a:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-1);
+      transition: var(--transition);
+      transform: translateX(-50%);
+    }
+    
+    nav a:hover:before,
+    nav a.active:before {
+      width: 60%;
+    }
+    
+    nav a:hover,
+    nav a.active {
+      color: var(--accent-color);
+      transform: scale(1.05);
+    }
 
-  .hero-section h2 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
+    /* Fancy hamburger menu */
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 1001;
+    }
+    
+    .menu-icon div {
+      width: 100%;
+      height: 3px;
+      background: var(--gradient-1);
+      margin: 6px 0;
+      transition: var(--transition);
+      border-radius: 2px;
+      transform-origin: center;
+    }
+    
+    .menu-icon.active div:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .menu-icon.active div:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+    
+    .menu-icon.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
 
-  .hero-section p {
-    font-size: 1.2em;
-    max-width: 600px;
-    line-height: 1.6;
-  }
+    main {
+      flex: 1;
+    }
 
-  /* Services Overview Section */
-  .services-overview {
-    padding: 60px 20px;
-    text-align: center;
-  }
+    /* Hero Section */
+    .services-hero {
+      background: var(--gradient-1);
+      color: #ffffff;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .services-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="25" cy="25" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .services-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: heroTitle 1s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .services-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+      animation: heroText 1.2s ease-out 0.3s both;
+    }
+    
+    @keyframes heroTitle {
+      from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    @keyframes heroText {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 0.9;
+        transform: translateY(0);
+      }
+    }
 
-  .services-overview .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    /* Services Overview Section */
+    .services-overview {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
 
-  .services-overview h3 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .services-overview .intro-text {
-    font-size: 1.1em;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    line-height: 1.6;
-  }
+    .services-overview .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-  .services-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
+    .services-overview h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .services-overview h2.fade-in {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+    
+    .services-overview .intro-text {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .services-overview .intro-text.fade-in {
+      animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
 
-  .service-item {
-    background: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    width: calc(33.333% - 20px); /* Three items per row, accounting for 30px gap */
-    min-width: 280px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: left;
-  }
-  
-  .service-item .icon {
-    font-size: 2.5em; /* Placeholder for icon */
-    margin-bottom: 15px;
-    color: #ff6600;
-  }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-  .service-item h4 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-  }
+    .service-item {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-align: left;
+      position: relative;
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    
+    .service-item.fade-in {
+      animation: serviceSlideIn 0.8s ease-out forwards;
+    }
+    
+    .service-item:nth-child(1) { animation-delay: 0.1s; }
+    .service-item:nth-child(2) { animation-delay: 0.3s; }
+    .service-item:nth-child(3) { animation-delay: 0.5s; }
+    .service-item:nth-child(4) { animation-delay: 0.7s; }
+    
+    @keyframes serviceSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .service-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+      opacity: 0;
+      transition: var(--transition);
+      border-radius: var(--border-radius);
+    }
 
-  .service-item p {
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-  }
+    .service-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    }
+    
+    .service-item:hover::before {
+      opacity: 1;
+    }
+    
+    .service-item .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: var(--gradient-3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 2;
+    }
 
-  /* Testimonial Section */
-  .testimonial-section {
-    background: url('https://via.placeholder.com/1500x500.png?text=Testimonial+Background') no-repeat center center/cover; /* Placeholder */
-    color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  .testimonial-section .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
-    padding: 40px;
-    border-radius: 10px;
-  }
+    .service-item h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+    }
 
-  .testimonial-section .quote {
-    font-size: 1.3em;
-    font-style: italic;
-    margin-bottom: 20px;
-    line-height: 1.7;
-  }
+    .service-item p {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      position: relative;
+      z-index: 2;
+    }
 
-  .testimonial-section .author {
-    font-size: 1.1em;
-    font-weight: bold;
-  }
-  
-  .testimonial-section .company {
-    font-size: 0.9em;
-  }
+    /* Process Section */
+    .process-section {
+      background: var(--gradient-2);
+      color: #ffffff;
+      padding: 4rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .process-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .process-section .container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
 
-  /* CTA Section */
-  .cta-section {
-    padding: 60px 20px;
-    text-align: center;
-    background: #f9f9f9;
-  }
+    .process-section h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .process-section h2.fade-in {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
 
-  .cta-section h3 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-  }
+    .process-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .process-section p.fade-in {
+      animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
 
-  .cta-button {
-    background-color: #ff6600;
-    color: #ffffff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    display: inline-block;
-  }
+    /* CTA Section */
+    .cta-section {
+      padding: 4rem 1rem;
+      text-align: center;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    }
 
-  .cta-button:hover {
-    background-color: #e65c00;
-  }
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .cta-section h2.fade-in {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .cta-button {
+      background: var(--gradient-3);
+      color: #ffffff;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(79, 172, 254, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .cta-button.fade-in {
+      animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    
+    .cta-button:hover::before {
+      left: 100%;
+    }
+
+    .cta-button:hover {
+      background: var(--gradient-2);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+    }
   
   /* Footer Styles */
   footer {
@@ -415,76 +759,142 @@
     color: #aaaaaa;
   }
 
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    header {
-      padding: 10px;
-    }
-
-    header h1 {
-      font-size: 2em;
-    }
-
-    nav ul {
-      display: none;
-      flex-direction: column;
-      background-color: rgba(255, 255, 255, 0.9);
-      position: absolute;
-      top: 70px; /* Adjusted based on typical header height */
-      right: 0;
-      width: 100%;
-      padding: 0;
-    }
-
-    nav ul.show {
-      display: flex;
-    }
-
-    nav li {
-      margin: 10px 0;
-      text-align: center;
-    }
-
-    .menu-icon {
-      display: block;
+    /* Responsive Design - Mobile-first approach */
+    
+    /* Tablet: 768px and up */
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+      }
+      
+      .services-hero {
+        padding: 6rem 2rem 3rem;
+      }
+      
+      .services-hero h1 {
+        font-size: 3rem;
+      }
+      
+      .services-hero p {
+        font-size: 1.3rem;
+      }
+      
+      nav {
+        display: block;
+      }
+      
+      nav ul {
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 0;
+        transform: translateY(0);
+        box-shadow: none;
+        gap: 2rem;
+      }
+      
+      nav li {
+        opacity: 1;
+        transform: translateY(0);
+        animation: none;
+      }
+      
+      nav a {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+      
+      .menu-icon {
+        display: none;
+      }
+      
+      .services-overview {
+        padding: 4rem 2rem;
+      }
+      
+      .services-overview h2 {
+        font-size: 2.5rem;
+      }
+      
+      .process-section {
+        padding: 5rem 2rem;
+      }
+      
+      .process-section h2 {
+        font-size: 2.5rem;
+      }
+      
+      .cta-section {
+        padding: 5rem 2rem;
+      }
+      
+      .cta-section h2 {
+        font-size: 2.5rem;
+      }
     }
     
-    .hero-section {
-      padding: 60px 20px;
-      height: auto;
-      text-align: center;
+    /* Desktop: 1024px and up */
+    @media (min-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+      
+      .services-hero {
+        padding: 8rem 3rem 4rem;
+      }
+      
+      .services-hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .services-hero p {
+        font-size: 1.4rem;
+      }
+      
+      .services-overview {
+        padding: 5rem 3rem;
+      }
+      
+      .services-overview h2 {
+        font-size: 3rem;
+      }
+      
+      .process-section {
+        padding: 6rem 3rem;
+      }
+      
+      .process-section h2 {
+        font-size: 3rem;
+      }
+      
+      .cta-section {
+        padding: 6rem 3rem;
+      }
+      
+      .cta-section h2 {
+        font-size: 3rem;
+      }
     }
-    .hero-section h2 {
-      font-size: 2.5em;
+    
+    /* Large Desktop: 1440px and up */
+    @media (min-width: 1440px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+      }
+      
+      .services-hero {
+        padding: 10rem 4rem 5rem;
+      }
+      
+      .services-hero h1 {
+        font-size: 4rem;
+      }
     }
-    .hero-section p {
-      font-size: 1.1em;
-    }
-
-    .services-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-    .service-item {
-      width: 90%;
-      margin-bottom: 20px;
-    }
-    .testimonial-section .container {
-        padding: 20px;
-    }
-    .testimonial-section .quote {
-        font-size: 1.1em;
-    }
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-      text-align:center;
-    }
-    .footer-column {
-      min-width: 100%;
-      margin-bottom: 20px;
-    }
-  }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-36R7DYFRZD"></script>
@@ -497,6 +907,11 @@
   </script>
 </head>
 <body>
+
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader"></div>
+  </div>
 
   <header>
     <h1><a href="index.html">Morey Digital</a></h1>
@@ -518,48 +933,54 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <h1>Services</h1>
-        <p>At Morey Digital, we offer more than just websites—we craft tailored digital solutions built to perform. From sleek designs to high-converting funnels, our services are designed to elevate your brand, engage your audience, and drive measurable growth.</p>
-      </div>
+    <section class="services-hero">
+      <h1>Our Services</h1>
+      <p>At Morey Digital, we offer more than just websites—we craft tailored digital solutions built to perform. From sleek designs to high-converting funnels, our services are designed to elevate your brand, engage your audience, and drive measurable growth.</p>
     </section>
 
     <!-- Services Overview Section -->
     <section class="services-overview">
       <div class="container">
-        <h3>Explore Our Full Range of Web & Digital Services</h3>
-        <p class="intro-text">At Morey Digital, we offer more than just websites—we deliver end-to-end digital solutions designed to help your business grow. From eye-catching design and robust development to strategic marketing and SEO, our services are built to elevate your brand, engage your audience, and drive meaningful results. Explore our full suite of services and see how Morey Digital can bring your digital vision to life.</p>
+        <h2>Explore Our Full Range of Digital Services</h2>
+        <p class="intro-text">We deliver end-to-end digital solutions designed to help your business grow. From eye-catching design and robust development to strategic marketing and ongoing support, our services are built to elevate your brand, engage your audience, and drive meaningful results.</p>
         <div class="services-grid">
           <div class="service-item">
-            <div class="icon">🌐</div> <!-- Placeholder Icon -->
-            <h4>Web Design & Development</h4>
-            <p>Custom, high-performance websites tailored to your brand and goals.</p>
+            <div class="icon">🌐</div>
+            <h3>Web Design & Development</h3>
+            <p>Custom, high-performance websites tailored to your brand and goals. We create responsive, fast-loading sites that provide exceptional user experiences across all devices.</p>
           </div>
           <div class="service-item">
-            <div class="icon">🛒</div> <!-- Placeholder Icon -->
-            <h4>E-com & Online Store Solutions</h4>
-            <p>Scalable online stores built to convert and grow your business.</p>
+            <div class="icon">🛒</div>
+            <h3>E-commerce & Online Store Solutions</h3>
+            <p>Scalable online stores built to convert and grow your business. From product catalogs to secure payment processing, we handle every aspect of your e-commerce platform.</p>
           </div>
           <div class="service-item">
-            <div class="icon">🎧</div> <!-- Placeholder Icon -->
-            <h4>Ongoing Support & Maintenance</h4>
-            <p>Reliable updates, fixes, and optimisations—so your site runs smoothly 24/7.</p>
+            <div class="icon">🔧</div>
+            <h3>Ongoing Support & Maintenance</h3>
+            <p>Reliable updates, fixes, and optimizations—so your site runs smoothly 24/7. We provide continuous monitoring, security updates, and performance enhancements.</p>
           </div>
           <div class="service-item">
-            <div class="icon">🚩</div> <!-- Placeholder Icon -->
-            <h4>Marketing Strategy</h4>
-            <p>Smart, data-driven strategies to boost your reach and drive results.</p>
+            <div class="icon">📈</div>
+            <h3>Digital Marketing Strategy</h3>
+            <p>Smart, data-driven strategies to boost your reach and drive results. We help you connect with your audience through SEO, social media, and targeted campaigns.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <h2>How We Work</h2>
+        <p>Our proven process ensures every project delivers exceptional results. From initial consultation to launch and beyond, we work closely with you to bring your vision to life while exceeding your expectations.</p>
       </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
       <div class="container">
-        <h3>Have a project in mind?</h3>
-        <a href="contact.html" class="cta-button">Contact Us Today →</a>
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <a href="contact.html" class="cta-button">Get Started Today →</a>
       </div>
     </section>
   </main>
@@ -606,13 +1027,97 @@
   </footer>
 
   <script>
+    // Page loader functionality
+    window.addEventListener('load', function() {
+      const loader = document.querySelector('.page-loader');
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        // Trigger scroll animations after loader disappears
+        setTimeout(() => {
+          initScrollAnimations();
+        }, 100);
+      }, 800);
+    });
+
+    // Mobile menu toggle
     function toggleMenu() {
       var navLinks = document.getElementById('nav-links');
       var menuIcon = document.querySelector('.menu-icon');
       navLinks.classList.toggle('show');
+      menuIcon.classList.toggle('active');
       var isExpanded = navLinks.classList.contains('show');
       menuIcon.setAttribute('aria-expanded', isExpanded);
     }
+
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll animations using Intersection Observer
+    function initScrollAnimations() {
+      const elementsToAnimate = document.querySelectorAll('.services-overview h2, .services-overview .intro-text, .service-item, .process-section h2, .process-section p, .cta-section h2, .cta-button');
+      
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      elementsToAnimate.forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('nav');
+      const menuIcon = document.querySelector('.menu-icon');
+      const navLinks = document.getElementById('nav-links');
+      
+      if (!nav.contains(event.target) && !menuIcon.contains(event.target)) {
+        navLinks.classList.remove('show');
+        menuIcon.classList.remove('active');
+        menuIcon.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Initialize animations on DOM content loaded (fallback)
+    document.addEventListener('DOMContentLoaded', function() {
+      // If page is already loaded, trigger animations immediately
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          initScrollAnimations();
+        }, 100);
+      }
+    });
   </script>
 
 </body>

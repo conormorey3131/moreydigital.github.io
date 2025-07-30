@@ -12,7 +12,7 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Contact Morey Digital | Web Design & SEO Limerick">
   <meta property="og:description" content="Get in touch with Morey Digital in Limerick for expert web development, SEO, and digital marketing services.">
-  <meta property="og:image" content="https://www.moreydigital.ie/images/og-contact.jpg"> <!-- Placeholder OG image -->
+  <meta property="og:image" content="https://www.moreydigital.ie/images/og-default.svg">
   <meta property="og:url" content="https://www.moreydigital.ie/contact.html">
   <meta property="og:type" content="website">
 
@@ -20,7 +20,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Morey Digital | Web Design & SEO Limerick">
   <meta name="twitter:description" content="Get in touch with Morey Digital in Limerick for expert web development, SEO, and digital marketing services.">
-  <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-contact.jpg"> <!-- Placeholder Twitter image -->
+  <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-default.svg">
 
   <!-- Canonical Link -->
   <link rel="canonical" href="https://www.moreydigital.ie/contact.html">
@@ -71,107 +71,343 @@
   </script>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Stylesheet -->
   <style>
-    /* General Styles */
+    /* CSS Variables for consistent theming */
+    :root {
+      --primary-color: #333333;
+      --accent-color: #ff6600;
+      --accent-hover: #e65c00;
+      --background: #ffffff;
+      --text-light: #666666;
+      --text-lighter: #888888;
+      --border-color: #e1e5e9;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --shadow-hover: rgba(0, 0, 0, 0.2);
+      --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      --border-radius: 12px;
+      --spacing: 1rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Mobile-first base styles */
     body {
       margin: 0;
-      padding: 0;
+      padding: 80px 0 0 0;
       font-family: 'Montserrat', sans-serif;
-      background: #ffffff;
-      color: #333333;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      color: var(--primary-color);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      line-height: 1.6;
+      font-size: 16px;
+      overflow-x: hidden;
     }
 
+    /* Preloader animation */
+    .page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+    }
+
+    .page-loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--border-color);
+      border-top: 3px solid var(--accent-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .fade-in-delay-1 { animation-delay: 0.2s; }
+    .fade-in-delay-2 { animation-delay: 0.4s; }
+    .fade-in-delay-3 { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Mobile-first header */
     header {
-      background-color: transparent;
-      padding: 20px;
-      position: relative;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: var(--transition);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
     }
 
     header h1 {
       margin: 0;
-      font-size: 3em;
-      font-weight: bold;
+      font-size: 1.5rem;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     header h1 a {
-      color: #333333;
+      color: var(--primary-color);
       text-decoration: none;
+      background: var(--gradient-1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: var(--transition);
+    }
+    
+    header h1 a:hover {
+      background: var(--gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transform: scale(1.05);
     }
 
-    /* Navbar Styles */
+    /* Mobile-first navigation */
     nav {
-      display: flex;
-      justify-content: flex-end;
+      display: none;
     }
-
+    
     nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 2rem 0;
+      transform: translateY(-100%);
+      transition: var(--transition);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-
+    
+    nav ul.show {
+      transform: translateY(0);
+    }
+    
     nav li {
-      margin: 0 15px;
+      margin: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInNav 0.5s ease-out forwards;
     }
-
+    
+    nav li:nth-child(1) { animation-delay: 0.1s; }
+    nav li:nth-child(2) { animation-delay: 0.2s; }
+    nav li:nth-child(3) { animation-delay: 0.3s; }
+    nav li:nth-child(4) { animation-delay: 0.4s; }
+    nav li:nth-child(5) { animation-delay: 0.5s; }
+    
+    @keyframes slideInNav {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     nav a {
-      color: #333333;
+      color: var(--primary-color);
       text-decoration: none;
-      font-weight: 700;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 1rem 2rem;
+      display: block;
+      position: relative;
+      transition: var(--transition);
     }
-
+    
+    nav a:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient-1);
+      transition: var(--transition);
+      transform: translateX(-50%);
+    }
+    
+    nav a:hover:before,
+    nav a.active:before {
+      width: 60%;
+    }
+    
     nav a:hover,
     nav a.active {
-      text-decoration: underline;
+      color: var(--accent-color);
+      transform: scale(1.05);
     }
 
-    /* Hamburger Menu Icon */
+    /* Fancy hamburger menu */
     .menu-icon {
-      display: none;
+      display: block;
       cursor: pointer;
-      position: absolute;
-      top: 30px;
-      right: 20px;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 1001;
+    }
+    
+    .menu-icon div {
+      width: 100%;
+      height: 3px;
+      background: var(--gradient-1);
+      margin: 6px 0;
+      transition: var(--transition);
+      border-radius: 2px;
+      transform-origin: center;
+    }
+    
+    .menu-icon.active div:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+    
+    .menu-icon.active div:nth-child(2) {
+      opacity: 0;
+      transform: scale(0);
+    }
+    
+    .menu-icon.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
     }
 
-    .menu-icon div {
-      width: 30px;
-      height: 4px;
-      background-color: #333333;
-      margin: 6px 0;
-      transition: 0.4s;
+    /* Hero Section */
+    .contact-hero {
+      background: var(--gradient-1);
+      color: #ffffff;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="25" cy="25" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .contact-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: heroTitle 1s ease-out;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .contact-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+      animation: heroText 1.2s ease-out 0.3s both;
+    }
+    
+    @keyframes heroTitle {
+      from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    @keyframes heroText {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 0.9;
+        transform: translateY(0);
+      }
     }
 
     /* Main Content */
     main {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      max-width: 800px;
-      font-size: 1.2em;
-      margin-bottom: 30px;
+      padding: 2rem 1rem;
+      position: relative;
+      z-index: 1;
+      min-height: 50vh;
     }
 
     .contact-info {
@@ -186,6 +422,194 @@
 
     .contact-info a:hover {
       text-decoration: underline;
+    }
+
+    /* Enhanced Contact Form Styles */
+    .contact-form-container {
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      position: relative;
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) rotateX(0);
+      transition: var(--transition);
+    }
+    
+    .contact-form-container.fade-in {
+      animation: formSlideIn 0.8s ease-out;
+    }
+    
+    @keyframes formSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px) rotateX(10deg);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+      }
+    }
+    
+    .contact-form-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form-container h2 {
+      text-align: center;
+      background: var(--gradient-2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 800;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border: 2px solid var(--border-color);
+      border-radius: var(--border-radius);
+      font-size: 16px;
+      font-family: inherit;
+      transition: var(--transition);
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.95);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 102, 0, 0.2);
+    }
+    
+    .form-group input:hover,
+    .form-group select:hover,
+    .form-group textarea:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-1px);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--gradient-2);
+      color: white;
+      padding: 1.2rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3);
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: var(--transition-slow);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(245, 87, 108, 0.4);
+    }
+    
+    .submit-btn:hover::before {
+      left: 100%;
+    }
+
+    /* Success Message Styling */
+    .success-message {
+      background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+      color: #ffffff;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      margin-bottom: 2rem;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
+      animation: successSlideIn 0.8s ease-out;
+    }
+
+    .success-message h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .success-message p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    @keyframes successSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Error state styling */
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    }
+    
+    .form-group.error label {
+      color: #ef4444 !important;
+    }
+    
+    .submit-btn:active {
+      transform: translateY(-1px) scale(1.01);
     }
 
     .socials {
@@ -295,46 +719,154 @@
       color: #aaaaaa;
     }
 
-    /* Responsive Styles */
-    @media (max-width: 768px) {
+    /* Contact Info Styles */
+    .contact-info {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: var(--border-radius);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .contact-info h2 {
+      background: var(--gradient-3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+    }
+    
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+    
+    .contact-info a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    
+    .contact-info a:hover {
+      color: var(--accent-hover);
+      transform: scale(1.05);
+    }
+    
+    .socials {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .socials a {
+      color: var(--primary-color);
+      font-size: 2rem;
+      transition: var(--transition);
+      padding: 1rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .socials a:hover {
+      color: var(--accent-color);
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+    }
+
+    /* Tablet and up */
+    @media (min-width: 768px) {
       header {
-        padding: 10px;
+        padding: 1.5rem 2rem;
       }
-
+      
       header h1 {
-        font-size: 2em;
+        font-size: 2rem;
       }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.9);
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        padding: 0;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      nav li {
-        margin: 10px 0;
-        text-align: center;
-      }
-
-      .menu-icon {
+      
+      nav {
         display: block;
       }
-
-      .socials {
-        flex-direction: column;
+      
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 0;
+        transform: none;
+        box-shadow: none;
+        gap: 2rem;
       }
-
-      .socials a {
-        margin: 10px 0;
+      
+      nav li {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+      
+      nav a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+      }
+      
+      .menu-icon {
+        display: none;
+      }
+      
+      .contact-hero {
+        padding: 6rem 2rem 3rem;
+      }
+      
+      .contact-hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .contact-form-container {
+        padding: 3rem;
+        max-width: 800px;
+      }
+      
+      .socials {
+        gap: 3rem;
+      }
+    }
+    
+    /* Desktop and up */
+    @media (min-width: 1024px) {
+      header {
+        padding: 2rem 3rem;
+      }
+      
+      header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .contact-hero {
+        padding: 8rem 3rem 4rem;
+      }
+      
+      .contact-hero h1 {
+        font-size: 4rem;
+      }
+      
+      .contact-form-container {
+        padding: 4rem;
+        max-width: 900px;
       }
     }
   </style>
@@ -368,10 +900,95 @@
     </nav>
   </header>
 
-  <main>
+  <!-- Hero Section -->
+  <section class="contact-hero">
     <h1>Contact Us</h1>
-    <p>We'd love to hear from you! Whether you're in Ireland or anywhere in the world, we're ready to meet your digital needs.</p>
+    <p>Ready to elevate your digital presence? Get in touch and let's discuss how we can help your business grow online.</p>
+  </section>
+
+  <main>
+    
+    <!-- Contact Form -->
+    <div class="contact-form-container">
+      <h2>Get A Free Consultation</h2>
+      
+      <!-- Success Message (hidden by default) -->
+      <div id="success-message" class="success-message" style="display: none;">
+        <h3>✅ Message Sent Successfully!</h3>
+        <p>Thank you for contacting Morey Digital. We've received your message and will get back to you within 24 hours.</p>
+      </div>
+      
+      <form action="https://formspree.io/f/myzppzno" method="POST" class="contact-form">
+        <!-- Custom subject line -->
+        <input type="hidden" name="_subject" value="New Contact Form Submission - Morey Digital Website">
+        <!-- Redirect after successful submission -->
+        <input type="hidden" name="_next" value="https://www.moreydigital.ie/thank-you.html">
+        <!-- Alternative redirect method -->
+        <input type="hidden" name="_redirect" value="https://www.moreydigital.ie/thank-you.html">
+        <!-- Reply-to field -->
+        <input type="hidden" name="_replyto" value="">
+        <!-- Disable CAPTCHA -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Honeypot field for spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company">
+        </div>
+        
+        <div class="form-group">
+          <label for="service">Service Interested In</label>
+          <select id="service" name="service">
+            <option value="">Please select...</option>
+            <option value="web-design">Web Design & Development</option>
+            <option value="ecommerce">E-commerce Solutions</option>
+            <option value="digital-marketing">Digital Marketing</option>
+            <option value="seo">SEO Services</option>
+            <option value="maintenance">Website Maintenance</option>
+            <option value="consultation">General Consultation</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="budget">Monthly Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Please select...</option>
+            <option value="under-100">Under €100/month</option>
+            <option value="100-250">€100 - €250/month</option>
+            <option value="250-500">€250 - €500/month</option>
+            <option value="500-1k">€500 - €1,000/month</option>
+            <option value="1k-plus">€1,000+/month</option>
+            <option value="one-time">One-time project</option>
+            <option value="discuss">Let's discuss</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Project Details *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, goals, timeline, and any specific requirements..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+    
     <div class="contact-info">
+      <h2>Other Ways To Connect</h2>
       <p><strong>Email:</strong> <a href="mailto:conor@moreydigital.ie">conor@moreydigital.ie</a></p>
       <p><strong>Phone:</strong> <a href="tel:+353873999296">+353 87 399 9296</a></p>
       <p><strong>Location:</strong> Based in Limerick, available for meetings in surrounding areas and worldwide remotely.</p>
@@ -466,14 +1083,220 @@
     </div>
   </footer>
 
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader"></div>
+  </div>
+
   <script>
+    // Enhanced mobile menu toggle
     function toggleMenu() {
       var navLinks = document.getElementById('nav-links');
       var menuIcon = document.querySelector('.menu-icon');
+      
       navLinks.classList.toggle('show');
+      menuIcon.classList.toggle('active');
+      
       var isExpanded = navLinks.classList.contains('show');
       menuIcon.setAttribute('aria-expanded', isExpanded);
+      
+      document.body.style.overflow = isExpanded ? 'hidden' : 'auto';
     }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      var nav = document.querySelector('nav');
+      var menuIcon = document.querySelector('.menu-icon');
+      var navLinks = document.getElementById('nav-links');
+      
+      if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
+        navLinks.classList.remove('show');
+        menuIcon.classList.remove('active');
+        menuIcon.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      var header = document.querySelector('header');
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+    
+    // Page loader
+    window.addEventListener('load', function() {
+      var loader = document.getElementById('pageLoader');
+      setTimeout(function() {
+        loader.classList.add('hidden');
+        // Ensure form is visible first
+        var formContainer = document.querySelector('.contact-form-container');
+        var contactInfo = document.querySelector('.contact-info');
+        
+        if (formContainer) {
+          formContainer.style.opacity = '1';
+          formContainer.style.visibility = 'visible';
+          setTimeout(function() {
+            formContainer.classList.add('fade-in');
+          }, 100);
+        }
+        
+        if (contactInfo) {
+          setTimeout(function() {
+            contactInfo.classList.add('fade-in');
+          }, 300);
+        }
+      }, 500);
+    });
+    
+    // Check for success parameter on page load
+    function checkForSuccess() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        showSuccessMessage();
+        // Clean URL
+        const newUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, newUrl);
+      }
+    }
+    
+    // Show success message
+    function showSuccessMessage() {
+      const successMessage = document.getElementById('success-message');
+      const form = document.querySelector('.contact-form');
+      
+      if (successMessage && form) {
+        successMessage.style.display = 'block';
+        form.style.display = 'none';
+        
+        // Scroll to success message
+        setTimeout(() => {
+          successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+        
+        // Auto-hide after 10 seconds and show form again
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+          form.style.display = 'block';
+          form.reset(); // Reset form fields
+        }, 10000);
+      }
+    }
+
+    // Ensure form is visible on DOM content loaded (fallback)
+    document.addEventListener('DOMContentLoaded', function() {
+      var formContainer = document.querySelector('.contact-form-container');
+      if (formContainer) {
+        formContainer.style.opacity = '1';
+        formContainer.style.visibility = 'visible';
+        formContainer.style.display = 'block';
+      }
+      
+      // Check for success message
+      checkForSuccess();
+      
+      // Form enhancements
+      const inputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+      const emailInput = document.getElementById('email');
+      const replyToField = document.querySelector('input[name="_replyto"]');
+      
+      // Set reply-to field when email changes
+      if (emailInput && replyToField) {
+        emailInput.addEventListener('input', function() {
+          replyToField.value = this.value;
+        });
+      }
+      
+      inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+          this.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+          if (!this.value) {
+            this.parentElement.classList.remove('focused');
+          }
+        });
+        
+        if (input.value) {
+          input.parentElement.classList.add('focused');
+        }
+      });
+      
+      // Form submission handling with AJAX
+      const form = document.querySelector('.contact-form');
+      const submitBtn = document.querySelector('.submit-btn');
+      
+      if (form && submitBtn) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault(); // Always prevent default submission
+          
+          // Validate required fields
+          const requiredFields = form.querySelectorAll('[required]');
+          let isValid = true;
+          
+          requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+              isValid = false;
+              field.parentElement.classList.add('error');
+              field.focus();
+            } else {
+              field.parentElement.classList.remove('error');
+            }
+          });
+          
+          // Email validation
+          const emailField = form.querySelector('input[type="email"]');
+          if (emailField && emailField.value) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailField.value)) {
+              isValid = false;
+              emailField.parentElement.classList.add('error');
+              emailField.focus();
+            }
+          }
+          
+          if (isValid) {
+            // Update button state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.background = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
+            submitBtn.disabled = true;
+            
+            // Submit form via AJAX
+            const formData = new FormData(form);
+            
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            }).then(response => {
+              if (response.ok) {
+                // Success - redirect to thank you page
+                window.location.href = 'thank-you.html';
+              } else {
+                throw new Error('Form submission failed');
+              }
+            }).catch(error => {
+              // Error handling
+              submitBtn.textContent = 'Error - Try Again';
+              submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+              submitBtn.disabled = false;
+              
+              // Reset button after 3 seconds
+              setTimeout(() => {
+                submitBtn.textContent = 'Send Message';
+                submitBtn.style.background = 'var(--gradient-2)';
+              }, 3000);
+            });
+          }
+        });
+      }
+    });
   </script>
 
 </body>
