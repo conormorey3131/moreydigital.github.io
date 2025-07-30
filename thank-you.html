@@ -113,6 +113,11 @@
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
+    header.scrolled {
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    }
+
     header h1 {
       margin: 0;
       font-size: 1.5rem;
@@ -141,7 +146,7 @@
 
     /* Navigation */
     nav {
-      display: none;
+      display: block;
     }
     
     nav ul {
@@ -161,15 +166,36 @@
       transform: translateY(-100%);
       transition: var(--transition);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
     }
     
     nav ul.show {
       transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
     }
     
     nav li {
       margin: 0;
       text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInNav 0.5s ease-out forwards;
+    }
+    
+    nav li:nth-child(1) { animation-delay: 0.1s; }
+    nav li:nth-child(2) { animation-delay: 0.2s; }
+    nav li:nth-child(3) { animation-delay: 0.3s; }
+    nav li:nth-child(4) { animation-delay: 0.4s; }
+    nav li:nth-child(5) { animation-delay: 0.5s; }
+    
+    @keyframes slideInNav {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     
     nav a {
@@ -440,15 +466,25 @@
       }
       
       nav ul {
+        display: flex;
         position: static;
         flex-direction: row;
         background: transparent;
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
         padding: 0;
-        transform: translateY(0);
+        transform: none;
         box-shadow: none;
         gap: 2rem;
+        opacity: 1;
+        visibility: visible;
+        z-index: auto;
+      }
+      
+      nav li {
+        animation: none;
+        opacity: 1;
+        transform: none;
       }
       
       nav a {
@@ -533,26 +569,45 @@
       }, 800);
     });
 
-    // Mobile menu toggle
+    // Enhanced mobile menu toggle
     function toggleMenu() {
       var navLinks = document.getElementById('nav-links');
       var menuIcon = document.querySelector('.menu-icon');
+      
+      if (!navLinks || !menuIcon) return;
+      
       navLinks.classList.toggle('show');
       menuIcon.classList.toggle('active');
+      
       var isExpanded = navLinks.classList.contains('show');
       menuIcon.setAttribute('aria-expanded', isExpanded);
+      
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = isExpanded ? 'hidden' : 'auto';
     }
 
-    // Close mobile menu when clicking outside
+    // Close menu when clicking outside or on menu items
     document.addEventListener('click', function(event) {
       const nav = document.querySelector('nav');
       const menuIcon = document.querySelector('.menu-icon');
       const navLinks = document.getElementById('nav-links');
       
+      if (!nav || !menuIcon || !navLinks) return;
+      
+      // Close menu if clicking outside nav or menu icon
       if (!nav.contains(event.target) && !menuIcon.contains(event.target)) {
         navLinks.classList.remove('show');
         menuIcon.classList.remove('active');
         menuIcon.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Close menu if clicking on a nav link (for mobile)
+      if (event.target.matches('nav a')) {
+        navLinks.classList.remove('show');
+        menuIcon.classList.remove('active');
+        menuIcon.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = 'auto';
       }
     });
 
