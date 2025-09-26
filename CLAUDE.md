@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a static HTML website for Morey Digital, a web development and digital marketing company based in Limerick, Ireland. The site is designed to be deployed to GitHub Pages and uses the custom domain `moreydigital.ie`.
+This is a static HTML website for Morey Digital, a web development and digital marketing company based in Clare, Ireland. The site is designed to be deployed to GitHub Pages and uses the custom domain `moreydigital.ie`.
 
 ## Architecture & Structure
 
@@ -92,7 +92,7 @@ linkchecker http://localhost:8000
 ### Updating Contact Information
 - Primary contact: `conor@moreydigital.ie`
 - Phone: `+353 87 399 9296`
-- Location: Limerick, Ireland
+- Location: Clare, Ireland
 - Social media links are consistent across all pages
 
 ### SEO & Analytics
