@@ -776,6 +776,15 @@
         <a href="https://vamplingerie.com/" target="_blank" rel="noopener" class="button">Visit Site</a>
       </div>
 
+      <!-- NL Comps Project -->
+      <div class="project">
+        <a href="https://nlcompetitionsni.com/" target="_blank" rel="noopener">
+          <img src="images/nlcomps.jpg" alt="NL Comps - Website Design by Morey Digital" loading="lazy" width="400" height="225" class="no-webp">
+        </a>
+        <h3>NL Comps</h3>
+        <a href="https://nlcompetitionsni.com/" target="_blank" rel="noopener" class="button">Visit Site</a>
+      </div>
+
       <!-- Project 2 -->
       <div class="project">
         <a href="https://cruzireland.com/" target="_blank" rel="noopener">
@@ -1039,7 +1048,7 @@
 
     // Serve WebP images if supported
     if (supportsWebp()) {
-      const images = document.querySelectorAll('img[src$=".png"], img[src$=".jpg"]');
+      const images = document.querySelectorAll('img[src$=".png"]:not(.no-webp), img[src$=".jpg"]:not(.no-webp)');
       images.forEach(img => {
         const webpSrc = img.src.replace(/\.(png|jpg)$/, '.webp');
         img.src = webpSrc;
