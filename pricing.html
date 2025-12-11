@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Website Pricing Packages Clare | Morey Digital Web Design</title>
+  <title>Website Pricing Packages | Morey Digital Limerick, Clare & Ireland</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta name="description" content="Transparent pricing for web design services in Clare. Starter websites from €599, E-commerce solutions, and Website as a Service packages. Get your business online today.">
-  <meta name="keywords" content="website pricing Clare, web design cost Ireland, affordable websites Clare, e-commerce pricing, website packages, monthly website plans, WaaS pricing">
+  <meta name="description" content="Transparent website pricing packages for Irish businesses. Starter websites from €499, Website-as-a-Service €150/mo, Shopify stores €349/mo. Serving Limerick, Clare & Ireland.">
+  <meta name="keywords" content="website pricing Ireland, web design cost Limerick, affordable websites Clare, Shopify pricing, website packages Ireland">
   <meta name="author" content="Morey Digital">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Website Pricing Packages Clare | Morey Digital">
-  <meta property="og:description" content="Transparent pricing for web design services in Clare. Starter websites from €599, E-commerce solutions, and Website as a Service packages.">
+  <meta property="og:title" content="Website Pricing Packages | Morey Digital Limerick, Clare & Ireland">
+  <meta property="og:description" content="Transparent website pricing packages for Irish businesses. Starter websites from €499, Website-as-a-Service €150/mo, Shopify stores €349/mo. Serving Limerick, Clare & Ireland.">
   <meta property="og:image" content="https://www.moreydigital.ie/images/og-default.svg">
   <meta property="og:url" content="https://www.moreydigital.ie/pricing.html">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Website Pricing Packages Clare | Morey Digital">
-  <meta name="twitter:description" content="Transparent pricing for web design services in Clare. Starter websites from €599, E-commerce solutions, and Website as a Service packages.">
+  <meta name="twitter:title" content="Website Pricing Packages | Morey Digital Limerick, Clare & Ireland">
+  <meta name="twitter:description" content="Transparent website pricing packages for Irish businesses. Starter websites from €499, Website-as-a-Service €150/mo, Shopify stores €349/mo. Serving Limerick, Clare & Ireland.">
   <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-default.svg">
 
   <!-- Canonical Link -->
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
-    "name": "Website Pricing Packages",
-    "description": "Transparent pricing for web design services in Clare",
+    "name": "Website Pricing Packages | Morey Digital Limerick, Clare & Ireland",
+    "description": "Transparent website pricing packages for Irish businesses. Starter websites from €499, Website-as-a-Service €150/mo, Shopify stores €349/mo. Serving Limerick, Clare & Ireland.",
     "url": "https://www.moreydigital.ie/pricing.html",
     "provider": {
       "@type": "Organization",
@@ -395,59 +395,184 @@
   }
 
   .package-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: white;
+    border-radius: 16px;
+    overflow: visible;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    padding: 2rem;
   }
 
   .package-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
   }
-
-  .package-image {
-    width: 100%;
-    height: auto;
-    display: block;
+  
+  .package-card.featured {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+  }
+  
+  .package-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+  }
+  
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .package-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #f3f4f6;
+  }
+  
+  .package-header h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .tagline {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 1.1rem;
+  }
+  
+  .price-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .price-main {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-light);
+  }
+  
+  .amount {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+  }
+  
+  .period {
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+  
+  .price-secondary {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--text-light);
+  }
+  
+  .price-secondary.zero-setup {
+    color: #22c55e;
+    font-weight: 600;
   }
 
   .package-content {
-    padding: 2rem;
+    text-align: left;
+  }
+  
+  .package-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .feature-list li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: bold;
+  }
+  
+  .contract-note {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0;
+  }
+  
+  .ideal-for {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 1.5rem 0;
     text-align: center;
   }
-
-  .package-content h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  
+  .hero-trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
   }
-
-  .package-content .price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+  
+  .hero-trust-badges .badge {
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
   }
-
-  .package-content .price-period {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--text-light);
+  
+  .cta-button.primary {
+    background: var(--accent-color);
+    color: white;
   }
-
-  .package-content .description {
-    color: var(--text-light);
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  
+  .cta-button.primary:hover {
+    background: var(--accent-hover);
   }
 
   .cta-button {
@@ -711,7 +836,7 @@
 
   <header>
     <h1><a href="index.html">Morey Digital</a></h1>
-    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu">
+    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
       <div></div>
       <div></div>
       <div></div>
@@ -719,20 +844,25 @@
     <nav>
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html" class="active">Packages</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html" class="active">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <a href="contact.html" class="header-cta-btn">Get Started</a>
   </header>
 
   <!-- Hero Section -->
   <section class="pricing-hero">
     <div class="container">
-      <h1>Transparent Pricing for Every Business</h1>
-      <p>Choose the perfect package to get your business online and growing. No hidden fees, just honest pricing.</p>
+      <h1>Simple, Transparent Website Pricing</h1>
+      <p>Three clear packages. No hidden fees. Choose what works for your business.</p>
+      <div class="hero-trust-badges">
+        <span class="badge">✓ Monthly Payment Options</span>
+        <span class="badge">✓ €0 Upfront Available</span>
+        <span class="badge">✓ Cancel Anytime</span>
+      </div>
     </div>
   </section>
 
@@ -741,44 +871,148 @@
     <div class="container">
       <div class="pricing-packages">
         <!-- Starter Package -->
-        <div class="package-card">
-          <img src="starter-package.png" alt="Starter Website Package - €499 + €39/month" class="package-image">
-          <div class="package-content">
-            <h3>Starter Package</h3>
-            <div class="price">
-              €499
-              <span class="price-period">+ €39/month</span>
+        <div class="package-card" id="starter">
+          <div class="package-header">
+            <h3>Starter Website + Care</h3>
+            <p class="tagline">"Your Website, Sorted."</p>
+          </div>
+          <div class="price-section">
+            <div class="price-main">
+              <span class="currency">€</span>
+              <span class="amount">499</span>
+              <span class="period">one-time</span>
             </div>
-            <p class="description">Perfect for small businesses and startups looking to establish their online presence quickly and affordably.</p>
-            <a href="contact.html" class="cta-button">Get Started</a>
+            <div class="price-secondary">
+              + €39/month for care
+            </div>
+          </div>
+          <div class="package-content">
+            <h4>One-Time Setup (€499)</h4>
+            <ul class="feature-list">
+              <li>1-2 page professional website</li>
+              <li>Custom branded layout</li>
+              <li>Mobile responsive design</li>
+              <li>Contact form included</li>
+              <li>Social media links</li>
+              <li>Basic SEO setup</li>
+              <li>Launch + hosting setup</li>
+              <li>Free updates for first 14 days</li>
+            </ul>
+            <h4>Monthly Care (€39/month)</h4>
+            <ul class="feature-list">
+              <li>Fully managed hosting</li>
+              <li>Domain management</li>
+              <li>Security updates</li>
+              <li>Plugin & core updates</li>
+              <li>Monthly backup</li>
+              <li>Uptime monitoring</li>
+              <li>Minor text edits (10 min)</li>
+              <li>Email support (48-72h)</li>
+            </ul>
+            <p class="ideal-for">Ideal for: Local businesses, consultants, and professionals who need a simple web presence.</p>
+            <a href="contact.html?package=starter" class="cta-button">Get Started</a>
           </div>
         </div>
 
         <!-- WaaS Package -->
-        <div class="package-card">
-          <img src="waas-package-branded.png" alt="Website as a Service Package - €150/month" class="package-image">
-          <div class="package-content">
-            <h3>Website as a Service</h3>
-            <div class="price">
-              €150
-              <span class="price-period">/month</span>
+        <div class="package-card featured" id="waas">
+          <div class="featured-badge">Most Popular</div>
+          <div class="package-header">
+            <h3>Website-as-a-Service</h3>
+            <p class="tagline">"Your Website, Zero Upfront."</p>
+          </div>
+          <div class="price-section">
+            <div class="price-main">
+              <span class="currency">€</span>
+              <span class="amount">150</span>
+              <span class="period">/month</span>
             </div>
-            <p class="description">Complete website solution with ongoing updates, maintenance, and support. No upfront costs, cancel anytime.</p>
-            <a href="contact.html" class="cta-button">Learn More</a>
+            <div class="price-secondary zero-setup">
+              €0 Setup Fee
+            </div>
+          </div>
+          <div class="package-content">
+            <h4>Custom Website Build</h4>
+            <ul class="feature-list">
+              <li>4-8 page professional site</li>
+              <li>Custom branded design</li>
+              <li>Mobile-first responsive</li>
+              <li>Contact forms + social links</li>
+              <li>Speed + SEO optimised</li>
+            </ul>
+            <h4>Hosting & Security</h4>
+            <ul class="feature-list">
+              <li>Premium managed hosting</li>
+              <li>SSL certificate included</li>
+              <li>Security + uptime monitoring</li>
+              <li>Domain management</li>
+            </ul>
+            <h4>Maintenance & Updates</h4>
+            <ul class="feature-list">
+              <li>Monthly website changes (up to 60 mins)</li>
+              <li>Performance checks</li>
+              <li>Bug fixes included</li>
+            </ul>
+            <h4>Content & SEO</h4>
+            <ul class="feature-list">
+              <li>60 mins content edits / month</li>
+              <li>Priority support (24-48h)</li>
+              <li>SEO monitoring + small fixes</li>
+            </ul>
+            <p class="contract-note">6-month minimum contract</p>
+            <p class="ideal-for">Ideal for: Growing SMEs, service businesses, and companies that need regular website updates.</p>
+            <a href="contact.html?package=waas" class="cta-button primary">Start Free Consultation</a>
           </div>
         </div>
 
         <!-- E-commerce Package -->
-        <div class="package-card">
-          <img src="ecommerce-subscription.png" alt="E-commerce Subscription - €349/month" class="package-image">
-          <div class="package-content">
-            <h3>E-commerce Subscription</h3>
-            <div class="price">
-              €349
-              <span class="price-period">/month</span>
+        <div class="package-card" id="shopify">
+          <div class="package-header">
+            <h3>E-Commerce Store Subscription</h3>
+            <p class="tagline">"Your Store, Zero Upfront."</p>
+          </div>
+          <div class="price-section">
+            <div class="price-main">
+              <span class="currency">€</span>
+              <span class="amount">349</span>
+              <span class="period">/month</span>
             </div>
-            <p class="description">Full online store with inventory management, payment processing, and ongoing optimization for maximum sales.</p>
-            <a href="contact.html" class="cta-button">Start Selling</a>
+            <div class="price-secondary zero-setup">
+              €0 Setup Fee
+            </div>
+          </div>
+          <div class="package-content">
+            <h4>Full E-Commerce Store Build</h4>
+            <ul class="feature-list">
+              <li>Custom-designed Shopify theme</li>
+              <li>Homepage, collections, product pages</li>
+              <li>About, contact & policy pages</li>
+              <li>Branded checkout styling</li>
+              <li>Speed + SEO optimised</li>
+            </ul>
+            <h4>Payments & Shipping</h4>
+            <ul class="feature-list">
+              <li>Payment gateway setup</li>
+              <li>Shipping rates configured</li>
+              <li>App integrations (reviews, email, etc.)</li>
+            </ul>
+            <h4>Product Management</h4>
+            <ul class="feature-list">
+              <li>Add & edit products</li>
+              <li>Photos, variants & descriptions</li>
+              <li>Tags & organisation</li>
+              <li>SEO improvements</li>
+            </ul>
+            <h4>Ongoing Support</h4>
+            <ul class="feature-list">
+              <li>Monthly change requests (2 hrs)</li>
+              <li>WhatsApp / email support</li>
+              <li>Theme & app maintenance</li>
+              <li>Bug fixes + troubleshooting</li>
+            </ul>
+            <p class="contract-note">6-month minimum contract</p>
+            <p class="ideal-for">Ideal for: Retail businesses, brands, and anyone serious about selling online.</p>
+            <a href="contact.html?package=shopify" class="cta-button">Start Selling Online</a>
           </div>
         </div>
       </div>
@@ -791,30 +1025,30 @@
       <h2>Frequently Asked Questions</h2>
       <div class="faq-container">
         <div class="faq-item">
-          <h3 class="faq-question">What's included in the Starter Package?</h3>
+          <h3 class="faq-question">Do I have to sign a contract?</h3>
           <div class="faq-answer">
-            The Starter Package includes a professionally designed 5-page website, mobile responsiveness, basic SEO setup, contact forms, social media integration, and 30 days of post-launch support. Perfect for businesses that need a professional online presence quickly.
+            For the Starter Package, there's no contract - just a one-time payment plus optional monthly care. Our Website-as-a-Service and E-Commerce packages have a 6-month minimum term to ensure we can deliver ongoing value, but you can cancel anytime after that with 30 days notice.
           </div>
         </div>
 
         <div class="faq-item">
-          <h3 class="faq-question">How does Website as a Service (WaaS) work?</h3>
+          <h3 class="faq-question">Can I upgrade later?</h3>
           <div class="faq-answer">
-            WaaS is our monthly subscription model with no upfront costs. You get a custom website, hosting, maintenance, regular updates, and ongoing support for one monthly fee. It's like having your own web team without the overhead. Cancel anytime with 30 days notice.
+            Absolutely! You can start with our Starter Package and upgrade to Website-as-a-Service or E-Commerce anytime. We'll migrate all your content and ensure a smooth transition. Many businesses start small and grow into our subscription services.
           </div>
         </div>
 
         <div class="faq-item">
-          <h3 class="faq-question">What's included in the E-commerce Subscription?</h3>
+          <h3 class="faq-question">How long does a site take to build?</h3>
           <div class="faq-answer">
-            Our E-commerce Subscription includes everything in WaaS plus a full online store setup, product management, secure payment processing, inventory tracking, order management, and monthly performance reports. We handle the technical side so you can focus on selling.
+            Starter websites typically launch within 48-72 hours. Website-as-a-Service sites take 5-7 business days for a full custom build. E-Commerce stores usually take 7-10 business days depending on product catalog size. We pride ourselves on fast turnaround times.
           </div>
         </div>
 
         <div class="faq-item">
-          <h3 class="faq-question">Can I upgrade or downgrade my package?</h3>
+          <h3 class="faq-question">Do you work with existing websites?</h3>
           <div class="faq-answer">
-            Absolutely! You can upgrade from the Starter Package to a subscription model anytime. For subscription services, you can change your plan with 30 days notice. We'll help migrate all your content and ensure a smooth transition.
+            Yes! We can take over maintenance of your existing website or rebuild it entirely depending on your needs. We'll assess your current site and recommend the best approach. Many clients come to us for a fresh start with better performance and design.
           </div>
         </div>
 
@@ -856,19 +1090,19 @@
         <div class="footer-social-icons">
           <a href="https://www.linkedin.com/company/morey-digital/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
-              <title>LinkedIn</title>
+              <title>Website Pricing Packages | Morey Digital Limerick, Clare & Ireland</title>
               <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.038-1.852-3.038-1.853 0-2.136 1.445-2.136 2.941v5.666H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.6 0 4.266 2.368 4.266 5.452v6.287zM5.337 7.433a2.064 2.064 0 11.001-4.128 2.064 2.064 0 010 4.128zM6.86 20.452H3.814V9h3.046v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.207 24 24 23.229 24 22.271V1.723C24 .771 23.207 0 22.225 0z"/>
             </svg>
           </a>
           <a href="https://instagram.com/moreydigital" target="_blank" rel="noopener" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
-              <title>Instagram</title>
+              <title>Website Pricing Packages | Morey Digital Limerick, Clare & Ireland</title>
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.977.24 2.427.402.59.221 1.01.48 1.457.927.446.447.705.867.927 1.457.162.45.348 1.257.402 2.427.058 1.266.069 1.646.069 4.85s-.011 3.584-.069 4.85c-.054 1.17-.24 1.977-.402 2.427-.221.59-.48 1.01-.927 1.457-.447.446-.867.705-1.457.927-.45.162-1.257.348-2.427.402-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.17-.054-1.977-.24-2.427-.402-.59-.221-1.01-.48-1.457-.927-.446-.447-.705-.867-.927-1.457-.162-.45-.348-1.257-.402-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.977.402-2.427.221-.59.48-1.01.927-1.457.447-.446.867-.705 1.457-.927.45-.162 1.257-.348 2.427-.402C8.416 2.175 8.796 2.163 12 2.163zm0 1.379c-3.17 0-3.549.011-4.792.069-1.04.047-1.602.217-1.974.363-.497.192-.853.422-1.229.798-.376.376-.606.732-.798 1.229-.146.372-.316.934-.363 1.974-.058 1.243-.069 1.622-.069 4.792s.011 3.549.069 4.792c.047 1.04.217 1.602.363 1.974.192.497.422.853.798 1.229.376.376.732.606 1.229.798.372.146.934.316 1.974.363 1.243.058 1.622.069 4.792.069s3.549-.011 4.792-.069c1.04-.047 1.602-.217 1.974-.363.497-.192-.853.422 1.229-.798.376-.376.606-.732.798-1.229.146-.372.316.934.363-1.974.058-1.243.069-1.622.069-4.792s-.011-3.549-.069-4.792c-.047-1.04-.217-1.602-.363-1.974-.192-.497-.422-.853-.798-1.229-.376-.376-.732-.606-1.229-.798-.372-.146-.934-.316-1.974-.363-1.243-.058-1.622-.069-4.792-.069zm0 5.838a4.001 4.001 0 100 8.002 4.001 4.001 0 000-8.002zm0 6.623a2.623 2.623 0 110-5.246 2.623 2.623 0 010 5.246zm5.223-6.769a.958.958 0 11-1.917 0 .958.958 0 011.917 0z"/>
             </svg>
           </a>
           <a href="https://www.tiktok.com/@moreydigital" target="_blank" rel="noopener" aria-label="TikTok">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" role="img">
-              <title>TikTok</title>
+              <title>Website Pricing Packages | Morey Digital Limerick, Clare & Ireland</title>
               <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2.373A2.99 2.99 0 0 1 7 9.5v-1.598A3 3 0 0 0 4 5.037V0H6v6.037A3 3 0 0 0 9 9V0z"/>
             </svg>
           </a>
@@ -895,79 +1129,77 @@
   </div>
 
   <!-- Enhanced mobile menu toggle -->
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      const menuIcon = document.querySelector('.menu-icon');
-      
-      if (!navLinks || !menuIcon) return;
-      
-      navLinks.classList.toggle('show');
-      menuIcon.classList.toggle('active');
-      
-      const isExpanded = navLinks.classList.contains('show');
-      menuIcon.setAttribute('aria-expanded', isExpanded);
-      
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = isExpanded ? 'hidden' : 'auto';
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/353873999296" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+    background: #20ba5a;
+  }
+  
+  .whatsapp-float i {
+    color: white;
+  }
+  
+  .header-cta-btn {
+    display: none;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .header-cta-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  }
+  
+  @media (min-width: 768px) {
+    .header-cta-btn {
+      display: inline-block;
     }
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      const nav = document.querySelector('nav');
-      const menuIcon = document.querySelector('.menu-icon');
-      const navLinks = document.getElementById('nav-links');
-      
-      if (!nav.contains(e.target) && !menuIcon.contains(e.target)) {
-        navLinks.classList.remove('show');
-        menuIcon.classList.remove('active');
-        menuIcon.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = 'auto';
-      }
-    });
-    
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-    
-    // Page loader
-    window.addEventListener('load', function() {
-      const loader = document.getElementById('pageLoader');
-      setTimeout(function() {
-        loader.classList.add('hidden');
-        // Add fade-in class to main content
-        document.querySelectorAll('.pricing-section, .faq-section, .cta-section').forEach(function(el, index) {
-          setTimeout(function() {
-            el.classList.add('fade-in');
-          }, index * 200);
-        });
-      }, 500);
-    });
-    
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, observerOptions);
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      const animatedElements = document.querySelectorAll('.package-card, .faq-item');
-      animatedElements.forEach(el => observer.observe(el));
-    });
-  </script>
+  }
+  
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+    }
+  }
+  </style>
+<script src="shared-scripts.js"></script>
 </body>
 </html>

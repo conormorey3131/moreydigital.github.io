@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Design Portfolio | Morey Digital Clare Projects</title>
+  <title>Portfolio | Website & Shopify Projects by Morey Digital Ireland</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <meta name="description" content="Explore Morey Digital's web design portfolio. See our latest projects for businesses in Clare and Ireland, showcasing our web development expertise.">
-  <meta name="keywords" content="Morey Digital portfolio, web design examples, Clare web projects, website portfolio, e-commerce sites, custom web development Ireland">
+  <meta name="description" content="View our portfolio of website and Shopify projects for Irish businesses. Custom web development and e-commerce solutions in Limerick, Clare, and nationwide.">
+  <meta name="keywords" content="web design portfolio Ireland, Shopify projects Limerick, website examples Clare, Irish web development, e-commerce portfolio">
   <meta name="author" content="Morey Digital">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Web Design Portfolio | Morey Digital Clare Projects">
-  <meta property="og:description" content="Explore Morey Digital's web design portfolio and our latest projects for businesses in Clare and Ireland.">
+  <meta property="og:title" content="Portfolio | Website & Shopify Projects by Morey Digital Ireland">
+  <meta property="og:description" content="View our portfolio of website and Shopify projects for Irish businesses. Custom web development and e-commerce solutions in Limerick, Clare, and nationwide.">
   <meta property="og:image" content="https://www.moreydigital.ie/images/og-default.svg">
   <meta property="og:url" content="https://www.moreydigital.ie/portfolio.html">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Web Design Portfolio | Morey Digital Clare Projects">
-  <meta name="twitter:description" content="Explore Morey Digital's web design portfolio and our latest projects for businesses in Clare and Ireland.">
+  <meta name="twitter:title" content="Portfolio | Website & Shopify Projects by Morey Digital Ireland">
+  <meta name="twitter:description" content="View our portfolio of website and Shopify projects for Irish businesses. Custom web development and e-commerce solutions in Limerick, Clare, and nationwide.">
   <meta name="twitter:image" content="https://www.moreydigital.ie/images/og-default.svg">
 
   <!-- Canonical Link -->
@@ -30,8 +30,8 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Web Design Portfolio | Morey Digital Clare Projects",
-    "description": "Explore Morey Digital's web design portfolio. See our latest projects for businesses in Clare and Ireland, showcasing our web development expertise.",
+    "name": "Portfolio | Website & Shopify Projects by Morey Digital Ireland",
+    "description": "View our portfolio of website and Shopify projects for Irish businesses. Custom web development and e-commerce solutions in Limerick, Clare, and nationwide.",
     "url": "https://www.moreydigital.ie/portfolio.html",
     "publisher": {
       "@type": "Organization",
@@ -48,7 +48,8 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Clare",
+        "addressLocality": "Limerick, Clare",
+        "addressRegion": "Munster",
         "addressCountry": "IE"
       },
       "contactPoint": {
@@ -66,7 +67,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
+  <!-- Font Awesome CDN -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></noscript>
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="shared-styles.css">
+  <!-- Page-specific Stylesheet -->
   <style>
     /* CSS Variables for consistent theming */
     :root {
@@ -741,21 +747,21 @@
 
   <header>
     <h1><a href="index.html">Morey Digital</a></h1>
-    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false" role="button">
+    <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
       <div></div>
       <div></div>
       <div></div>
     </div>
-    <nav>
+        <nav>
       <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html">Packages</a></li>
         <li><a href="portfolio.html" class="active">Portfolio</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <a href="pricing.html" class="header-cta-btn">View Packages</a>
   </header>
 
   <!-- Hero Section -->
@@ -853,6 +859,112 @@
       </div>
     </section>
 
+    <!-- Packages Overview Section -->
+    <section class="packages-overview">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Start Your Project?</h2>
+          <p>Choose the perfect package for your business needs</p>
+        </div>
+        <div class="packages-grid">
+          <!-- Starter Package -->
+          <div class="package-card">
+            <h3>Starter Website + Care</h3>
+            <div class="package-price">
+              <span class="price-main">€499</span>
+              <span class="price-period">+ €39/mo</span>
+            </div>
+            <p class="package-tagline">Your Website, Sorted.</p>
+            <ul class="package-features">
+              <li>1-2 page professional website</li>
+              <li>Mobile responsive design</li>
+              <li>Monthly hosting & updates</li>
+              <li>Basic SEO setup</li>
+            </ul>
+            <a href="pricing.html#starter" class="package-btn">View Details</a>
+          </div>
+
+          <!-- Website as a Service -->
+          <div class="package-card featured">
+            <div class="package-badge best-value">Most Popular</div>
+            <h3>Website-as-a-Service</h3>
+            <div class="package-price">
+              <span class="price-main">€150</span>
+              <span class="price-period">/month</span>
+              <span class="price-setup zero">€0 Upfront</span>
+            </div>
+            <p class="package-tagline">Your Website, Zero Upfront.</p>
+            <ul class="package-features">
+              <li>4-8 page custom website</li>
+              <li>Premium hosting & security</li>
+              <li>Monthly updates (60 mins)</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="pricing.html#waas" class="package-btn primary">Get Started</a>
+          </div>
+
+          <!-- Shopify Subscription -->
+          <div class="package-card">
+            <h3>Shopify Subscription</h3>
+            <div class="package-price">
+              <span class="price-main">€349</span>
+              <span class="price-period">/month</span>
+              <span class="price-setup zero">€0 Setup</span>
+            </div>
+            <p class="package-tagline">Your Store, Zero Upfront.</p>
+            <ul class="package-features">
+              <li>Full Shopify store build</li>
+              <li>Product management</li>
+              <li>Monthly changes (2 hrs)</li>
+              <li>WhatsApp support</li>
+            </ul>
+            <a href="pricing.html#shopify" class="package-btn">Start Selling</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Magnet Section -->
+    <section class="lead-magnet">
+      <div class="container">
+        <div class="lead-magnet-content">
+          <div class="lead-magnet-left">
+            <h2>Get Your Free Website Audit</h2>
+            <p>Find out how your current website is performing and get personalized recommendations to improve conversions, speed, and SEO.</p>
+            <ul class="audit-benefits">
+              <li>Performance & speed analysis</li>
+              <li>Mobile responsiveness check</li>
+              <li>SEO opportunities report</li>
+              <li>Competitor comparison</li>
+              <li>Personalized action plan</li>
+            </ul>
+          </div>
+          <div class="lead-magnet-right">
+            <form class="lead-form" action="https://formspree.io/f/myzppzno" method="POST">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <input type="text" name="business" placeholder="Business Name">
+              <input type="url" name="website" placeholder="Current Website URL (if you have one)">
+              <select name="package_interest" required>
+                <option value="">Select Package Interest</option>
+                <option value="starter">Starter Website (€499 + €39/mo)</option>
+                <option value="waas">Website-as-a-Service (€150/mo)</option>
+                <option value="shopify">Shopify Subscription (€349/mo)</option>
+                <option value="not-sure">Not Sure Yet</option>
+              </select>
+              <input type="hidden" name="_subject" value="Free Website Audit Request - Morey Digital">
+              <input type="hidden" name="_next" value="https://www.moreydigital.ie/thank-you.html">
+              <input type="hidden" name="_replyto" value="">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="text" name="_gotcha" style="display:none">
+              <button type="submit" class="submit-btn">Get My Free Audit</button>
+              <p class="form-note">100% free, no obligations. We'll email you within 24 hours.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="apps-section" style="padding-top: 4rem; border-top: 1px solid var(--border-color);">
       <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem;">Mobile App Development</h2>
       <div class="portfolio">
@@ -873,19 +985,19 @@
         <div class="footer-social-icons">
           <a href="https://www.linkedin.com/company/morey-digital/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
-              <title>LinkedIn</title>
+              <title>Portfolio | Website & Shopify Projects by Morey Digital Ireland</title>
               <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.038-1.852-3.038-1.853 0-2.136 1.445-2.136 2.941v5.666H9.352V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848 3.6 0 4.266 2.368 4.266 5.452v6.287zM5.337 7.433a2.064 2.064 0 11.001-4.128 2.064 2.064 0 010 4.128zM6.86 20.452H3.814V9h3.046v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.549C0 23.229.792 24 1.771 24h20.451C23.207 24 24 23.229 24 22.271V1.723C24 .771 23.207 0 22.225 0z"/>
             </svg>
           </a>
           <a href="https://instagram.com/moreydigital" target="_blank" rel="noopener" aria-label="Instagram">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" role="img">
-              <title>Instagram</title>
+              <title>Portfolio | Website & Shopify Projects by Morey Digital Ireland</title>
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.977.24 2.427.402.59.221 1.01.48 1.457.927.446.447.705.867.927 1.457.162.45.348 1.257.402 2.427.058 1.266.069 1.646.069 4.85s-.011 3.584-.069 4.85c-.054 1.17-.24 1.977-.402 2.427-.221.59-.48 1.01-.927 1.457-.447.446-.867.705-1.457.927-.45.162-1.257.348-2.427.402-1.266.058-1.646.069-4.85.069s-3.584-.011-4.85-.069c-1.17-.054-1.977-.24-2.427-.402-.59-.221-1.01-.48-1.457-.927-.446-.447-.705-.867-.927-1.457-.162-.45-.348-1.257-.402-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.977.402-2.427.221-.59.48-1.01.927-1.457.447-.446.867-.705 1.457-.927.45-.162 1.257-.348 2.427-.402C8.416 2.175 8.796 2.163 12 2.163zm0 1.379c-3.17 0-3.549.011-4.792.069-1.04.047-1.602.217-1.974.363-.497.192-.853.422-1.229.798-.376.376-.606.732-.798 1.229-.146.372-.316.934-.363 1.974-.058 1.243-.069 1.622-.069 4.792s.011 3.549.069 4.792c.047 1.04.217 1.602.363 1.974.192.497.422.853.798 1.229.376.376.732.606 1.229.798.372.146.934.316 1.974.363 1.243.058 1.622.069 4.792.069s3.549-.011 4.792-.069c1.04-.047 1.602-.217 1.974-.363.497-.192-.853.422 1.229-.798.376-.376.606-.732.798-1.229.146-.372.316.934.363-1.974.058-1.243.069-1.622.069-4.792s-.011-3.549-.069-4.792c-.047-1.04-.217-1.602-.363-1.974-.192-.497-.422-.853-.798-1.229-.376-.376-.732-.606-1.229-.798-.372-.146-.934-.316-1.974-.363-1.243-.058-1.622-.069-4.792-.069zm0 5.838a4.001 4.001 0 100 8.002 4.001 4.001 0 000-8.002zm0 6.623a2.623 2.623 0 110-5.246 2.623 2.623 0 010 5.246zm5.223-6.769a.958.958 0 11-1.917 0 .958.958 0 011.917 0z"/>
             </svg>
           </a>
           <a href="https://www.tiktok.com/@moreydigital" target="_blank" rel="noopener" aria-label="TikTok">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" role="img">
-              <title>TikTok</title>
+              <title>Portfolio | Website & Shopify Projects by Morey Digital Ireland</title>
               <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2.373A2.99 2.99 0 0 1 7 9.5v-1.598A3 3 0 0 0 4 5.037V0H6v6.037A3 3 0 0 0 9 9V0z"/>
             </svg>
           </a>
@@ -893,7 +1005,7 @@
       </div>
       <div class="footer-column">
         <h4>Location Details</h4>
-        <p>Clare, Ireland</p>
+        <p>Limerick, Clare & Ireland</p>
       </div>
       <div class="footer-column">
         <h4>Contact</h4>
@@ -1044,5 +1156,11 @@
     }
   </script>
 
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/353873999296" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+<script src="shared-scripts.js"></script>
 </body>
 </html>
