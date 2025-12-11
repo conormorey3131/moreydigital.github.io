@@ -3,6 +3,154 @@
 // Universal JavaScript for consistency across all pages
 // =====================================================
 
+// =====================================================
+// GOOGLE ANALYTICS 4 EVENT TRACKING
+// =====================================================
+
+// Safe wrapper for GA4 events - only tracks if gtag is available
+function trackGA4Event(eventName, parameters = {}) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, parameters);
+    console.log('GA4 Event:', eventName, parameters);
+  }
+}
+
+// Track specific CTA button clicks with location context
+function setupGA4Tracking() {
+  // Track Call Now button clicks
+  document.querySelectorAll('a[href^="tel:+353873999296"], a[href*="087 399 9296"]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      const location = getElementLocation(this);
+      trackGA4Event('call_click', {
+        location: location,
+        phone_number: '+353873999296',
+        button_text: this.textContent.trim()
+      });
+    });
+  });
+
+  // Track WhatsApp button clicks
+  document.querySelectorAll('a[href*="wa.me/353873999296"], a[href*="whatsapp"]').forEach(function(button) {
+    button.addEventListener('click', function() {
+      const location = getElementLocation(this);
+      trackGA4Event('whatsapp_click', {
+        location: location,
+        button_text: this.textContent.trim(),
+        destination_url: this.href
+      });
+    });
+  });
+
+  // Track "View Packages" button clicks
+  document.querySelectorAll('a').forEach(function(link) {
+    const text = link.textContent.toLowerCase().trim();
+    const href = link.getAttribute('href');
+    
+    if ((text.includes('view packages') || text.includes('packages & pricing')) && 
+        (href && (href.includes('pricing') || href.includes('#packages')))) {
+      link.addEventListener('click', function() {
+        const location = getElementLocation(this);
+        trackGA4Event('view_packages_click', {
+          location: location,
+          button_text: this.textContent.trim(),
+          destination_url: this.href
+        });
+      });
+    }
+  });
+
+  // Track "Get Started" button clicks
+  document.querySelectorAll('a').forEach(function(link) {
+    const text = link.textContent.toLowerCase().trim();
+    const href = link.getAttribute('href');
+    
+    if (text.includes('get started') && href && 
+        (href.includes('contact') || href.includes('pricing'))) {
+      link.addEventListener('click', function() {
+        const location = getElementLocation(this);
+        trackGA4Event('get_started_click', {
+          location: location,
+          button_text: this.textContent.trim(),
+          destination_url: this.href
+        });
+      });
+    }
+  });
+
+  // Track form submissions
+  document.querySelectorAll('.lead-form, .contact-form').forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      const formId = getFormIdentifier(this);
+      const formData = getFormData(this);
+      
+      trackGA4Event('form_submit', {
+        form_id: formId,
+        form_type: formData.type,
+        package_interest: formData.package || 'unknown',
+        location: getElementLocation(this)
+      });
+    });
+  });
+}
+
+// Helper function to determine element's page location
+function getElementLocation(element) {
+  const page = window.location.pathname.replace('/', '').replace('.html', '') || 'home';
+  
+  // Check if element is in hero section
+  if (element.closest('.hero, .contact-hero, .about-hero, .hero-cta-group')) {
+    return page + '_hero';
+  }
+  
+  // Check if element is in header
+  if (element.closest('header')) {
+    return page + '_header';
+  }
+  
+  // Check if element is in footer
+  if (element.closest('footer')) {
+    return page + '_footer';
+  }
+  
+  // Check if element is in packages/pricing section
+  if (element.closest('.packages, .package-card, .pricing')) {
+    return page + '_packages';
+  }
+  
+  // Check if element is in lead magnet
+  if (element.closest('.lead-magnet')) {
+    return page + '_lead_magnet';
+  }
+  
+  return page + '_content';
+}
+
+// Helper function to identify form type
+function getFormIdentifier(form) {
+  if (form.classList.contains('contact-form')) {
+    return 'contact';
+  }
+  if (form.classList.contains('lead-form')) {
+    return 'audit_lead';
+  }
+  if (form.action && form.action.includes('formspree')) {
+    return 'formspree_form';
+  }
+  return 'unknown_form';
+}
+
+// Helper function to extract form data for tracking
+function getFormData(form) {
+  const formData = new FormData(form);
+  return {
+    type: getFormIdentifier(form),
+    package: formData.get('package') || formData.get('package_interest') || formData.get('service_type'),
+    hasEmail: !!formData.get('email'),
+    hasPhone: !!formData.get('phone'),
+    hasWebsite: !!formData.get('website')
+  };
+}
+
 // Enhanced mobile menu toggle
 function toggleMenu() {
   const navLinks = document.getElementById('nav-links');
@@ -22,6 +170,9 @@ function toggleMenu() {
 
 // Initialize shared functionality when DOM loads
 document.addEventListener('DOMContentLoaded', function() {
+  
+  // Initialize GA4 event tracking
+  setupGA4Tracking();
   
   // Close mobile menu when clicking outside
   document.addEventListener('click', function(e) {
