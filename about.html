@@ -652,8 +652,112 @@
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #444444;
-    font-size: 0.9em; /* Made a bit bigger */
+    font-size: 0.9em;
     color: #aaaaaa;
+  }
+
+  /* Footer Services Promo */
+  .footer-services-promo {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #444444;
+    text-align: center;
+  }
+
+  .footer-services-promo h4 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    color: #ff6600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .promo-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .promo-item {
+    background: #2a2a2a;
+    padding: 20px 25px;
+    border-radius: 10px;
+    border: 1px solid #444444;
+    min-width: 250px;
+    flex: 1;
+    max-width: 320px;
+    transition: all 0.3s ease;
+  }
+
+  .promo-item:hover {
+    border-color: #ff6600;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255, 102, 0, 0.2);
+  }
+
+  .promo-item i {
+    font-size: 2em;
+    color: #ff6600;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .promo-item span {
+    display: block;
+    color: #ffffff;
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .promo-item small {
+    display: block;
+    color: #aaaaaa;
+    font-size: 0.85em;
+  }
+
+  .promo-item.promo-cta {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .promo-item.promo-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+  }
+
+  .whatsapp-quote-btn {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .whatsapp-quote-btn i {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .promo-services {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .promo-item {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 
     /* Responsive Design - Mobile-first approach */
@@ -981,8 +1085,52 @@
         </div>
       </div>
     </section>
+
+    <!-- Prominent Services Promo Banner -->
+    <section class="services-promo-banner">
+      <div class="container">
+        <div class="promo-banner-header">
+          <span class="promo-label">Also Available</span>
+          <h2>Grow Your Business Online</h2>
+          <p>Professional social media management and WordPress support to help your business thrive</p>
+        </div>
+        <div class="promo-services-grid">
+          <div class="promo-service-card">
+            <div class="card-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3>Social Media Management</h3>
+            <span class="price-tag">From €100/mo</span>
+            <p>Professional content creation & management for your business across all major platforms</p>
+            <div class="platforms">
+              <div class="platform-icon"><i class="fab fa-instagram"></i></div>
+              <div class="platform-icon"><i class="fab fa-facebook-f"></i></div>
+              <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
+              <div class="platform-icon"><i class="fab fa-linkedin-in"></i></div>
+            </div>
+          </div>
+          <div class="promo-service-card">
+            <div class="card-icon">
+              <i class="fab fa-wordpress"></i>
+            </div>
+            <h3>WordPress SEO & Fixes</h3>
+            <span class="price-tag">Custom Quotes</span>
+            <p>Speed optimisation, SEO improvements, bug fixes, security updates & general maintenance</p>
+            <div class="platforms">
+              <div class="platform-icon"><i class="fas fa-search"></i></div>
+              <div class="platform-icon"><i class="fas fa-tachometer-alt"></i></div>
+              <div class="platform-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="platform-icon"><i class="fas fa-tools"></i></div>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/353873999296?text=Hi%20Conor,%20I'd%20like%20a%20quote%20for%20your%20services" target="_blank" class="promo-whatsapp-cta">
+          <i class="fab fa-whatsapp"></i> Message on WhatsApp for a Quote
+        </a>
+      </div>
+    </section>
   </main>
-  
+
   <footer>
     <div class="footer-container">
       <div class="footer-column">
@@ -1021,9 +1169,14 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Morey Digital. All Rights Reserved.</p>
+      <p>&copy; <span id="footer-year"></span> Morey Digital. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Auto-update footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
 
   <script>
     // Page loader functionality
