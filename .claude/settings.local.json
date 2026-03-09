@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx vite build)",
+      "Bash(timeout 10 npx vite:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:www.google.com)",
+      "WebSearch",
+      "WebFetch(domain:moreydigital.ie)",
+      "WebFetch(domain:metashield.ie)",
+      "Bash(timeout 8 npx vite:*)",
+      "Bash(timeout 12 npx vite:*)",
+      "Bash(find:*)",
+      "Bash(node -e:*)",
+      "Bash(cat:*)",
+      "Bash(xargs:*)",
+      "Bash(cd:*)",
+      "Bash(wc:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh repo list:*)",
+      "Bash(gh auth status:*)"
+    ]
+  }
+}
