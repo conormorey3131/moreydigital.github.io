@@ -15,7 +15,6 @@ import {
   Palette,
   MapPin,
   UserCheck,
-  Unlock,
 } from 'lucide-react'
 import { useReveal } from '../hooks/useReveal'
 
@@ -111,11 +110,6 @@ const diffCards = [
     title: 'One Point of Contact',
     desc: 'When you work with Morey Digital, you deal directly with Conor \u2014 not a rotating cast of account managers. You get personal, consistent service from someone who actually knows your project inside and out.',
   },
-  {
-    icon: Unlock,
-    title: 'No Long-Term Lock-Ins',
-    desc: 'We don\u2019t tie you into lengthy contracts. Our management plans are month-to-month because we believe the quality of our work should be the reason you stay \u2014 not a contract.',
-  },
 ]
 
 /* ─── PAGE COMPONENT ─── */
@@ -136,7 +130,7 @@ export default function AboutPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '45%', '--glow-y': '45%' }} />
 
@@ -152,17 +146,17 @@ export default function AboutPage() {
               <span className="text-jade">Designed to Help Your Business Grow</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-300 font-body font-medium leading-relaxed mb-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 font-body font-medium leading-relaxed mb-4 max-w-3xl mx-auto">
               A boutique web design agency serving Limerick, Clare, and businesses across Ireland. We specialise in custom websites, online stores, and ongoing website care with premium support.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               We don&rsquo;t just build websites &mdash; we craft digital experiences designed to help businesses grow, rank, and convert. Whether you&rsquo;re a startup seeking a stunning online presence, an established business that needs custom web solutions, or a brand looking to improve search rankings, Morey Digital is your trusted digital partner.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get in Touch
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -172,12 +166,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── 2. OUR STORY ── */}
-      <section ref={storyRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={storyRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-12 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Story</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               The Person Behind Morey Digital
             </h2>
           </div>
@@ -185,13 +179,13 @@ export default function AboutPage() {
           <div className="reveal">
             <div className="glass-card p-8 sm:p-10">
               <div className="space-y-5">
-                <p className="text-gray-300 font-body text-base leading-relaxed">
-                  Morey Digital was founded by <strong className="text-white">Conor Morey</strong> &mdash; Founder & Managing Director. Conor is the driving force behind the business. With a passion for technology ignited at a young age, he&rsquo;s been building websites since he was just 11 years old. Based in Limerick and serving clients across Ireland, Conor combines his deep-rooted technical expertise with a strategic vision to help businesses succeed online.
+                <p className="text-[#555555] font-body text-base leading-relaxed">
+                  Morey Digital was founded by <strong className="text-[#1A3C6E]">Conor Morey</strong> &mdash; Founder & Managing Director. Conor is the driving force behind the business. With a passion for technology ignited at a young age, he&rsquo;s been building websites since he was just 11 years old. Based in Limerick and serving clients across Ireland, Conor combines his deep-rooted technical expertise with a strategic vision to help businesses succeed online.
                 </p>
-                <p className="text-gray-300 font-body text-base leading-relaxed">
+                <p className="text-[#555555] font-body text-base leading-relaxed">
                   He ensures every project reflects Morey Digital&rsquo;s commitment to innovation and excellence. Creative thinking, problem-solving, and a genuine care for each client&rsquo;s success are at the heart of the approach. Whether it&rsquo;s a brochure website for a local tradesperson or a full eCommerce store, the same standard of quality and attention goes into every build.
                 </p>
-                <p className="text-gray-300 font-body text-base leading-relaxed">
+                <p className="text-[#555555] font-body text-base leading-relaxed">
                   Morey Digital is deliberately boutique. That means you deal directly with Conor &mdash; not a revolving door of account managers or junior developers. You get honest advice, clear communication, and a partner who genuinely cares whether your website delivers results for your business.
                 </p>
               </div>
@@ -201,12 +195,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── 3. OUR CORE VALUES ── */}
-      <section ref={valuesRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={valuesRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '40%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What We Stand For</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Our Core Values
             </h2>
           </div>
@@ -221,8 +215,8 @@ export default function AboutPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mx-auto mb-5">
                   <val.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-base text-white mb-3">{val.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{val.desc}</p>
+                <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-3">{val.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{val.desc}</p>
               </div>
             ))}
           </div>
@@ -230,15 +224,15 @@ export default function AboutPage() {
       </section>
 
       {/* ── 4. WHO WE SERVE ── */}
-      <section ref={serveRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={serveRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Who We Work With</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Who We Serve
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               We work with businesses of all sizes across Ireland &mdash; from sole traders and startups to established brands and growing eCommerce stores.
             </p>
           </div>
@@ -253,8 +247,8 @@ export default function AboutPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -262,12 +256,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── 5. WHY MOREY DIGITAL ── */}
-      <section ref={diffRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={diffRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '50%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why Us</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Why Businesses Choose Morey Digital
             </h2>
           </div>
@@ -282,8 +276,8 @@ export default function AboutPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -291,19 +285,19 @@ export default function AboutPage() {
       </section>
 
       {/* ── 6. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Build Something That Works for Your Business?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Whether you need a new website, better Google visibility, or someone to manage what you already have &mdash; we&rsquo;d love to have a chat.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get in Touch
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

@@ -225,7 +225,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -236,7 +236,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '300px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -264,7 +264,7 @@ export default function WebsiteManagementPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '45%' }} />
 
@@ -285,17 +285,17 @@ export default function WebsiteManagementPage() {
               Proactive, fully managed website care. Trusted by Irish businesses who want complete confidence in their online presence &mdash; without the hassle of managing it themselves.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-4 max-w-2xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-4 max-w-2xl mx-auto">
               At Morey Digital, we keep your website performing at its best every single month. Our fully managed maintenance service handles updates, security monitoring, backups, and performance checks &mdash; so you never have to think about the technical side of your site again.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-2xl mx-auto">
               We take care of every update, every test, and every fix. You focus on running your business. We make sure your website is always online, always secure, and always working the way it should.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -305,12 +305,11 @@ export default function WebsiteManagementPage() {
       </section>
 
       {/* ── 2. WHAT SETS US APART ── */}
-      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why Us</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What Sets Morey Digital Apart for Website Management?
             </h2>
           </div>
@@ -325,8 +324,8 @@ export default function WebsiteManagementPage() {
                 <div className="w-11 h-11 rounded-xl bg-jade/10 flex items-center justify-center mb-4">
                   <item.icon size={22} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -334,12 +333,11 @@ export default function WebsiteManagementPage() {
       </section>
 
       {/* ── 3. WHAT'S INCLUDED ── */}
-      <section ref={includesRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '65%', '--glow-y': '30%' }} />
+      <section ref={includesRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What&rsquo;s Included</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What&rsquo;s Included in Our Website Management Service
             </h2>
           </div>
@@ -356,8 +354,8 @@ export default function WebsiteManagementPage() {
                     <item.icon size={22} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -367,15 +365,14 @@ export default function WebsiteManagementPage() {
       </section>
 
       {/* ── 4. HOW IT WORKS ── */}
-      <section ref={processRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={processRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Process</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               How Our Monthly Management Works
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               A clear, five-step process. You always know exactly what&rsquo;s happening with your website.
             </p>
           </div>
@@ -394,8 +391,8 @@ export default function WebsiteManagementPage() {
                   <div className="w-10 h-10 rounded-full bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                     <span className="text-jade font-heading font-bold text-sm">{step.num}</span>
                   </div>
-                  <h3 className="font-heading font-bold text-base text-white mb-3">{step.title}</h3>
-                  <p className="text-gray-400 font-body text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-3">{step.title}</h3>
+                  <p className="text-[#555555] font-body text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -404,15 +401,14 @@ export default function WebsiteManagementPage() {
       </section>
 
       {/* ── 5. PLANS ── */}
-      <section ref={plansRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
+      <section ref={plansRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Plans</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Choose the Right Level of Support
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               All plans include monthly updates, backups, monitoring, and reporting. Upgrade any time as your needs grow.
             </p>
           </div>
@@ -429,20 +425,20 @@ export default function WebsiteManagementPage() {
                 style={{ '--reveal-index': i }}
               >
                 {plan.featured && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-jade text-dark text-xs font-heading font-bold rounded-full">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-jade text-white text-xs font-heading font-bold rounded-full">
                     Most Popular
                   </div>
                 )}
 
                 <span className="text-jade text-xs font-body font-medium uppercase tracking-wider">{plan.label}</span>
-                <h3 className="font-heading font-bold text-2xl text-white mt-2 mb-2">{plan.title}</h3>
-                <p className="text-gray-400 font-body text-sm mb-6 leading-relaxed">{plan.desc}</p>
+                <h3 className="font-heading font-bold text-2xl text-[#1A3C6E] mt-2 mb-2">{plan.title}</h3>
+                <p className="text-[#555555] font-body text-sm mb-6 leading-relaxed">{plan.desc}</p>
 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm font-body">
                       <Check size={16} className="text-jade mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{f}</span>
+                      <span className="text-[#555555]">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -451,8 +447,8 @@ export default function WebsiteManagementPage() {
                   to="/contact"
                   className={`inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm transition-all group ${
                     plan.featured
-                      ? 'bg-jade text-dark hover:bg-jade-400'
-                      : 'border border-white/10 text-white hover:bg-white/5'
+                      ? 'bg-jade text-white hover:bg-jade-400'
+                      : 'border border-gray-200 text-[#1A3C6E] hover:bg-gray-100'
                   }`}
                 >
                   Get Started
@@ -462,7 +458,7 @@ export default function WebsiteManagementPage() {
             ))}
           </div>
 
-          <p className="text-center text-gray-500 font-body text-sm mt-8 reveal">
+          <p className="text-center text-[#555555] font-body text-sm mt-8 reveal">
             Not sure which plan is right for you?{' '}
             <Link to="/contact" className="text-jade hover:underline">Get in touch</Link>{' '}
             and we&rsquo;ll recommend the best fit for your business.
@@ -471,12 +467,11 @@ export default function WebsiteManagementPage() {
       </section>
 
       {/* ── 6. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -495,26 +490,23 @@ export default function WebsiteManagementPage() {
       </section>
 
       {/* ── 7. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Stop Worrying About Your Website?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Let Morey Digital handle the technical side so you can focus on your business. Get a free, no-obligation quote today.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <p className="text-gray-500 font-body text-sm mt-6">
-              No long-term contracts. Cancel any time.
-            </p>
           </div>
         </div>
       </section>

@@ -14,26 +14,32 @@ const testimonials = [
     quote: 'I would like to thank Conor for the amazing work on our website! Everything was done professionally, with great attention to detail and a clear understanding of our requirements. Working with him was easy and enjoyable, all questions were resolved quickly, and the result exceeded our expectations. The website turned out modern, user-friendly, and visually appealing, and we are extremely satisfied with the outcome. I highly recommend Conor to anyone who values professionalism and client care.',
     stars: 5,
   },
+  {
+    name: 'Noah Ryan',
+    business: 'Google Review',
+    quote: 'Can\'t recommend Conor enough. From day one he was there to help me make my vision become a reality. From the original idea to every minor detail I wanted changed, he ticked every box. Website came out better than I had expected and would recommend him and his services to anyone after a website.',
+    stars: 5,
+  },
 ]
 
 export default function Testimonials() {
   const ref = useReveal()
 
   return (
-    <section id="testimonials" ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="testimonials" ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
       <div className="absolute inset-0 glow-jade-subtle" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Testimonials</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             What Our Clients Say
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             Real reviews from real clients — see what businesses have to say about working with us.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto reveal-stagger">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-stagger">
           {testimonials.map((t, i) => (
             <div
               key={t.name}
@@ -47,7 +53,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-gray-300 font-body text-sm leading-relaxed mb-6 italic">
+              <p className="text-[#333333] font-body text-sm leading-relaxed mb-6 italic">
                 &ldquo;{t.quote}&rdquo;
               </p>
 
@@ -56,8 +62,8 @@ export default function Testimonials() {
                   <span className="text-jade font-heading font-bold text-sm">{t.name[0]}</span>
                 </div>
                 <div>
-                  <p className="text-white font-heading font-semibold text-sm">{t.name}</p>
-                  <p className="text-gray-500 font-body text-xs">{t.business}</p>
+                  <p className="text-[#1A3C6E] font-heading font-semibold text-sm">{t.name}</p>
+                  <p className="text-[#555555] font-body text-xs">{t.business}</p>
                 </div>
               </div>
             </div>

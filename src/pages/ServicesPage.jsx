@@ -207,14 +207,14 @@ function ServiceBlock({ service, index }) {
             <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
               <service.icon size={28} className="text-jade" />
             </div>
-            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-3">
+            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#1A3C6E] mb-3">
               {service.title}
             </h3>
             <p className="text-jade font-body font-semibold text-base mb-6">
               {service.tagline}
             </p>
             {service.description.map((para, j) => (
-              <p key={j} className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+              <p key={j} className="text-[#555555] font-body text-sm leading-relaxed mb-4">
                 {para}
               </p>
             ))}
@@ -229,15 +229,15 @@ function ServiceBlock({ service, index }) {
 
           {/* Features column */}
           <div className="lg:w-3/5">
-            <div className="glass-card p-6 sm:p-8 bg-white/[0.02]">
-              <p className="text-white font-heading font-semibold text-sm uppercase tracking-wider mb-5">
+            <div className="glass-card p-6 sm:p-8 bg-gray-100">
+              <p className="text-[#1A3C6E] font-heading font-semibold text-sm uppercase tracking-wider mb-5">
                 Key Features
               </p>
               <ul className="space-y-3">
                 {service.features.map((f) => (
                   <li key={f} className="flex items-start gap-3">
                     <Check size={16} className="text-jade mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300 font-body text-sm leading-relaxed">{f}</span>
+                    <span className="text-[#555555] font-body text-sm leading-relaxed">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -262,7 +262,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '50%' }} />
 
@@ -278,17 +278,17 @@ export default function ServicesPage() {
               <span className="text-jade">Grow Online</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-400 font-body leading-relaxed mb-6 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 font-body leading-relaxed mb-6 max-w-3xl mx-auto">
               From a brand-new website to ongoing SEO and monthly support — Morey Digital handles the digital side of your business so you don&rsquo;t have to.
             </p>
 
-            <p className="text-gray-500 font-body text-sm leading-relaxed mb-10 max-w-2xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-2xl mx-auto">
               We work with Irish SMEs, tradespeople, eCommerce brands, hospitality businesses, and professional services firms across Clare, Limerick, and nationwide. Whether you need a new site from scratch or want someone to manage and grow your existing online presence, we&rsquo;ve got you covered.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -298,15 +298,14 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 2. CORE SERVICES ── */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What We Do</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Our Core Services
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Six areas of expertise. One team. Every detail handled.
             </p>
           </div>
@@ -320,12 +319,11 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 3. WHY CHOOSE MOREY DIGITAL ── */}
-      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '40%' }} />
+      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why Us</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Why Choose Morey Digital?
             </h2>
           </div>
@@ -340,8 +338,8 @@ export default function ServicesPage() {
                 <div className="w-11 h-11 rounded-xl bg-jade/10 flex items-center justify-center mb-4">
                   <item.icon size={22} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -349,19 +347,19 @@ export default function ServicesPage() {
       </section>
 
       {/* ── 4. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Build a Better Online Presence?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Talk to the Morey Digital team today. No commitment, no jargon — just a straightforward conversation about how we can help your business grow online.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

@@ -202,7 +202,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -213,7 +213,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '400px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -241,7 +241,7 @@ export default function WebsiteSecurityOverviewPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '45%', '--glow-y': '45%' }} />
 
@@ -261,17 +261,17 @@ export default function WebsiteSecurityOverviewPage() {
               Cyber threats don&rsquo;t stop at 5pm. Morey Digital provides layered, always-on website security that blocks attacks, prevents downtime, and keeps your customers&rsquo; trust intact &mdash; day and night.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-3 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-3 max-w-3xl mx-auto">
               Your website is more than a marketing tool &mdash; it&rsquo;s a business asset. A hack, a data breach, or a prolonged outage doesn&rsquo;t just cost money to fix. It damages your reputation, affects your search rankings, and shakes the confidence of your customers. The good news: with the right protection in place, almost all of it is preventable.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               Morey Digital builds security into every website we manage &mdash; not as an optional extra, but as a core part of how we work. From firewall protection and malware scanning to brute force blocking and SSL management, your website is actively defended at every layer.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -297,12 +297,11 @@ export default function WebsiteSecurityOverviewPage() {
       </section>
 
       {/* ── 2. WHY WEBSITE SECURITY MATTERS ── */}
-      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why It Matters</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Why Website Security Matters for Your Business
             </h2>
           </div>
@@ -317,9 +316,9 @@ export default function WebsiteSecurityOverviewPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
                 {card.paras.map((para, j) => (
-                  <p key={j} className={`text-gray-400 font-body text-sm leading-relaxed ${j > 0 ? 'mt-3' : ''}`}>
+                  <p key={j} className={`text-[#555555] font-body text-sm leading-relaxed ${j > 0 ? 'mt-3' : ''}`}>
                     {para}
                   </p>
                 ))}
@@ -330,15 +329,14 @@ export default function WebsiteSecurityOverviewPage() {
       </section>
 
       {/* ── 3. WHAT'S INCLUDED ── */}
-      <section ref={includedRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '30%' }} />
+      <section ref={includedRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What&rsquo;s Included</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What&rsquo;s Included in Morey Digital Website Security
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Security isn&rsquo;t a single feature &mdash; it&rsquo;s a layered set of protections working together. Here&rsquo;s what we put in place for every website we manage.
             </p>
           </div>
@@ -355,8 +353,8 @@ export default function WebsiteSecurityOverviewPage() {
                     <item.icon size={22} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                     {item.linkText && item.to && (
                       <Link
                         to={item.to}
@@ -375,15 +373,14 @@ export default function WebsiteSecurityOverviewPage() {
       </section>
 
       {/* ── 4. BUSINESS BENEFITS ── */}
-      <section ref={benefitsRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={benefitsRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Business Benefits</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               The Business Benefits of a Properly Secured Website
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Security investment isn&rsquo;t just about avoiding the worst &mdash; it actively improves how your business performs online.
             </p>
           </div>
@@ -400,8 +397,8 @@ export default function WebsiteSecurityOverviewPage() {
                     <item.icon size={24} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -411,15 +408,14 @@ export default function WebsiteSecurityOverviewPage() {
       </section>
 
       {/* ── 5. SECURITY SUB-SERVICES HUB ── */}
-      <section ref={hubRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
+      <section ref={hubRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Services</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Explore Our Security Services in More Detail
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Each area of website security has its own dedicated service &mdash; click through to learn exactly what&rsquo;s involved and what we include.
             </p>
           </div>
@@ -435,8 +431,8 @@ export default function WebsiteSecurityOverviewPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed mb-4">{card.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed mb-4">{card.desc}</p>
                 <span className="text-jade font-heading font-semibold text-sm inline-flex items-center gap-1 group-hover:underline">
                   Learn more
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -448,12 +444,11 @@ export default function WebsiteSecurityOverviewPage() {
       </section>
 
       {/* ── 6. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -472,19 +467,19 @@ export default function WebsiteSecurityOverviewPage() {
       </section>
 
       {/* ── 7. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Your Website Should Be Protected Right Now &mdash; Not After Something Goes Wrong
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Most Irish business websites are running with security gaps that could be closed today. Get in touch for a free review and we&rsquo;ll tell you exactly where you stand.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

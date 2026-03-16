@@ -51,15 +51,15 @@ export default function Industries() {
   const ref = useReveal()
 
   return (
-    <section id="industries" ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="industries" ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
       <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '30%', '--glow-y': '60%' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Who We Work With</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             Built for Irish SMEs, Across Every Industry
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             From local shops to professional firms — we build websites tailored to how your customers find and choose you.
           </p>
         </div>
@@ -75,14 +75,14 @@ export default function Industries() {
               <div className="w-11 h-11 rounded-xl bg-jade/10 flex items-center justify-center mx-auto mb-3">
                 <ind.icon size={22} className="text-jade" />
               </div>
-              <span className="text-white font-heading font-semibold text-sm">{ind.title}</span>
+              <span className="text-[#1A3C6E] font-heading font-semibold text-sm">{ind.title}</span>
             </div>
           ))}
         </div>
 
         {/* Portfolio preview */}
         <div className="reveal">
-          <h3 className="font-heading font-bold text-2xl text-white text-center mb-8">Recent Projects</h3>
+          <h3 className="font-heading font-bold text-2xl text-[#1A3C6E] text-center mb-8">Recent Projects</h3>
         </div>
         <div className="grid md:grid-cols-3 gap-6 reveal-stagger">
           {portfolio.map((project, i) => (
@@ -107,11 +107,11 @@ export default function Industries() {
               </div>
               <div className="p-6">
                 <span className="text-jade text-xs font-body font-medium uppercase tracking-wider">{project.category}</span>
-                <h4 className="font-heading font-bold text-base text-white mt-1 mb-2 flex items-center gap-2">
+                <h4 className="font-heading font-bold text-base text-[#1A3C6E] mt-1 mb-2 flex items-center gap-2">
                   {project.title}
-                  <ExternalLink size={14} className="text-gray-500 group-hover:text-jade transition-colors" />
+                  <ExternalLink size={14} className="text-[#555555] group-hover:text-jade transition-colors" />
                 </h4>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{project.desc}</p>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{project.desc}</p>
               </div>
             </a>
           ))}

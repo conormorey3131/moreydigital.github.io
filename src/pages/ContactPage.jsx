@@ -151,14 +151,14 @@ export default function ContactPage() {
   }
 
   const inputClasses =
-    'w-full bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3 text-white font-body text-sm placeholder-gray-500 focus:outline-none focus:border-jade/40 focus:ring-1 focus:ring-jade/20 transition-colors'
+    'w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-[#1A1A1A] font-body text-sm placeholder-gray-500 focus:outline-none focus:border-jade/40 focus:ring-1 focus:ring-jade/20 transition-colors'
 
   return (
     <>
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-12 lg:pt-40 lg:pb-16 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-12 lg:pt-40 lg:pb-16 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
 
@@ -174,7 +174,7 @@ export default function ContactPage() {
               <span className="text-jade">Next Project</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-400 font-body leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 font-body leading-relaxed max-w-2xl mx-auto">
               Whether you need a new website, ongoing management, or help growing your online presence &mdash; we&rsquo;re here to help. Send us a message, give us a call, or reach out on WhatsApp.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
       </section>
 
       {/* ── 2. FORM + CONTACT DETAILS ── */}
-      <section ref={formRef} className="relative py-16 lg:py-24 overflow-hidden">
+      <section ref={formRef} className="relative py-16 lg:py-24 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="reveal">
@@ -195,15 +195,15 @@ export default function ContactPage() {
                       <div className="w-16 h-16 rounded-full bg-jade/10 border border-jade/20 flex items-center justify-center mx-auto mb-6">
                         <CheckCircle size={32} className="text-jade" />
                       </div>
-                      <h3 className="font-heading font-bold text-2xl text-white mb-3">
+                      <h3 className="font-heading font-bold text-2xl text-[#1A3C6E] mb-3">
                         Message Sent Successfully
                       </h3>
-                      <p className="text-gray-400 font-body text-sm leading-relaxed mb-6 max-w-md mx-auto">
+                      <p className="text-[#555555] font-body text-sm leading-relaxed mb-6 max-w-md mx-auto">
                         Thanks for getting in touch. We&rsquo;ll review your enquiry and get back to you within 24 hours.
                       </p>
                       <button
                         onClick={() => setStatus('idle')}
-                        className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 text-white font-heading font-semibold text-sm rounded-lg hover:bg-white/5 transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 text-[#1A3C6E] font-heading font-semibold text-sm rounded-lg hover:bg-gray-100 transition-all"
                       >
                         Send Another Message
                       </button>
@@ -211,10 +211,10 @@ export default function ContactPage() {
                   ) : (
                     <>
                       <div className="mb-8">
-                        <h2 className="font-heading font-bold text-xl sm:text-2xl text-white mb-2">
+                        <h2 className="font-heading font-bold text-xl sm:text-2xl text-[#1A3C6E] mb-2">
                           Send Us a Message
                         </h2>
-                        <p className="text-gray-400 font-body text-sm">
+                        <p className="text-[#555555] font-body text-sm">
                           Fill in the form below and we&rsquo;ll get back to you within 24 hours.
                         </p>
                       </div>
@@ -236,7 +236,7 @@ export default function ContactPage() {
                         {/* Row 1: Name + Email */}
                         <div className="grid sm:grid-cols-2 gap-5">
                           <div>
-                            <label htmlFor="name" className="block text-white font-body text-sm font-medium mb-2">
+                            <label htmlFor="name" className="block text-[#1A3C6E] font-body text-sm font-medium mb-2">
                               Full Name
                             </label>
                             <input
@@ -251,7 +251,7 @@ export default function ContactPage() {
                             />
                           </div>
                           <div>
-                            <label htmlFor="email" className="block text-white font-body text-sm font-medium mb-2">
+                            <label htmlFor="email" className="block text-[#1A3C6E] font-body text-sm font-medium mb-2">
                               Email Address
                             </label>
                             <input
@@ -270,7 +270,7 @@ export default function ContactPage() {
                         {/* Row 2: Phone + Business */}
                         <div className="grid sm:grid-cols-2 gap-5">
                           <div>
-                            <label htmlFor="phone" className="block text-white font-body text-sm font-medium mb-2">
+                            <label htmlFor="phone" className="block text-[#1A3C6E] font-body text-sm font-medium mb-2">
                               Phone Number
                             </label>
                             <input
@@ -285,7 +285,7 @@ export default function ContactPage() {
                             />
                           </div>
                           <div>
-                            <label htmlFor="business" className="block text-white font-body text-sm font-medium mb-2">
+                            <label htmlFor="business" className="block text-[#1A3C6E] font-body text-sm font-medium mb-2">
                               Business Name
                             </label>
                             <input
@@ -302,7 +302,7 @@ export default function ContactPage() {
 
                         {/* Row 3: Service Dropdown */}
                         <div>
-                          <label htmlFor="service" className="block text-white font-body text-sm font-medium mb-2">
+                          <label htmlFor="service" className="block text-[#1A3C6E] font-body text-sm font-medium mb-2">
                             What Service Are You Interested In?
                           </label>
                           <div className="relative">
@@ -316,7 +316,7 @@ export default function ContactPage() {
                             >
                               <option value="" disabled>Select a service...</option>
                               {serviceOptions.map((opt) => (
-                                <option key={opt} value={opt} className="bg-dark-100 text-white">
+                                <option key={opt} value={opt} className="bg-white text-[#1A1A1A]">
                                   {opt}
                                 </option>
                               ))}
@@ -330,7 +330,7 @@ export default function ContactPage() {
 
                         {/* Row 4: Message */}
                         <div>
-                          <label htmlFor="message" className="block text-white font-body text-sm font-medium mb-2">
+                          <label htmlFor="message" className="block text-[#1A3C6E] font-body text-sm font-medium mb-2">
                             Tell Us About Your Project
                           </label>
                           <textarea
@@ -349,11 +349,11 @@ export default function ContactPage() {
                         <button
                           type="submit"
                           disabled={status === 'submitting'}
-                          className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-jade text-dark font-heading font-bold text-sm rounded-lg hover:bg-jade-400 transition-all group disabled:opacity-60 disabled:cursor-not-allowed"
+                          className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 bg-jade text-white font-heading font-bold text-sm rounded-lg hover:bg-jade-400 transition-all group disabled:opacity-60 disabled:cursor-not-allowed"
                         >
                           {status === 'submitting' ? (
                             <>
-                              <div className="w-4 h-4 border-2 border-dark/30 border-t-dark rounded-full animate-spin" />
+                              <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                               Sending...
                             </>
                           ) : (
@@ -373,7 +373,7 @@ export default function ContactPage() {
               <div className="lg:col-span-2 space-y-6">
                 {/* Contact Details Card */}
                 <div className="glass-card p-8">
-                  <h3 className="font-heading font-bold text-lg text-white mb-6">
+                  <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-6">
                     Contact Details
                   </h3>
                   <div className="space-y-5">
@@ -383,18 +383,18 @@ export default function ContactPage() {
                           <detail.icon size={18} className="text-jade" />
                         </div>
                         <div>
-                          <p className="text-gray-500 font-body text-xs uppercase tracking-wider mb-0.5">
+                          <p className="text-[#555555] font-body text-xs uppercase tracking-wider mb-0.5">
                             {detail.label}
                           </p>
                           {detail.href ? (
                             <a
                               href={detail.href}
-                              className="text-white font-body text-sm hover:text-jade transition-colors"
+                              className="text-[#1A3C6E] font-body text-sm hover:text-jade transition-colors"
                             >
                               {detail.value}
                             </a>
                           ) : (
-                            <p className="text-white font-body text-sm">{detail.value}</p>
+                            <p className="text-[#1A3C6E] font-body text-sm">{detail.value}</p>
                           )}
                         </div>
                       </div>
@@ -407,19 +407,19 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Shield size={18} className="text-jade flex-shrink-0" />
-                      <p className="text-gray-300 font-body text-sm">
+                      <p className="text-[#333333] font-body text-sm">
                         Free, no-obligation consultation
                       </p>
                     </div>
                     <div className="flex items-center gap-3">
                       <Zap size={18} className="text-jade flex-shrink-0" />
-                      <p className="text-gray-300 font-body text-sm">
+                      <p className="text-[#333333] font-body text-sm">
                         Response within 24 hours
                       </p>
                     </div>
                     <div className="flex items-center gap-3">
                       <MessageSquare size={18} className="text-jade flex-shrink-0" />
-                      <p className="text-gray-300 font-body text-sm">
+                      <p className="text-[#333333] font-body text-sm">
                         No jargon, ever
                       </p>
                     </div>
@@ -428,7 +428,7 @@ export default function ContactPage() {
 
                 {/* What Happens Next Card */}
                 <div className="glass-card p-8">
-                  <h3 className="font-heading font-bold text-lg text-white mb-5">
+                  <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-5">
                     What Happens Next?
                   </h3>
                   <div className="space-y-4">
@@ -437,7 +437,7 @@ export default function ContactPage() {
                         <div className="w-6 h-6 rounded-full bg-jade/10 border border-jade/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <span className="text-jade font-heading font-bold text-xs">{i + 1}</span>
                         </div>
-                        <p className="text-gray-400 font-body text-sm leading-relaxed">{step}</p>
+                        <p className="text-[#555555] font-body text-sm leading-relaxed">{step}</p>
                       </div>
                     ))}
                   </div>
@@ -449,12 +449,12 @@ export default function ContactPage() {
       </section>
 
       {/* ── 3. FAQ STRIP ── */}
-      <section ref={faqRef} className="relative py-20 lg:py-28 overflow-hidden">
+      <section ref={faqRef} className="relative py-20 lg:py-28 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '50%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-12 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Common Questions</span>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mt-3">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl text-[#1A3C6E] mt-3">
               Before You Reach Out
             </h2>
           </div>
@@ -466,8 +466,8 @@ export default function ContactPage() {
                 className="reveal glass-card glass-card-hover p-7 transition-all"
                 style={{ '--reveal-index': i }}
               >
-                <h3 className="font-heading font-bold text-base text-white mb-3">{item.q}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+                <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-3">{item.q}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
               </div>
             ))}
           </div>
@@ -475,20 +475,20 @@ export default function ContactPage() {
       </section>
 
       {/* ── 4. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-20 lg:py-28 overflow-hidden">
+      <section ref={ctaRef} className="relative py-20 lg:py-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white mb-4">
               Prefer to Talk Directly?
             </h2>
-            <p className="text-gray-400 font-body text-base mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-base mb-8 max-w-xl mx-auto">
               No forms needed. Give us a call, send a WhatsApp, or drop us an email &mdash; whatever suits you best.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="tel:+353873999296"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
               >
                 <Phone size={18} />
                 Call Us
@@ -497,14 +497,14 @@ export default function ContactPage() {
                 href="https://wa.me/353873999296"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-white/10 text-white font-heading font-semibold rounded-lg hover:bg-white/5 transition-all text-base"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-gray-200 text-white font-heading font-semibold rounded-lg hover:bg-gray-100 hover:text-[#1A3C6E] transition-all text-base"
               >
                 <MessageSquare size={18} />
                 WhatsApp
               </a>
               <a
                 href="mailto:conor@moreydigital.ie"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-white/10 text-white font-heading font-semibold rounded-lg hover:bg-white/5 transition-all text-base"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-gray-200 text-white font-heading font-semibold rounded-lg hover:bg-gray-100 hover:text-[#1A3C6E] transition-all text-base"
               >
                 <Mail size={18} />
                 Email

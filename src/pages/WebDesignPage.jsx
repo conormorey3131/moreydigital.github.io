@@ -40,7 +40,7 @@ function BrowserMockup() {
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
           <div className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
         </div>
-        <div className="flex-1 h-5 rounded bg-white/[0.06] mx-2" />
+        <div className="flex-1 h-5 rounded bg-gray-200 mx-2" />
       </div>
       {/* Page layout skeleton */}
       <div className="space-y-3">
@@ -48,39 +48,39 @@ function BrowserMockup() {
         <div className="flex items-center justify-between">
           <div className="w-16 h-3 rounded bg-jade/30" />
           <div className="flex gap-3">
-            <div className="w-8 h-2 rounded bg-white/10" />
-            <div className="w-8 h-2 rounded bg-white/10" />
-            <div className="w-8 h-2 rounded bg-white/10" />
+            <div className="w-8 h-2 rounded bg-gray-200" />
+            <div className="w-8 h-2 rounded bg-gray-200" />
+            <div className="w-8 h-2 rounded bg-gray-200" />
           </div>
         </div>
         {/* Hero area */}
-        <div className="bg-white/[0.03] rounded-lg p-4 space-y-2">
-          <div className="w-3/4 h-3 rounded bg-white/15" />
-          <div className="w-1/2 h-3 rounded bg-white/10" />
+        <div className="bg-gray-100 rounded-lg p-4 space-y-2">
+          <div className="w-3/4 h-3 rounded bg-gray-300" />
+          <div className="w-1/2 h-3 rounded bg-gray-200" />
           <div className="w-20 h-6 rounded bg-jade/40 mt-3" />
         </div>
         {/* Cards row */}
         <div className="grid grid-cols-3 gap-2">
-          <div className="bg-white/[0.03] rounded-lg p-3 space-y-1.5">
+          <div className="bg-gray-100 rounded-lg p-3 space-y-1.5">
             <div className="w-5 h-5 rounded bg-jade/20" />
-            <div className="w-full h-2 rounded bg-white/10" />
-            <div className="w-2/3 h-2 rounded bg-white/[0.06]" />
+            <div className="w-full h-2 rounded bg-gray-200" />
+            <div className="w-2/3 h-2 rounded bg-gray-200" />
           </div>
-          <div className="bg-white/[0.03] rounded-lg p-3 space-y-1.5">
+          <div className="bg-gray-100 rounded-lg p-3 space-y-1.5">
             <div className="w-5 h-5 rounded bg-jade/20" />
-            <div className="w-full h-2 rounded bg-white/10" />
-            <div className="w-2/3 h-2 rounded bg-white/[0.06]" />
+            <div className="w-full h-2 rounded bg-gray-200" />
+            <div className="w-2/3 h-2 rounded bg-gray-200" />
           </div>
-          <div className="bg-white/[0.03] rounded-lg p-3 space-y-1.5">
+          <div className="bg-gray-100 rounded-lg p-3 space-y-1.5">
             <div className="w-5 h-5 rounded bg-jade/20" />
-            <div className="w-full h-2 rounded bg-white/10" />
-            <div className="w-2/3 h-2 rounded bg-white/[0.06]" />
+            <div className="w-full h-2 rounded bg-gray-200" />
+            <div className="w-2/3 h-2 rounded bg-gray-200" />
           </div>
         </div>
         {/* Footer */}
         <div className="flex justify-between pt-2">
-          <div className="w-12 h-2 rounded bg-white/[0.06]" />
-          <div className="w-20 h-2 rounded bg-white/[0.06]" />
+          <div className="w-12 h-2 rounded bg-gray-200" />
+          <div className="w-20 h-2 rounded bg-gray-200" />
         </div>
       </div>
     </div>
@@ -232,7 +232,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -243,7 +243,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '300px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -271,7 +271,7 @@ export default function WebDesignPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '35%', '--glow-y': '45%' }} />
 
@@ -290,13 +290,13 @@ export default function WebDesignPage() {
                   <span className="text-jade">Irish Businesses</span>
                 </h1>
 
-                <p className="text-lg sm:text-xl text-gray-300 font-body font-medium leading-relaxed mb-6 max-w-2xl">
+                <p className="text-lg sm:text-xl text-white/80 font-body font-medium leading-relaxed mb-6 max-w-2xl">
                   Conversion-focused design and brand-aligned layouts that make visitors stay, trust you, and get in touch. Built for real Irish businesses, not generic templates.
                 </p>
 
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
                 >
                   Get a Free Quote
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -313,15 +313,14 @@ export default function WebDesignPage() {
       </section>
 
       {/* ── 2. WHO WE DESIGN FOR ── */}
-      <section ref={audienceRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={audienceRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Clients</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Who We Design For
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               We specialise in websites for Irish SMEs and local businesses, with tailored experience across a range of industries.
             </p>
           </div>
@@ -336,8 +335,8 @@ export default function WebDesignPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mx-auto mb-5">
                   <item.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{item.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{item.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -345,12 +344,11 @@ export default function WebDesignPage() {
       </section>
 
       {/* ── 3. WHAT YOU GET ── */}
-      <section ref={featuresRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '65%', '--glow-y': '30%' }} />
+      <section ref={featuresRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What&rsquo;s Included</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What&rsquo;s Included in Every Design
             </h2>
           </div>
@@ -365,8 +363,8 @@ export default function WebDesignPage() {
                 <div className="w-11 h-11 rounded-xl bg-jade/10 flex items-center justify-center mb-4">
                   <item.icon size={22} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -374,15 +372,14 @@ export default function WebDesignPage() {
       </section>
 
       {/* ── 4. DESIGN DELIVERABLES ── */}
-      <section ref={deliverablesRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={deliverablesRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Deliverables</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What You Receive
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Here&rsquo;s exactly what&rsquo;s delivered as part of every Morey Digital web design project.
             </p>
           </div>
@@ -394,8 +391,8 @@ export default function WebDesignPage() {
                   <Check size={16} className="text-jade" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-bold text-base text-white mb-1">{item.title}</h3>
-                  <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-1">{item.title}</h3>
+                  <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -404,15 +401,14 @@ export default function WebDesignPage() {
       </section>
 
       {/* ── 5. SELECTED WORK ── */}
-      <section ref={portfolioRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
+      <section ref={portfolioRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Work</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Recent Web Design Projects
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               A sample of websites we&rsquo;ve designed for Irish businesses. More case studies coming soon.
             </p>
           </div>
@@ -434,11 +430,11 @@ export default function WebDesignPage() {
                   <span className="inline-block px-2.5 py-1 rounded-full bg-jade/10 border border-jade/20 text-jade text-xs font-body font-medium mb-3">
                     {project.industry}
                   </span>
-                  <h3 className="font-heading font-bold text-lg text-white mb-2">{project.name}</h3>
-                  <div className="flex items-center gap-2 text-gray-400 font-body text-sm">
+                  <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-2">{project.name}</h3>
+                  <div className="flex items-center gap-2 text-[#555555] font-body text-sm">
                     <MapPin size={14} className="text-jade flex-shrink-0" />
                     <span>{project.location}</span>
-                    <span className="text-gray-600">&middot;</span>
+                    <span className="text-gray-400">&middot;</span>
                     <span>{project.service}</span>
                   </div>
                   <div className="mt-4 flex items-center gap-1 text-jade font-heading font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
@@ -453,12 +449,11 @@ export default function WebDesignPage() {
       </section>
 
       {/* ── 6. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -477,19 +472,19 @@ export default function WebDesignPage() {
       </section>
 
       {/* ── 7. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Design a Website That Works for Your Business?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Get a free, no-obligation quote. We&rsquo;ll talk through what you need and give you a clear picture of what&rsquo;s involved.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

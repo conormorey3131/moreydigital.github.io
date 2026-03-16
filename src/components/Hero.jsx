@@ -9,8 +9,8 @@ function BrowserCard() {
         <div className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
         <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/80" />
         <div className="w-2.5 h-2.5 rounded-full bg-green-400/80" />
-        <div className="ml-2 flex-1 h-5 rounded bg-white/5 flex items-center px-2">
-          <span className="text-[9px] text-gray-500 font-body">yoursite.ie</span>
+        <div className="ml-2 flex-1 h-5 rounded bg-gray-100 flex items-center px-2">
+          <span className="text-[9px] text-[#555555] font-body">yoursite.ie</span>
         </div>
       </div>
       {/* Layout skeleton */}
@@ -19,11 +19,11 @@ function BrowserCard() {
           <span className="text-[10px] text-jade/60 font-heading font-semibold">HERO</span>
         </div>
         <div className="flex gap-2">
-          <div className="flex-1 h-8 rounded bg-white/5" />
-          <div className="flex-1 h-8 rounded bg-white/5" />
-          <div className="flex-1 h-8 rounded bg-white/5" />
+          <div className="flex-1 h-8 rounded bg-gray-100" />
+          <div className="flex-1 h-8 rounded bg-gray-100" />
+          <div className="flex-1 h-8 rounded bg-gray-100" />
         </div>
-        <div className="h-6 rounded bg-white/[0.03]" />
+        <div className="h-6 rounded bg-gray-50" />
       </div>
     </div>
   )
@@ -33,7 +33,7 @@ function RankCard() {
   return (
     <div className="glass-card p-3 w-48 float-medium" style={{ animationDelay: '0.8s' }}>
       <div className="flex items-center justify-between mb-2">
-        <span className="text-[10px] text-gray-400 font-body uppercase tracking-wider">Google Rank</span>
+        <span className="text-[10px] text-[#555555] font-body uppercase tracking-wider">Google Rank</span>
         <span className="text-jade text-xs font-heading font-bold">#1</span>
       </div>
       <div className="space-y-1.5">
@@ -44,9 +44,9 @@ function RankCard() {
         ].map((item) => (
           <div key={item.keyword}>
             <div className="flex justify-between mb-0.5">
-              <span className="text-[9px] text-gray-500 font-body">{item.keyword}</span>
+              <span className="text-[9px] text-[#555555] font-body">{item.keyword}</span>
             </div>
-            <div className="h-1.5 rounded-full bg-white/5">
+            <div className="h-1.5 rounded-full bg-gray-100">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-jade/60 to-jade"
                 style={{ width: item.w }}
@@ -63,7 +63,7 @@ function AnalyticsCard() {
   return (
     <div className="glass-card p-3 w-52 float-slow" style={{ animationDelay: '1.5s' }}>
       <div className="flex items-center justify-between mb-2">
-        <span className="text-[10px] text-gray-400 font-body uppercase tracking-wider">Monthly Visitors</span>
+        <span className="text-[10px] text-[#555555] font-body uppercase tracking-wider">Monthly Visitors</span>
         <span className="text-jade text-xs font-heading font-bold">+38%</span>
       </div>
       <div className="flex items-end gap-1 h-12">
@@ -76,8 +76,8 @@ function AnalyticsCard() {
         ))}
       </div>
       <div className="flex items-center justify-between mt-2">
-        <span className="text-[10px] text-gray-500 font-body">2,847 visits</span>
-        <Eye size={12} className="text-gray-500" />
+        <span className="text-[10px] text-[#555555] font-body">2,847 visits</span>
+        <Eye size={12} className="text-[#555555]" />
       </div>
     </div>
   )
@@ -92,11 +92,11 @@ function SupportCard() {
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-[11px] text-white font-body font-medium">Website updated</p>
-          <p className="text-[9px] text-gray-500 font-body">2 mins ago</p>
+          <p className="text-[9px] text-[#555555] font-body">2 mins ago</p>
         </div>
         <span className="text-[9px] text-jade bg-jade/10 px-1.5 py-0.5 rounded font-body">Done</span>
       </div>
-      <div className="mt-2 h-1.5 rounded-full bg-white/5">
+      <div className="mt-2 h-1.5 rounded-full bg-gray-100">
         <div className="h-full rounded-full bg-jade w-full transition-all" />
       </div>
     </div>
@@ -105,14 +105,14 @@ function SupportCard() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 lg:pt-0 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 lg:pt-0 overflow-hidden bg-[#1A3C6E]">
       {/* Background effects */}
-      <div className="absolute inset-0 grid-dots" />
+      <div className="absolute inset-0 grid-dots-light" />
       <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '30%', '--glow-y': '40%' }} />
       <div
         className="absolute top-1/4 right-0 w-[500px] h-[500px] max-w-full"
         style={{
-          background: 'radial-gradient(circle, rgba(0,200,150,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, rgba(244,123,32,0.08) 0%, transparent 70%)',
         }}
       />
 
@@ -126,7 +126,7 @@ export default function Hero() {
               for Irish Businesses
             </h1>
 
-            <p className="text-lg text-gray-400 font-body leading-relaxed mb-8 max-w-xl">
+            <p className="text-lg text-white/80 font-body leading-relaxed mb-8 max-w-xl">
               From design and development to SEO, Google Business and ongoing support —
               we handle everything so you can focus on running your business. Based in Clare, working nationwide.
             </p>
@@ -134,7 +134,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group"
               >
                 Get a Free Quote
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -157,7 +157,7 @@ export default function Hero() {
               ].map((stat) => (
                 <div key={stat.label}>
                   <div className="text-jade font-heading font-bold text-xl">{stat.value}</div>
-                  <div className="text-gray-500 text-xs font-body mt-0.5">{stat.label}</div>
+                  <div className="text-white/60 text-xs font-body mt-0.5">{stat.label}</div>
                 </div>
               ))}
             </div>

@@ -91,13 +91,13 @@ export default function Navbar() {
     (item.children && item.children.some((c) => location.pathname === c.to))
 
   const panelClasses =
-    'bg-[rgba(10,15,20,0.97)] backdrop-blur-xl border border-white/[0.08] rounded-xl shadow-2xl py-2'
+    'bg-white border border-gray-200 shadow-xl rounded-xl py-2'
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-dark/90 backdrop-blur-lg border-b border-white/5 shadow-lg shadow-black/20'
+          ? 'bg-dark/90 backdrop-blur-lg border-b border-white/5 shadow-lg shadow-[#1A3C6E]/20'
           : 'bg-transparent'
       }`}
     >
@@ -105,7 +105,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between w-full h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-jade flex items-center justify-center font-heading font-bold text-dark text-sm">
+            <div className="w-8 h-8 rounded-lg bg-jade flex items-center justify-center font-heading font-bold text-white text-sm">
               M
             </div>
             <span className="font-heading font-bold text-lg text-white group-hover:text-jade transition-colors">
@@ -128,7 +128,7 @@ export default function Navbar() {
                   if (servicesOpen) setActiveL1(null)
                 }}
                 className={`flex items-center gap-1 text-sm transition-colors font-body whitespace-nowrap ${
-                  isServicesSection ? 'text-jade' : 'text-gray-400 hover:text-white'
+                  isServicesSection ? 'text-jade' : 'text-white/70 hover:text-white'
                 }`}
               >
                 Services
@@ -155,7 +155,7 @@ export default function Navbar() {
                               ? 'text-jade bg-jade/[0.08] border-l-2 border-jade'
                               : hovered
                                 ? 'text-jade bg-jade/[0.08]'
-                                : 'text-white/70 hover:text-jade hover:bg-jade/[0.08]'
+                                : 'text-[#555555] hover:text-[#F47B20] hover:bg-jade/[0.08]'
                           } ${!active ? 'border-l-2 border-transparent' : ''}`}
                         >
                           <span>{item.label}</span>
@@ -179,7 +179,7 @@ export default function Navbar() {
                             className={`block px-4 py-3 text-sm font-body transition-all duration-200 ${
                               childActive
                                 ? 'text-jade bg-jade/[0.08] border-l-2 border-jade'
-                                : 'text-white/70 hover:text-jade hover:bg-jade/[0.08] border-l-2 border-transparent'
+                                : 'text-[#555555] hover:text-[#F47B20] hover:bg-jade/[0.08] border-l-2 border-transparent'
                             }`}
                           >
                             {child.label}
@@ -195,7 +195,7 @@ export default function Navbar() {
             <Link
               to="/plans"
               className={`text-sm transition-colors font-body whitespace-nowrap ${
-                location.pathname === '/plans' ? 'text-jade' : 'text-gray-400 hover:text-white'
+                location.pathname === '/plans' ? 'text-jade' : 'text-white/70 hover:text-white'
               }`}
             >
               Plans
@@ -203,14 +203,14 @@ export default function Navbar() {
             <Link
               to="/about"
               className={`text-sm transition-colors font-body whitespace-nowrap ${
-                location.pathname === '/about' ? 'text-jade' : 'text-gray-400 hover:text-white'
+                location.pathname === '/about' ? 'text-jade' : 'text-white/70 hover:text-white'
               }`}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="hidden md:inline-flex px-5 py-2.5 bg-jade text-dark font-heading font-semibold text-sm rounded-lg hover:bg-jade-400 transition-colors whitespace-nowrap flex-shrink-0"
+              className="hidden md:inline-flex px-5 py-2.5 bg-jade text-white font-heading font-semibold text-sm rounded-lg hover:bg-jade-400 transition-colors whitespace-nowrap flex-shrink-0"
             >
               Get a Free Quote
             </Link>
@@ -219,7 +219,7 @@ export default function Navbar() {
           {/* Mobile toggle — visible below md */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden p-2 text-gray-400 hover:text-white"
+            className="md:hidden p-2 text-white/70 hover:text-white"
             aria-label="Toggle menu"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -239,7 +239,7 @@ export default function Navbar() {
             to="/services"
             onClick={() => setOpen(false)}
             className={`block py-3 transition-colors font-body ${
-              location.pathname === '/services' ? 'text-jade' : 'text-gray-400 hover:text-white'
+              location.pathname === '/services' ? 'text-jade' : 'text-white/70 hover:text-white'
             }`}
           >
             Services
@@ -254,7 +254,7 @@ export default function Navbar() {
                   to={item.to}
                   onClick={() => setOpen(false)}
                   className={`flex-1 block py-3 pl-4 text-sm transition-colors font-body ${
-                    isL1Active(item) ? 'text-jade' : 'text-gray-500 hover:text-white'
+                    isL1Active(item) ? 'text-jade' : 'text-white/60 hover:text-white'
                   }`}
                 >
                   {item.label}
@@ -262,7 +262,7 @@ export default function Navbar() {
                 {item.children && item.children.length > 0 && (
                   <button
                     onClick={() => setMobileExpanded(mobileExpanded === i ? null : i)}
-                    className="p-3 text-gray-500 hover:text-white transition-colors"
+                    className="p-3 text-white/60 hover:text-white transition-colors"
                     aria-label={`Expand ${item.label}`}
                   >
                     <ChevronDown
@@ -290,7 +290,7 @@ export default function Navbar() {
                       className={`block py-3 pl-8 text-xs transition-colors font-body border-l border-white/10 ${
                         location.pathname === child.to
                           ? 'text-jade'
-                          : 'text-gray-500 hover:text-white'
+                          : 'text-white/60 hover:text-white'
                       }`}
                     >
                       {child.label}
@@ -305,7 +305,7 @@ export default function Navbar() {
             to="/plans"
             onClick={() => setOpen(false)}
             className={`block py-3 transition-colors font-body ${
-              location.pathname === '/plans' ? 'text-jade' : 'text-gray-400 hover:text-white'
+              location.pathname === '/plans' ? 'text-jade' : 'text-white/70 hover:text-white'
             }`}
           >
             Plans
@@ -314,7 +314,7 @@ export default function Navbar() {
             to="/about"
             onClick={() => setOpen(false)}
             className={`block py-3 transition-colors font-body ${
-              location.pathname === '/about' ? 'text-jade' : 'text-gray-400 hover:text-white'
+              location.pathname === '/about' ? 'text-jade' : 'text-white/70 hover:text-white'
             }`}
           >
             About
@@ -322,7 +322,7 @@ export default function Navbar() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
-            className="block mt-4 px-5 py-3 bg-jade text-dark font-heading font-semibold text-sm rounded-lg text-center hover:bg-jade-400 transition-colors"
+            className="block mt-4 px-5 py-3 bg-jade text-white font-heading font-semibold text-sm rounded-lg text-center hover:bg-jade-400 transition-colors"
           >
             Get a Free Quote
           </Link>

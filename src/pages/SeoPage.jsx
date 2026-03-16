@@ -178,7 +178,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -189,7 +189,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '400px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -217,7 +217,7 @@ export default function SeoPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '45%', '--glow-y': '45%' }} />
 
@@ -237,13 +237,13 @@ export default function SeoPage() {
               If your business isn&rsquo;t showing up in Google search results, you&rsquo;re invisible to the people most likely to buy from you. Morey Digital provides practical, results-focused SEO that gets Irish businesses found online.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               We handle everything &mdash; on-page optimisation, local SEO, Google Business Profile management, keyword research, technical SEO, and monthly reporting. No jargon, no vanity metrics. Just a clear strategy to improve your visibility and bring in more business from organic search.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -269,12 +269,11 @@ export default function SeoPage() {
       </section>
 
       {/* ── 2. WHY SEO MATTERS ── */}
-      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why It Matters</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Why SEO Is Critical for Your Business
             </h2>
           </div>
@@ -289,8 +288,8 @@ export default function SeoPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -298,15 +297,14 @@ export default function SeoPage() {
       </section>
 
       {/* ── 3. WHAT WE DO ── */}
-      <section ref={servicesRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '30%' }} />
+      <section ref={servicesRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What We Do</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               How We Improve Your Search Visibility
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               SEO isn&rsquo;t a single task &mdash; it&rsquo;s a structured, ongoing process. Here&rsquo;s exactly what we do to get your business ranking.
             </p>
           </div>
@@ -323,8 +321,8 @@ export default function SeoPage() {
                     <item.icon size={22} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -334,8 +332,7 @@ export default function SeoPage() {
       </section>
 
       {/* ── 4. GOOGLE BUSINESS PROFILE ── */}
-      <section ref={gbpRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={gbpRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="reveal">
             <div className="glass-card p-8 sm:p-10 lg:p-12">
@@ -345,34 +342,34 @@ export default function SeoPage() {
                   <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                     <Store size={28} className="text-jade" />
                   </div>
-                  <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-3">
+                  <h2 className="font-heading font-bold text-2xl sm:text-3xl text-[#1A3C6E] mb-3">
                     Google Business Profile Management
                   </h2>
                   <p className="text-jade font-body font-semibold text-base mb-6">
                     The most overlooked tool for local businesses in Ireland.
                   </p>
-                  <p className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+                  <p className="text-[#555555] font-body text-sm leading-relaxed mb-4">
                     Your Google Business Profile is often the very first impression a potential customer gets of your business. It appears in Google Search, Google Maps, and the local pack &mdash; the map results that appear above standard search listings for local queries.
                   </p>
-                  <p className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+                  <p className="text-[#555555] font-body text-sm leading-relaxed mb-4">
                     An incomplete or neglected profile tells customers you don&rsquo;t care about your online presence. A fully optimised, actively managed profile tells them you&rsquo;re professional, established, and ready for their business.
                   </p>
-                  <p className="text-gray-400 font-body text-sm leading-relaxed">
+                  <p className="text-[#555555] font-body text-sm leading-relaxed">
                     We handle the complete setup, optimisation, and ongoing management of your Google Business Profile &mdash; so it works as a genuine lead generation tool, not just a listing.
                   </p>
                 </div>
 
                 {/* Features column */}
                 <div className="lg:w-1/2">
-                  <div className="glass-card p-6 sm:p-8 bg-white/[0.02]">
-                    <p className="text-white font-heading font-semibold text-sm uppercase tracking-wider mb-5">
+                  <div className="glass-card p-6 sm:p-8 bg-gray-100">
+                    <p className="text-[#1A3C6E] font-heading font-semibold text-sm uppercase tracking-wider mb-5">
                       What&rsquo;s Included
                     </p>
                     <ul className="space-y-3">
                       {gbpFeatures.map((f) => (
                         <li key={f} className="flex items-start gap-3">
                           <Check size={16} className="text-jade mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-300 font-body text-sm leading-relaxed">{f}</span>
+                          <span className="text-[#555555] font-body text-sm leading-relaxed">{f}</span>
                         </li>
                       ))}
                     </ul>
@@ -385,15 +382,14 @@ export default function SeoPage() {
       </section>
 
       {/* ── 5. BUSINESS BENEFITS ── */}
-      <section ref={benefitsRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '60%' }} />
+      <section ref={benefitsRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Business Impact</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What SEO Actually Delivers for Your Business
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               SEO isn&rsquo;t just about rankings. It&rsquo;s about generating real, measurable business results from organic search.
             </p>
           </div>
@@ -410,8 +406,8 @@ export default function SeoPage() {
                     <item.icon size={24} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -421,12 +417,11 @@ export default function SeoPage() {
       </section>
 
       {/* ── 6. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -445,19 +440,19 @@ export default function SeoPage() {
       </section>
 
       {/* ── 7. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Start Ranking on Google?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Book an SEO audit and find out exactly where your website stands &mdash; and what it would take to start ranking for the searches that matter to your business.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Book an SEO Audit
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

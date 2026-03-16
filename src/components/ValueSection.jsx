@@ -23,15 +23,15 @@ export default function ValueSection() {
   const ref = useReveal()
 
   return (
-    <section ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
       <div className="absolute inset-0 glow-jade-subtle" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why It Matters</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             Your Website Is Your Most Important Salesperson
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             It works around the clock, talks to every visitor, and either wins them over or sends them to a competitor. Here's what's at stake.
           </p>
         </div>
@@ -46,8 +46,8 @@ export default function ValueSection() {
               <div className="w-12 h-12 rounded-xl bg-jade/10 flex items-center justify-center mb-5">
                 <card.icon size={24} className="text-jade" />
               </div>
-              <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-              <p className="text-gray-400 font-body leading-relaxed text-sm">{card.desc}</p>
+              <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+              <p className="text-[#555555] font-body leading-relaxed text-sm">{card.desc}</p>
             </div>
           ))}
         </div>

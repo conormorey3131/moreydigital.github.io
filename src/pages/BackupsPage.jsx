@@ -219,7 +219,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -230,7 +230,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '400px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -243,9 +243,9 @@ function PlanCell({ value }) {
     return <CheckCircle size={18} className="text-jade mx-auto" />
   }
   if (value === false) {
-    return <span className="text-white/25">&mdash;</span>
+    return <span className="text-gray-300">&mdash;</span>
   }
-  return <span className="text-white/80 text-sm font-body">{value}</span>
+  return <span className="text-[#555555] text-sm font-body">{value}</span>
 }
 
 /* ─── MOBILE PLAN CARD ─── */
@@ -253,7 +253,7 @@ function MobilePlanCard({ planName, planKey, highlighted }) {
   return (
     <div className={`glass-card p-6 ${highlighted ? 'border-l-[3px] border-l-jade' : ''}`}>
       <div className="flex items-center gap-2 mb-5">
-        <h3 className="font-heading font-bold text-lg text-white">{planName}</h3>
+        <h3 className="font-heading font-bold text-lg text-[#1A3C6E]">{planName}</h3>
         {highlighted && (
           <span className="px-2 py-0.5 rounded-full bg-jade/10 border border-jade/20 text-jade text-[10px] font-body font-medium uppercase tracking-wider">
             Most Popular
@@ -263,7 +263,7 @@ function MobilePlanCard({ planName, planKey, highlighted }) {
       <div className="space-y-3">
         {planFeatures.map((f) => (
           <div key={f.label} className="flex items-center justify-between gap-3">
-            <span className="text-gray-400 font-body text-sm">{f.label}</span>
+            <span className="text-[#555555] font-body text-sm">{f.label}</span>
             <PlanCell value={f[planKey]} />
           </div>
         ))}
@@ -296,7 +296,7 @@ export default function BackupsPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '45%', '--glow-y': '45%' }} />
 
@@ -312,17 +312,17 @@ export default function BackupsPage() {
               <span className="text-jade">We Get You Back Online Fast</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-300 font-body font-medium leading-relaxed mb-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white font-body font-medium leading-relaxed mb-4 max-w-3xl mx-auto">
               Every website we manage is backed up automatically every day. If something breaks &mdash; a bad update, a hack, human error, or a hosting issue &mdash; we restore it quickly with minimal disruption to your business.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               Your website is a business asset. Losing it &mdash; even temporarily &mdash; means lost enquiries, lost trust, and potentially lost data. Morey Digital ensures that no matter what happens, there&rsquo;s always a clean, recent version of your site ready to be restored. We handle everything so you don&rsquo;t have to.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -348,10 +348,10 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 2. INTRO STATEMENT ── */}
-      <section ref={introRef} className="relative py-16 lg:py-24 overflow-hidden">
+      <section ref={introRef} className="relative py-16 lg:py-24 overflow-hidden bg-white">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
-            <p className="text-lg md:text-xl text-white/60 font-body leading-relaxed">
+            <p className="text-lg md:text-xl text-[#555555] font-body leading-relaxed">
               When your website drives enquiries, bookings, or sales, every minute it&rsquo;s offline costs you real money and real trust. A proper backup and recovery setup isn&rsquo;t a luxury &mdash; it&rsquo;s basic protection for every Irish business with a website that matters to their livelihood.
             </p>
           </div>
@@ -359,12 +359,12 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 3. WHO THIS IS FOR ── */}
-      <section ref={whoRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={whoRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Who We Help</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Who This Service Is For
             </h2>
           </div>
@@ -379,8 +379,8 @@ export default function BackupsPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -388,15 +388,15 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 4. WHAT YOU GET — CHECKLIST ── */}
-      <section ref={checklistRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={checklistRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '30%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What You Get</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What&rsquo;s Included in Every Backup & Recovery Plan
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Here&rsquo;s exactly what we put in place for every website we manage.
             </p>
           </div>
@@ -410,8 +410,8 @@ export default function BackupsPage() {
               >
                 <CheckCircle size={22} className="text-jade flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-heading font-bold text-base text-white mb-1">{item.label}</h3>
-                  <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-1">{item.label}</h3>
+                  <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -420,15 +420,15 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 5. HOW IT WORKS ── */}
-      <section ref={processRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={processRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Process</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               How Our Backup & Recovery Process Works
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               A clear, structured process that means your website is always protected and recoverable.
             </p>
           </div>
@@ -444,8 +444,8 @@ export default function BackupsPage() {
                   <span className="text-jade text-sm font-heading font-bold">{step.num}</span>
                 </div>
                 <span className="text-jade text-xs font-body font-medium uppercase tracking-wider">{step.label}</span>
-                <h3 className="font-heading font-bold text-sm text-white mt-2 mb-3">{step.title}</h3>
-                <p className="text-gray-400 font-body text-xs leading-relaxed">{step.desc}</p>
+                <h3 className="font-heading font-bold text-sm text-[#1A3C6E] mt-2 mb-3">{step.title}</h3>
+                <p className="text-[#555555] font-body text-xs leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -453,15 +453,15 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 6. PLAN COMPARISON ── */}
-      <section ref={plansRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={plansRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '40%' }} />
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Compare Plans</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Backup & Recovery Across Our Plans
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               All plans include daily backups and uptime monitoring. Higher plans add faster response times, more restore points, and priority support.
             </p>
           </div>
@@ -472,7 +472,7 @@ export default function BackupsPage() {
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-jade/[0.12]">
-                    <th className="px-6 py-4 font-heading font-semibold text-sm text-white/80">Feature</th>
+                    <th className="px-6 py-4 font-heading font-semibold text-sm text-[#1A3C6E]">Feature</th>
                     <th className="px-6 py-4 font-heading font-semibold text-sm text-jade text-center">Launch Plan</th>
                     <th className="px-6 py-4 font-heading font-semibold text-sm text-jade text-center">Growth Plan</th>
                     <th className="px-6 py-4 font-heading font-semibold text-sm text-jade text-center relative">
@@ -487,12 +487,12 @@ export default function BackupsPage() {
                   {planFeatures.map((f, i) => (
                     <tr
                       key={f.label}
-                      className={i % 2 === 0 ? 'bg-white/[0.02]' : ''}
+                      className={i % 2 === 0 ? 'bg-gray-50' : ''}
                     >
-                      <td className="px-6 py-4 text-sm text-gray-300 font-body">{f.label}</td>
+                      <td className="px-6 py-4 text-sm text-[#333333] font-body">{f.label}</td>
                       <td className="px-6 py-4 text-center"><PlanCell value={f.launch} /></td>
                       <td className="px-6 py-4 text-center"><PlanCell value={f.growth} /></td>
-                      <td className="px-6 py-4 text-center bg-jade/[0.04] border-l border-jade/10"><PlanCell value={f.managed} /></td>
+                      <td className="px-6 py-4 text-center bg-gray-100 border-l border-gray-200"><PlanCell value={f.managed} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -507,22 +507,22 @@ export default function BackupsPage() {
             <MobilePlanCard planName="Managed Plan" planKey="managed" highlighted />
           </div>
 
-          <p className="text-white/40 font-body text-sm text-center mt-8">
+          <p className="text-[#555555] font-body text-sm text-center mt-8">
             Need a faster recovery time or a custom setup? Get in touch and we&rsquo;ll tailor a plan around your specific requirements.
           </p>
         </div>
       </section>
 
       {/* ── 7. WHAT WE MONITOR ── */}
-      <section ref={monitorRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={monitorRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Monitoring</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What We Monitor to Keep Your Website Safe
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Uptime monitoring is only one part of keeping your website running reliably. Here&rsquo;s everything we watch.
             </p>
           </div>
@@ -539,8 +539,8 @@ export default function BackupsPage() {
                     <item.icon size={22} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -550,12 +550,12 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 8. WHAT HAPPENS WHEN SOMETHING GOES WRONG ── */}
-      <section ref={recoveryRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={recoveryRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '50%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Disaster Recovery</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What Happens If Your Website Goes Down
             </h2>
           </div>
@@ -563,17 +563,17 @@ export default function BackupsPage() {
           <div className="grid lg:grid-cols-2 gap-10 items-start reveal">
             {/* Left column — copy */}
             <div className="space-y-4">
-              <p className="text-gray-300 font-body text-base leading-relaxed">
+              <p className="text-[#333333] font-body text-base leading-relaxed">
                 When something goes wrong with a website &mdash; and at some point, something always does &mdash; the speed and clarity of the response makes all the difference. With Morey Digital managing your website, you don&rsquo;t need to know what to do. We do.
               </p>
-              <p className="text-gray-300 font-body text-base leading-relaxed">
+              <p className="text-[#333333] font-body text-base leading-relaxed">
                 Whether it&rsquo;s a broken update, a hosting issue, a hack, or an accidental deletion, our process is the same: assess quickly, restore from the most recent clean backup, get you back online, and make sure the same thing can&rsquo;t happen again.
               </p>
             </div>
 
             {/* Right column — recovery process card */}
             <div className="glass-card p-8 border-l-[3px] border-l-jade">
-              <h3 className="font-heading font-bold text-lg text-white mb-6">What We Do When Your Site Goes Down</h3>
+              <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-6">What We Do When Your Site Goes Down</h3>
               <div className="space-y-5">
                 {recoverySteps.map((step) => (
                   <div key={step.num} className="flex items-start gap-4">
@@ -581,8 +581,8 @@ export default function BackupsPage() {
                       <span className="text-jade text-xs font-heading font-bold">{step.num}</span>
                     </div>
                     <div>
-                      <span className="font-heading font-semibold text-white text-sm">{step.label}</span>
-                      <span className="text-gray-400 font-body text-sm"> &mdash; {step.desc}</span>
+                      <span className="font-heading font-semibold text-[#1A3C6E] text-sm">{step.label}</span>
+                      <span className="text-[#555555] font-body text-sm"> &mdash; {step.desc}</span>
                     </div>
                   </div>
                 ))}
@@ -593,12 +593,12 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 9. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -617,19 +617,19 @@ export default function BackupsPage() {
       </section>
 
       {/* ── 10. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Is Your Website Backed Up Right Now?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Most Irish business websites have no reliable backup in place &mdash; and discover that fact only when something goes wrong. Don&rsquo;t wait to find out the hard way. Get in touch today.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

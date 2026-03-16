@@ -45,15 +45,15 @@ export default function WhyUs() {
   const ref = useReveal()
 
   return (
-    <section id="why-us" ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="why-us" ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-white">
       <div className="absolute inset-0 glow-jade-subtle" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why Choose Us</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             6 Reasons Irish Businesses Trust Morey Digital
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             We're not the biggest agency — and that's the point. You get direct access, honest advice, and a team that genuinely cares about your results.
           </p>
         </div>
@@ -68,8 +68,8 @@ export default function WhyUs() {
               <div className="w-11 h-11 rounded-xl bg-jade/10 flex items-center justify-center mb-4">
                 <point.icon size={22} className="text-jade" />
               </div>
-              <h3 className="font-heading font-bold text-base text-white mb-2">{point.title}</h3>
-              <p className="text-gray-400 font-body text-sm leading-relaxed">{point.desc}</p>
+              <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{point.title}</h3>
+              <p className="text-[#555555] font-body text-sm leading-relaxed">{point.desc}</p>
             </div>
           ))}
         </div>

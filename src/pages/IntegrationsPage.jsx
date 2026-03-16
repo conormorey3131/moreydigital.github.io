@@ -192,7 +192,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -203,7 +203,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '400px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -232,7 +232,7 @@ export default function IntegrationsPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '45%', '--glow-y': '50%' }} />
 
@@ -248,17 +248,17 @@ export default function IntegrationsPage() {
               <span className="text-jade">Power Your Business</span>
             </h1>
 
-            <p className="text-gray-300 font-body text-base sm:text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
+            <p className="text-white font-body text-base sm:text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
               A static website that just sits there is a missed opportunity. The businesses getting the most from their websites have connected them to the platforms they already use every day &mdash; booking systems, payment processors, email marketing tools, CRMs, and more.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               Morey Digital builds websites that work intelligently alongside your business systems. That means less manual work, fewer errors, better customer experiences, and a website that does far more than just look good.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -268,15 +268,15 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 2. OUR APPROACH ── */}
-      <section ref={approachRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={approachRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Approach</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Our Approach to Integrations & Connected Websites
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               We believe your website should work with your business, not separately from it. Every integration we build is planned carefully and implemented cleanly.
             </p>
           </div>
@@ -288,10 +288,10 @@ export default function IntegrationsPage() {
                 className="reveal glass-card p-8 sm:p-10 transition-all"
                 style={{ '--reveal-index': i }}
               >
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-4">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#1A3C6E] mb-4">
                   {block.title}
                 </h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed mb-6">
+                <p className="text-[#555555] font-body text-sm leading-relaxed mb-6">
                   {block.desc}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -306,12 +306,12 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 3. THE POWER OF A CONNECTED WEBSITE ── */}
-      <section ref={powerRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={powerRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '35%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Connected Websites</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What a Connected Website Can Do for Your Business
             </h2>
           </div>
@@ -327,11 +327,11 @@ export default function IntegrationsPage() {
                 >
                   <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 ${reversed ? 'lg:flex-row-reverse' : ''}`}>
                     <div className="lg:w-3/5">
-                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-5">
+                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#1A3C6E] mb-5">
                         {section.title}
                       </h3>
                       {section.paragraphs.map((para, j) => (
-                        <p key={j} className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+                        <p key={j} className="text-[#555555] font-body text-sm leading-relaxed mb-4">
                           {para}
                         </p>
                       ))}
@@ -352,15 +352,15 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 4. INTEGRATION LOGO STRIP ── */}
-      <section ref={badgesRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={badgesRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Platforms</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Tools & Platforms We Integrate With
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               We connect Irish business websites to the platforms that matter most.
             </p>
           </div>
@@ -369,16 +369,16 @@ export default function IntegrationsPage() {
             {integrationBadges.map((badge, i) => (
               <div
                 key={badge.name}
-                className="reveal flex items-center gap-3 bg-[rgba(15,25,35,0.7)] border border-white/[0.08] rounded-xl py-3 px-4 hover:border-jade/25 transition-all"
+                className="reveal flex items-center gap-3 bg-gray-100 border border-gray-200 rounded-xl py-3 px-4 hover:border-jade/25 transition-all"
                 style={{ '--reveal-index': i }}
               >
                 <badge.icon size={18} className="text-jade flex-shrink-0" />
-                <span className="text-white/80 font-body text-sm">{badge.name}</span>
+                <span className="text-[#333333] font-body text-sm">{badge.name}</span>
               </div>
             ))}
           </div>
 
-          <p className="text-center text-white/40 font-body text-sm mt-8 reveal">
+          <p className="text-center text-[#555555] font-body text-sm mt-8 reveal">
             Don&rsquo;t see the tool you use?{' '}
             <Link to="/contact" className="text-jade hover:underline">Get in touch</Link>{' '}
             &mdash; if it has an API, we can almost certainly connect it.
@@ -387,12 +387,12 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 5. WHY A CONNECTED WEBSITE IS SMARTER ── */}
-      <section ref={smarterRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={smarterRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '50%' }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Smarter Websites</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Why a Connected Website Is the Smarter Choice
             </h2>
           </div>
@@ -404,11 +404,11 @@ export default function IntegrationsPage() {
                 className="reveal glass-card p-8 sm:p-10 transition-all"
                 style={{ '--reveal-index': i }}
               >
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-5">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#1A3C6E] mb-5">
                   {block.title}
                 </h3>
                 {block.paragraphs.map((para, j) => (
-                  <p key={j} className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+                  <p key={j} className="text-[#555555] font-body text-sm leading-relaxed mb-4">
                     {para}
                   </p>
                 ))}
@@ -424,15 +424,15 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 6. BUSINESS IMPACT ── */}
-      <section ref={impactRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={impactRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Business Impact</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What Integrations Actually Deliver for Your Business
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               The right connections between your website and your tools deliver real, measurable improvements to how your business runs.
             </p>
           </div>
@@ -449,8 +449,8 @@ export default function IntegrationsPage() {
                     <item.icon size={24} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -460,12 +460,12 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 7. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '40%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -484,19 +484,19 @@ export default function IntegrationsPage() {
       </section>
 
       {/* ── 8. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Build a Website That Works Smarter for Your Business?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Tell us what tools you use and what you&rsquo;re trying to achieve. We&rsquo;ll map out the right integrations and give you a clear, no-obligation quote.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

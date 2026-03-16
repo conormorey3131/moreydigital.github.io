@@ -31,7 +31,6 @@ const plans = [
       'Security monitoring & malware scanning',
       'Daily automated backups',
       'Uptime monitoring — 24/7 alerts',
-      'No long-term contract — cancel any time',
     ],
     featured: true,
   },
@@ -57,15 +56,15 @@ export default function Plans() {
   const ref = useReveal()
 
   return (
-    <section id="plans" ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="plans" ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-white">
       <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Plans</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             Simple Plans, No Surprises
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             Transparent pricing for Irish businesses. Choose what fits — and get in touch for a free, no-obligation quote.
           </p>
         </div>
@@ -79,7 +78,7 @@ export default function Plans() {
             >
               {plan.featured && (
                 <div className="flex justify-center mb-[-14px] relative z-10">
-                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-jade text-dark font-heading font-bold text-xs uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-jade text-white font-heading font-bold text-xs uppercase tracking-wider">
                     <Star size={12} className="fill-current" />
                     Most Popular
                   </span>
@@ -95,8 +94,8 @@ export default function Plans() {
                 style={
                   plan.featured
                     ? {
-                        border: '1px solid rgba(0,200,150,0.4)',
-                        boxShadow: '0 0 30px rgba(0,200,150,0.08)',
+                        border: '1px solid rgba(244,123,32,0.4)',
+                        boxShadow: '0 0 30px rgba(244,123,32,0.08)',
                       }
                     : undefined
                 }
@@ -105,24 +104,24 @@ export default function Plans() {
                   {plan.label}
                 </span>
 
-                <h3 className="font-heading font-bold text-2xl text-white mb-2">{plan.title}</h3>
-                <p className="text-gray-400 font-body text-sm mb-5 leading-relaxed">{plan.desc}</p>
+                <h3 className="font-heading font-bold text-2xl text-[#1A3C6E] mb-2">{plan.title}</h3>
+                <p className="text-[#555555] font-body text-sm mb-5 leading-relaxed">{plan.desc}</p>
 
                 {/* Price */}
                 <div className="mb-5">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-white/50 font-body text-xs">From</span>
+                    <span className="text-[#555555] font-body text-xs">From</span>
                   </div>
                   <p className="font-heading font-extrabold text-3xl text-jade leading-none mt-1">{plan.price}</p>
-                  <p className="text-white/40 font-body text-xs mt-1">{plan.priceSuffix}</p>
-                  <p className="text-white/30 font-body text-[11px] mt-1">{plan.priceNote}</p>
+                  <p className="text-[#555555] font-body text-xs mt-1">{plan.priceSuffix}</p>
+                  <p className="text-[#555555] font-body text-[11px] mt-1">{plan.priceNote}</p>
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
                   {plan.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5 text-sm font-body">
                       <Check size={16} className="text-jade mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{f}</span>
+                      <span className="text-[#555555]">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -131,7 +130,7 @@ export default function Plans() {
                   to="/contact"
                   className={`inline-flex items-center justify-center w-full gap-2 px-6 py-3 rounded-lg font-heading font-semibold text-sm transition-all group ${
                     plan.featured
-                      ? 'bg-jade text-dark hover:bg-jade-400'
+                      ? 'bg-jade text-white hover:bg-jade-400'
                       : 'border border-jade text-jade hover:bg-jade hover:text-dark'
                   }`}
                 >

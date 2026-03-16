@@ -87,15 +87,15 @@ export default function Services() {
   const ref = useReveal()
 
   return (
-    <section id="services" ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="services" ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-white">
       <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '70%', '--glow-y': '20%' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What We Do</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             Everything You Need to Succeed Online
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             We don't just build websites — we cover design, SEO, eCommerce, branding, and ongoing support. One team for everything digital.
           </p>
         </div>
@@ -110,11 +110,11 @@ export default function Services() {
               <div className="w-11 h-11 rounded-xl bg-jade/10 flex items-center justify-center mb-4">
                 <svc.icon size={22} className="text-jade" />
               </div>
-              <h3 className="font-heading font-bold text-lg text-white mb-2">{svc.title}</h3>
-              <p className="text-gray-400 font-body text-sm mb-4">{svc.desc}</p>
+              <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-2">{svc.title}</h3>
+              <p className="text-[#555555] font-body text-sm mb-4">{svc.desc}</p>
               <ul className="space-y-2">
                 {svc.bullets.map((b) => (
-                  <li key={b} className="flex items-start gap-2 text-sm text-gray-400 font-body">
+                  <li key={b} className="flex items-start gap-2 text-sm text-[#555555] font-body">
                     <span className="text-jade mt-1 text-xs">&#10003;</span>
                     <span>{b}</span>
                   </li>

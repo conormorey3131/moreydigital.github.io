@@ -68,12 +68,12 @@ const faqItems = [
 function FaqItem({ q, a }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="border-b border-white/5">
+    <div className="border-b border-gray-200">
       <button
         onClick={() => setOpen(!open)}
         className="flex items-center justify-between w-full py-5 text-left group"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base pr-4">{q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base pr-4">{q}</span>
         <ChevronDown
           size={18}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
@@ -83,7 +83,7 @@ function FaqItem({ q, a }) {
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: open ? '300px' : '0px', opacity: open ? 1 : 0 }}
       >
-        <p className="text-gray-400 font-body text-sm leading-relaxed pb-5">{a}</p>
+        <p className="text-[#555555] font-body text-sm leading-relaxed pb-5">{a}</p>
       </div>
     </div>
   )
@@ -135,7 +135,6 @@ const managementFeatures = [
   'Monthly report \u2014 plain English summary',
   'Minor content updates included',
   'Priority support response',
-  'No long-term contract \u2014 cancel any time',
 ]
 
 const ecommerceFeatures = [
@@ -168,7 +167,7 @@ export default function PlansPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '40%' }} />
 
@@ -184,21 +183,21 @@ export default function PlansPage() {
               <span className="text-jade">Irish Businesses</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-300 font-body font-medium leading-relaxed mb-4 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 font-body font-medium leading-relaxed mb-4 max-w-3xl mx-auto">
               No hidden fees, no confusing bundles. Choose the service that fits where your business is right now &mdash; and get in touch for a free, no-obligation quote.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-3 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-3 max-w-3xl mx-auto">
               Every business is different. Whether you need a professional website built from scratch, ongoing management and security for an existing site, or a full eCommerce store, we have a clear starting point for each &mdash; and we&rsquo;ll tailor it to exactly what you need.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               Prices shown are starting points. Your final quote depends on the size, complexity, and specific requirements of your project. Get in touch and we&rsquo;ll give you an accurate, itemised quote with no surprises.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -207,13 +206,12 @@ export default function PlansPage() {
             {/* Feature badges */}
             <div className="flex flex-wrap justify-center gap-4 mt-10">
               {[
-                { icon: CheckCircle2, label: 'No Long-Term Lock-Ins' },
                 { icon: MessageCircle, label: 'Free Consultation' },
                 { icon: Shield, label: 'Irish-Based Team' },
               ].map((badge) => (
-                <div key={badge.label} className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.06]">
+                <div key={badge.label} className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 border border-gray-200">
                   <badge.icon size={14} className="text-jade flex-shrink-0" />
-                  <span className="text-gray-300 text-xs font-body">{badge.label}</span>
+                  <span className="text-[#333333] text-xs font-body">{badge.label}</span>
                 </div>
               ))}
             </div>
@@ -222,7 +220,7 @@ export default function PlansPage() {
       </section>
 
       {/* ── 2. THE THREE PLAN CARDS ── */}
-      <section ref={plansRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={plansRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start reveal-stagger">
@@ -236,19 +234,19 @@ export default function PlansPage() {
                 One-Off Project
               </span>
 
-              <h2 className="font-heading font-bold text-2xl text-white mb-3">Starter Website</h2>
-              <p className="text-gray-400 font-body text-sm leading-relaxed mb-6">
+              <h2 className="font-heading font-bold text-2xl text-[#1A3C6E] mb-3">Starter Website</h2>
+              <p className="text-[#555555] font-body text-sm leading-relaxed mb-6">
                 A professional, fast-loading website built for your business &mdash; designed to make a great first impression and convert visitors into enquiries.
               </p>
 
               {/* Pricing block */}
               <div className="mb-6">
-                <p className="text-white/50 font-body text-xs mb-1">From</p>
+                <p className="text-[#555555] font-body text-xs mb-1">From</p>
                 <p className="font-heading font-extrabold text-[3rem] leading-none text-jade">&euro;499</p>
-                <p className="text-white/40 font-body text-xs mt-1">one-off</p>
-                <div className="border-t border-white/[0.06] my-4" />
-                <p className="text-white/70 font-body text-sm font-medium">then &euro;39/month</p>
-                <p className="text-white/40 font-body text-xs mt-1">
+                <p className="text-[#555555] font-body text-xs mt-1">one-off</p>
+                <div className="border-t border-gray-200 my-4" />
+                <p className="text-[#1A3C6E] font-body text-sm font-medium">then &euro;39/month</p>
+                <p className="text-[#555555] font-body text-xs mt-1">
                   Monthly fee covers hosting, SSL, security monitoring &amp; software updates
                 </p>
               </div>
@@ -258,7 +256,7 @@ export default function PlansPage() {
                 {starterFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
                     <CheckCircle2 size={16} className="text-jade flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300 font-body text-sm">{f}</span>
+                    <span className="text-[#333333] font-body text-sm">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -266,12 +264,12 @@ export default function PlansPage() {
               {/* CTA */}
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border border-jade text-jade font-heading font-bold text-sm rounded-lg hover:bg-jade hover:text-dark transition-all group"
+                className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border border-jade text-jade font-heading font-bold text-sm rounded-lg hover:bg-jade hover:text-white transition-all group"
               >
                 Get a Quote
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <p className="text-white/40 font-body text-xs text-center mt-3">
+              <p className="text-[#555555] font-body text-xs text-center mt-3">
                 Prices vary by size and complexity &mdash; get in touch for an accurate quote
               </p>
             </div>
@@ -283,7 +281,7 @@ export default function PlansPage() {
             >
               {/* Most Popular badge */}
               <div className="flex justify-center mb-[-14px] relative z-10">
-                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-jade text-dark font-heading font-bold text-xs uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-jade text-white font-heading font-bold text-xs uppercase tracking-wider">
                   <Star size={12} className="fill-current" />
                   Most Popular
                 </span>
@@ -292,25 +290,25 @@ export default function PlansPage() {
               <div
                 className="glass-card p-8 relative"
                 style={{
-                  border: '1px solid rgba(0,200,150,0.4)',
-                  boxShadow: '0 0 30px rgba(0,200,150,0.08), 0 0 60px rgba(0,200,150,0.04)',
+                  border: '1px solid rgba(244,123,32,0.4)',
+                  boxShadow: '0 0 30px rgba(244,123,32,0.08), 0 0 60px rgba(244,123,32,0.04)',
                 }}
               >
                 <span className="inline-block px-3 py-1 rounded-full bg-jade/10 border border-jade/20 text-jade text-[11px] font-body font-semibold uppercase tracking-wider mb-5">
                   Monthly Service
                 </span>
 
-                <h2 className="font-heading font-bold text-2xl text-white mb-3">Website Management</h2>
-                <p className="text-gray-400 font-body text-sm leading-relaxed mb-6">
+                <h2 className="font-heading font-bold text-2xl text-[#1A3C6E] mb-3">Website Management</h2>
+                <p className="text-[#555555] font-body text-sm leading-relaxed mb-6">
                   Everything your website needs to stay secure, fast, and up to date &mdash; handled for you every month. No surprises, no technical headaches.
                 </p>
 
                 {/* Pricing block */}
                 <div className="mb-6">
-                  <p className="text-white/50 font-body text-xs mb-1">From</p>
+                  <p className="text-[#555555] font-body text-xs mb-1">From</p>
                   <p className="font-heading font-extrabold text-[3rem] leading-none text-jade">&euro;150</p>
-                  <p className="text-white/40 font-body text-xs mt-1">/month</p>
-                  <p className="text-white/40 font-body text-xs mt-2">
+                  <p className="text-[#555555] font-body text-xs mt-1">/month</p>
+                  <p className="text-[#555555] font-body text-xs mt-2">
                     Price depends on site size and level of support required
                   </p>
                 </div>
@@ -320,7 +318,7 @@ export default function PlansPage() {
                   {managementFeatures.map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
                       <CheckCircle2 size={16} className="text-jade flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300 font-body text-sm">{f}</span>
+                      <span className="text-[#333333] font-body text-sm">{f}</span>
                     </li>
                   ))}
                 </ul>
@@ -328,12 +326,12 @@ export default function PlansPage() {
                 {/* CTA */}
                 <Link
                   to="/contact"
-                  className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-jade text-dark font-heading font-bold text-sm rounded-lg hover:bg-jade-400 transition-all group"
+                  className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-jade text-white font-heading font-bold text-sm rounded-lg hover:bg-jade-400 transition-all group"
                 >
                   Get a Quote
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <p className="text-white/40 font-body text-xs text-center mt-3">
+                <p className="text-[#555555] font-body text-xs text-center mt-3">
                   We&rsquo;ll assess your site and give you an accurate monthly quote
                 </p>
               </div>
@@ -348,17 +346,17 @@ export default function PlansPage() {
                 Monthly Service
               </span>
 
-              <h2 className="font-heading font-bold text-2xl text-white mb-3">eCommerce Website</h2>
-              <p className="text-gray-400 font-body text-sm leading-relaxed mb-6">
+              <h2 className="font-heading font-bold text-2xl text-[#1A3C6E] mb-3">eCommerce Website</h2>
+              <p className="text-[#555555] font-body text-sm leading-relaxed mb-6">
                 A fully functional online store built on Shopify or WordPress/WooCommerce &mdash; designed to sell, with everything set up and ready to take orders from day one.
               </p>
 
               {/* Pricing block */}
               <div className="mb-6">
-                <p className="text-white/50 font-body text-xs mb-1">From</p>
+                <p className="text-[#555555] font-body text-xs mb-1">From</p>
                 <p className="font-heading font-extrabold text-[3rem] leading-none text-jade">&euro;350</p>
-                <p className="text-white/40 font-body text-xs mt-1">/month</p>
-                <p className="text-white/40 font-body text-xs mt-2">
+                <p className="text-[#555555] font-body text-xs mt-1">/month</p>
+                <p className="text-[#555555] font-body text-xs mt-2">
                   Price varies by store size, product count, and integrations required
                 </p>
               </div>
@@ -368,7 +366,7 @@ export default function PlansPage() {
                 {ecommerceFeatures.map((f) => (
                   <li key={f} className="flex items-start gap-2.5">
                     <CheckCircle2 size={16} className="text-jade flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-300 font-body text-sm">{f}</span>
+                    <span className="text-[#333333] font-body text-sm">{f}</span>
                   </li>
                 ))}
               </ul>
@@ -376,12 +374,12 @@ export default function PlansPage() {
               {/* CTA */}
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border border-jade text-jade font-heading font-bold text-sm rounded-lg hover:bg-jade hover:text-dark transition-all group"
+                className="flex items-center justify-center gap-2 w-full px-6 py-3.5 border border-jade text-jade font-heading font-bold text-sm rounded-lg hover:bg-jade hover:text-white transition-all group"
               >
                 Get a Quote
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <p className="text-white/40 font-body text-xs text-center mt-3">
+              <p className="text-[#555555] font-body text-xs text-center mt-3">
                 Tell us about your store and we&rsquo;ll give you an accurate quote
               </p>
             </div>
@@ -390,35 +388,35 @@ export default function PlansPage() {
       </section>
 
       {/* ── 3. NOT SURE WHICH PLAN? ── */}
-      <section ref={ctaMidRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaMidRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="reveal">
             <div className="glass-card p-10 sm:p-12 text-center">
-              <h2 className="font-heading font-bold text-2xl sm:text-3xl text-white mb-4">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl text-[#1A3C6E] mb-4">
                 Not Sure Which Option Is Right for You?
               </h2>
-              <p className="text-gray-400 font-body text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+              <p className="text-[#555555] font-body text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
                 Most of our enquiries start with a quick conversation &mdash; tell us where you are right now and what you&rsquo;re trying to achieve, and we&rsquo;ll point you in the right direction. No pressure, no sales pitch. Just straight advice.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-sm"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-sm"
                 >
                   Fill In Our Contact Form
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
                   href="tel:+353873999296"
-                  className="inline-flex items-center gap-2 px-8 py-4 border border-jade text-jade font-heading font-bold rounded-lg hover:bg-jade hover:text-dark transition-all text-sm"
+                  className="inline-flex items-center gap-2 px-8 py-4 border border-jade text-jade font-heading font-bold rounded-lg hover:bg-jade hover:text-white transition-all text-sm"
                 >
                   Or Call Conor Directly
                 </a>
               </div>
 
-              <p className="text-white/40 font-body text-xs mt-6">
+              <p className="text-[#555555] font-body text-xs mt-6">
                 We reply to all enquiries within one business day. No commitment required.
               </p>
             </div>
@@ -427,15 +425,15 @@ export default function PlansPage() {
       </section>
 
       {/* ── 4. WHAT EVERY CLIENT GETS ── */}
-      <section ref={everyRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={everyRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="absolute inset-0 glow-jade-subtle" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">What You Get</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What Every Client Gets
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               These aren&rsquo;t extras &mdash; they&rsquo;re how we work with every business we take on.
             </p>
           </div>
@@ -450,8 +448,8 @@ export default function PlansPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mx-auto mb-5">
                   <item.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-sm text-white mb-2">{item.title}</h3>
-                <p className="text-gray-400 font-body text-xs leading-relaxed">{item.desc}</p>
+                <h3 className="font-heading font-bold text-sm text-[#1A3C6E] mb-2">{item.title}</h3>
+                <p className="text-[#555555] font-body text-xs leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -459,12 +457,12 @@ export default function PlansPage() {
       </section>
 
       {/* ── 5. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '40%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -478,19 +476,19 @@ export default function PlansPage() {
       </section>
 
       {/* ── 6. FINAL CTA BANNER ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Get Started? Let&rsquo;s Talk.
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Fill in the contact form and tell us what you need. We&rsquo;ll get back to you within one business day with a straight answer and a clear quote &mdash; no jargon, no obligation.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote Now
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

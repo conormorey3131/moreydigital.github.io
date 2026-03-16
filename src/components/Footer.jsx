@@ -9,12 +9,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-jade flex items-center justify-center font-heading font-bold text-dark text-sm">
+              <div className="w-8 h-8 rounded-lg bg-jade flex items-center justify-center font-heading font-bold text-white text-sm">
                 M
               </div>
               <span className="font-heading font-bold text-lg text-white">Morey Digital</span>
             </div>
-            <p className="text-gray-400 font-body text-sm leading-relaxed">
+            <p className="text-white/70 font-body text-sm leading-relaxed">
               Web design, SEO, and digital growth for Irish businesses. Based in Clare, working nationwide.
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function Footer() {
                 { label: 'Website Security', to: '/services/website-security-overview' },
               ].map((s) => (
                 <li key={s.label}>
-                  <Link to={s.to} className="text-gray-400 hover:text-jade text-sm font-body transition-colors">
+                  <Link to={s.to} className="text-white/70 hover:text-jade text-sm font-body transition-colors">
                     {s.label}
                   </Link>
                 </li>
@@ -52,11 +52,11 @@ export default function Footer() {
               ].map((link) => (
                 <li key={link.label}>
                   {link.to ? (
-                    <Link to={link.to} className="text-gray-400 hover:text-jade text-sm font-body transition-colors">
+                    <Link to={link.to} className="text-white/70 hover:text-jade text-sm font-body transition-colors">
                       {link.label}
                     </Link>
                   ) : (
-                    <a href={link.href} className="text-gray-400 hover:text-jade text-sm font-body transition-colors">
+                    <a href={link.href} className="text-white/70 hover:text-jade text-sm font-body transition-colors">
                       {link.label}
                     </a>
                   )}
@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:conor@moreydigital.ie"
-                  className="flex items-center gap-2 text-gray-400 hover:text-jade text-sm font-body transition-colors"
+                  className="flex items-center gap-2 text-white/70 hover:text-jade text-sm font-body transition-colors"
                 >
                   <Mail size={14} className="text-jade flex-shrink-0" />
                   conor@moreydigital.ie
@@ -81,14 +81,14 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+353873999296"
-                  className="flex items-center gap-2 text-gray-400 hover:text-jade text-sm font-body transition-colors"
+                  className="flex items-center gap-2 text-white/70 hover:text-jade text-sm font-body transition-colors"
                 >
                   <Phone size={14} className="text-jade flex-shrink-0" />
                   +353 87 399 9296
                 </a>
               </li>
               <li>
-                <span className="flex items-center gap-2 text-gray-400 text-sm font-body">
+                <span className="flex items-center gap-2 text-white/70 text-sm font-body">
                   <MapPin size={14} className="text-jade flex-shrink-0" />
                   Clare, Ireland
                 </span>
@@ -122,7 +122,7 @@ export default function Footer() {
                   aria-label={social.label}
                   className="w-9 h-9 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center hover:bg-jade/10 hover:border-jade/20 transition-all"
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-gray-400">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-white/60">
                     <path d={social.path} />
                   </svg>
                 </a>
@@ -133,14 +133,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-xs font-body">
+          <p className="text-white/50 text-xs font-body">
             &copy; {new Date().getFullYear()} Morey Digital. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy-policy" className="text-gray-500 hover:text-gray-400 text-xs font-body transition-colors">
+            <Link to="/privacy-policy" className="text-white/50 hover:text-white/80 text-xs font-body transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms-of-service" className="text-gray-500 hover:text-gray-400 text-xs font-body transition-colors">
+            <Link to="/terms-of-service" className="text-white/50 hover:text-white/80 text-xs font-body transition-colors">
               Terms of Service
             </Link>
           </div>

@@ -198,7 +198,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         onClick={onToggle}
         className="w-full flex items-center justify-between gap-4 p-6 text-left"
       >
-        <span className="font-heading font-semibold text-white text-sm sm:text-base">{item.q}</span>
+        <span className="font-heading font-semibold text-[#1A3C6E] text-sm sm:text-base">{item.q}</span>
         <ChevronDown
           size={20}
           className={`text-jade flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -209,7 +209,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         style={{ maxHeight: isOpen ? '400px' : '0px', opacity: isOpen ? 1 : 0 }}
       >
         <div className="px-6 pb-6 pt-0">
-          <p className="text-gray-400 font-body text-sm leading-relaxed">{item.a}</p>
+          <p className="text-[#555555] font-body text-sm leading-relaxed">{item.a}</p>
         </div>
       </div>
     </div>
@@ -238,7 +238,7 @@ export default function CustomDesignPage() {
       <PageMeta />
 
       {/* ── 1. PAGE HERO ── */}
-      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <section ref={heroRef} className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 grid-dots" />
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '40%', '--glow-y': '50%' }} />
 
@@ -254,17 +254,17 @@ export default function CustomDesignPage() {
               <span className="text-jade">Essential</span> for Your Business
             </h1>
 
-            <p className="text-gray-300 font-body text-base sm:text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-base sm:text-lg leading-relaxed mb-4 max-w-3xl mx-auto">
               Your website is often the very first impression a potential customer has of your business. Within seconds, they decide whether you look professional, trustworthy, and worth their time. That first impression is either working for you or against you.
             </p>
 
-            <p className="text-gray-400 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
+            <p className="text-white/80 font-body text-sm leading-relaxed mb-10 max-w-3xl mx-auto">
               Custom website design isn&rsquo;t just about looking different from your competitors &mdash; it&rsquo;s about building a digital presence that genuinely represents your brand, serves your specific business goals, and gives you a real competitive edge. A template can&rsquo;t do that. A custom-built website can.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -274,15 +274,14 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 2. OUR APPROACH ── */}
-      <section ref={approachRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={approachRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Approach</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Our Approach to Custom Website Design
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Great design combines visual appeal with strategic intent. Every custom website we build is designed to look brilliant and deliver real business results.
             </p>
           </div>
@@ -294,10 +293,10 @@ export default function CustomDesignPage() {
                 className="reveal glass-card p-8 sm:p-10 transition-all"
                 style={{ '--reveal-index': i }}
               >
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-4">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#1A3C6E] mb-4">
                   {block.title}
                 </h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed mb-6">
+                <p className="text-[#555555] font-body text-sm leading-relaxed mb-6">
                   {block.desc}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -312,12 +311,11 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 3. THE POWER OF CUSTOM DESIGN ── */}
-      <section ref={powerRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '60%', '--glow-y': '35%' }} />
+      <section ref={powerRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Custom Design</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               The Power of a Properly Custom-Built Website
             </h2>
           </div>
@@ -334,11 +332,11 @@ export default function CustomDesignPage() {
                   <div className={`flex flex-col lg:flex-row gap-8 lg:gap-12 ${reversed ? 'lg:flex-row-reverse' : ''}`}>
                     {/* Text column */}
                     <div className="lg:w-3/5">
-                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-5">
+                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#1A3C6E] mb-5">
                         {section.title}
                       </h3>
                       {section.paragraphs.map((para, j) => (
-                        <p key={j} className="text-gray-400 font-body text-sm leading-relaxed mb-4">
+                        <p key={j} className="text-[#555555] font-body text-sm leading-relaxed mb-4">
                           {para}
                         </p>
                       ))}
@@ -361,12 +359,11 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 4. WHY BUSINESSES CHOOSE CUSTOM ── */}
-      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={whyRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Why Custom</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Why Irish Businesses Choose Custom Design
             </h2>
           </div>
@@ -381,8 +378,8 @@ export default function CustomDesignPage() {
                 <div className="w-14 h-14 rounded-2xl bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <card.icon size={28} className="text-jade" />
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{card.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{card.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{card.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -390,15 +387,14 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 5. BUSINESS IMPACT ── */}
-      <section ref={impactRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '45%', '--glow-y': '50%' }} />
+      <section ref={impactRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Business Impact</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               What a Custom Website Actually Delivers
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               The right website investment pays for itself through better results, more enquiries, and a stronger reputation.
             </p>
           </div>
@@ -415,8 +411,8 @@ export default function CustomDesignPage() {
                     <item.icon size={24} className="text-jade" />
                   </div>
                   <div>
-                    <h3 className="font-heading font-bold text-base text-white mb-2">{item.title}</h3>
-                    <p className="text-gray-400 font-body text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="font-heading font-bold text-base text-[#1A3C6E] mb-2">{item.title}</h3>
+                    <p className="text-[#555555] font-body text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               </div>
@@ -426,15 +422,14 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 6. PORTFOLIO PLACEHOLDER ── */}
-      <section ref={portfolioRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade-subtle" />
+      <section ref={portfolioRef} className="relative py-24 lg:py-32 overflow-hidden bg-white">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">Our Work</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Custom Websites We&rsquo;ve Built for Irish Businesses
             </h2>
-            <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+            <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
               Real projects, built from scratch for Irish businesses. More case studies coming soon.
             </p>
           </div>
@@ -456,11 +451,11 @@ export default function CustomDesignPage() {
                   <span className="inline-block px-2.5 py-1 rounded-full bg-jade/10 border border-jade/20 text-jade text-xs font-body font-medium mb-3">
                     {project.industry}
                   </span>
-                  <h3 className="font-heading font-bold text-lg text-white mb-2">{project.name}</h3>
-                  <div className="flex items-center gap-2 text-gray-400 font-body text-sm">
+                  <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-2">{project.name}</h3>
+                  <div className="flex items-center gap-2 text-[#555555] font-body text-sm">
                     <MapPin size={14} className="text-jade flex-shrink-0" />
                     <span>{project.location}</span>
-                    <span className="text-gray-600">&middot;</span>
+                    <span className="text-gray-400">&middot;</span>
                     <span>{project.service}</span>
                   </div>
                   <div className="mt-4 flex items-center gap-1 text-jade font-heading font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity">
@@ -475,12 +470,11 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 7. FAQ ── */}
-      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '40%' }} />
+      <section ref={faqRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#D6E4F0]">
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-center mb-16 reveal">
             <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">FAQ</span>
-            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
               Frequently Asked Questions
             </h2>
           </div>
@@ -499,19 +493,19 @@ export default function CustomDesignPage() {
       </section>
 
       {/* ── 8. FINAL CTA ── */}
-      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden">
+      <section ref={ctaRef} className="relative py-24 lg:py-32 overflow-hidden bg-[#1A3C6E]">
         <div className="absolute inset-0 glow-jade" style={{ '--glow-x': '50%', '--glow-y': '50%' }} />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
           <div className="reveal">
             <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
               Ready to Build a Website That Truly Represents Your Business?
             </h2>
-            <p className="text-gray-400 font-body text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-white/80 font-body text-lg mb-8 max-w-xl mx-auto">
               Get a free, no-obligation quote from the Morey Digital team. We&rsquo;ll talk through what you need and give you a clear picture of what&rsquo;s involved &mdash; no pressure, no jargon.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-dark font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-jade text-white font-heading font-bold rounded-lg hover:bg-jade-400 transition-all group text-base"
             >
               Get a Free Quote
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

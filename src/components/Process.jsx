@@ -27,15 +27,15 @@ export default function Process() {
   const ref = useReveal()
 
   return (
-    <section id="process" ref={ref} className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="process" ref={ref} className="relative py-24 lg:py-32 overflow-hidden bg-white">
       <div className="absolute inset-0 glow-jade-subtle" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="text-center mb-16 reveal">
           <span className="text-jade text-sm font-body font-medium uppercase tracking-wider">How We Work</span>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-white mt-3">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1A3C6E] mt-3">
             From First Chat to Live Website
           </h2>
-          <p className="text-gray-400 font-body mt-4 max-w-2xl mx-auto">
+          <p className="text-[#555555] font-body mt-4 max-w-2xl mx-auto">
             A clear, simple process with no surprises. You'll know exactly what's happening at every stage.
           </p>
         </div>
@@ -54,8 +54,8 @@ export default function Process() {
                 <div className="w-10 h-10 rounded-full bg-jade/10 border border-jade/20 flex items-center justify-center mb-5">
                   <span className="text-jade font-heading font-bold text-sm">{step.num}</span>
                 </div>
-                <h3 className="font-heading font-bold text-lg text-white mb-3">{step.title}</h3>
-                <p className="text-gray-400 font-body text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="font-heading font-bold text-lg text-[#1A3C6E] mb-3">{step.title}</h3>
+                <p className="text-[#555555] font-body text-sm leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
