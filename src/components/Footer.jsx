@@ -134,7 +134,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-xs font-body">
-            &copy; {new Date().getFullYear()} Morey Digital. All rights reserved.
+            &copy; {new Date().getFullYear()} Morey Digital Limited. All rights reserved. &middot; CRO No. 816307
           </p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="text-white/50 hover:text-white/80 text-xs font-body transition-colors">
