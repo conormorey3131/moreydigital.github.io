@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.moreydigital.ie/sitemap.xml
+Sitemap: https://moreydigital.ie/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
