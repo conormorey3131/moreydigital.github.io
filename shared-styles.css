@@ -212,7 +212,7 @@ main { flex: 1; }
 .stat { background: #fff; padding: 1.6rem 1.2rem; text-align: center; }
 .stat .num { font-family: var(--font-display); font-size: clamp(1.9rem, 5vw, 2.6rem); color: var(--ink); line-height: 1; }
 .stat .lbl { display: block; margin-top: .45rem; font-size: .82rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-@media (min-width: 700px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 700px) { .stats { grid-template-columns: repeat(4, 1fr); } .stats.stats-3 { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------- Generic grids & cards ---------- */
 .grid { display: grid; gap: 1.25rem; }
@@ -359,3 +359,54 @@ main { flex: 1; }
 .mt-2 { margin-top: 1.5rem; }
 .mb-2 { margin-bottom: 1.5rem; }
 .maxw-prose { max-width: 65ch; }
+
+/* ---------- Voice AI feature (dark split + call card) ---------- */
+.bg-ink .lead { color: var(--on-dark); }
+.bg-ink .checklist li { color: var(--on-dark); }
+.bg-ink .checklist li::before { background: rgba(15,181,160,.18); color: var(--accent); }
+.call-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-radius: var(--radius);
+  padding: clamp(1.75rem, 4vw, 2.75rem); text-align: center;
+}
+.call-card .call-ico {
+  width: 68px; height: 68px; border-radius: 50%; background: var(--accent); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.3rem;
+  box-shadow: 0 0 0 12px rgba(15,181,160,.16); animation: call-pulse 2.4s ease-out infinite;
+}
+@keyframes call-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(15,181,160,.45); }
+  70%  { box-shadow: 0 0 0 18px rgba(15,181,160,0); }
+  100% { box-shadow: 0 0 0 0 rgba(15,181,160,0); }
+}
+.call-card .call-lbl { display: block; text-transform: uppercase; letter-spacing: .1em; font-size: .75rem; font-weight: 600; color: var(--accent); margin-bottom: .5rem; }
+.call-card .call-num { display: block; font-family: var(--font-display); font-size: clamp(2.1rem, 5.5vw, 3.2rem); line-height: 1.1; color: #fff; text-decoration: none; transition: color var(--t); }
+.call-card .call-num:hover { color: var(--accent); }
+.call-card .call-biz { display: block; margin-top: .6rem; color: var(--on-dark); font-weight: 600; }
+.call-card p { color: var(--on-dark-mut); font-size: .95rem; margin-top: 1rem; }
+.call-card .btn { margin-top: 1.4rem; }
+@media (prefers-reduced-motion: reduce) { .call-card .call-ico { animation: none; } }
+
+/* ---------- Client logo band (marquee) ---------- */
+.logo-band { padding: clamp(2.75rem, 5vw, 4rem) 0; }
+.logo-band .eyebrow { display: block; text-align: center; margin-bottom: clamp(1.75rem, 4vw, 2.5rem); }
+.logo-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.logo-track { display: flex; align-items: center; width: max-content; animation: logo-scroll 55s linear infinite; }
+.logo-marquee:hover .logo-track { animation-play-state: paused; }
+.logo-track > * { flex: none; margin-right: clamp(3rem, 6vw, 5.5rem); opacity: .88; transition: opacity var(--t); }
+.logo-track > *:hover { opacity: 1; }
+.logo-track img { height: 46px; width: auto; display: block; }
+.logo-track img.wide { height: 36px; }
+.logo-track img.tall { height: 64px; }
+.logo-word { font-family: var(--font-display); color: #fff; text-transform: uppercase; line-height: 1.05; text-align: center; }
+.logo-word strong { display: block; font-weight: 500; font-size: 1.25rem; letter-spacing: .08em; }
+.logo-word small { display: block; font-family: var(--font-sans); font-size: .55rem; letter-spacing: .28em; color: var(--accent); margin-top: .2rem; }
+@keyframes logo-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 2rem; }
+  .logo-track > [aria-hidden="true"] { display: none; }
+  .logo-marquee { -webkit-mask-image: none; mask-image: none; }
+}
