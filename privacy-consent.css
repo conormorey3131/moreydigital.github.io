@@ -1,0 +1,33 @@
+/* Optional-cookie controls share the site's navy, teal and white palette. */
+.privacy-footer-links { display: flex; flex-wrap: wrap; gap: .65rem 1.2rem; }
+.privacy-footer-links a,
+.privacy-footer-links button,
+.privacy-standalone-links a,
+.privacy-standalone-links button { color: inherit; font: inherit; text-decoration: underline; text-underline-offset: .2em; }
+.privacy-footer-links button,
+.privacy-standalone-links button { border: 0; background: none; padding: 0; cursor: pointer; }
+.privacy-standalone-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.2rem; padding: 1.5rem; }
+.md-consent[hidden], .md-consent [hidden] { display: none !important; }
+.md-consent { position: fixed; z-index: 10000; inset: auto 0 0; padding: 0; margin: 0; min-height: 0; max-height: 78vh; overflow: auto; background: #fff; color: #16324f; border-top: 2px solid #16324f; box-shadow: 0 -8px 32px rgba(13,27,42,.13); font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.5; text-align: left; }
+.md-consent-inner { max-width: 1160px; margin: 0 auto; padding: 1.25rem clamp(1rem, 4vw, 2rem); }
+.md-consent-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.md-consent h2 { color: #16324f; font: 600 1.25rem/1.3 Inter, system-ui, sans-serif; margin: 0 0 .65rem; }
+.md-consent p { color: #41525e; font-size: .93rem; margin: 0 0 .85rem; max-width: none; }
+.md-consent-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem 1.5rem; margin-bottom: 1rem; }
+.md-consent-options label { display: flex; align-items: flex-start; gap: .65rem; cursor: pointer; color: #41525e; font-size: .9rem; }
+.md-consent-options input { flex: 0 0 auto; width: 1.2rem; height: 1.2rem; margin: .2rem 0 0; accent-color: #16324f; }
+.md-consent-options strong { display: block; color: #16324f; font-size: .95rem; font-weight: 650; }
+.md-consent-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+.md-consent-actions button { border: 1px solid #16324f; border-radius: 7px; background: #16324f; color: #fff; padding: .7rem 1rem; min-height: 44px; font: 600 .9rem/1.25 Inter, system-ui, sans-serif; cursor: pointer; }
+.md-consent-actions button:hover { background: #244a70; }
+.md-consent-actions a { color: #16324f; padding: .6rem; text-decoration: underline; text-underline-offset: .2em; font-size: .9rem; }
+.md-consent .md-consent-close { flex-shrink: 0; min-height: 44px; padding: .4rem .6rem; color: #16324f; background: #fff; border: 1px solid #16324f; border-radius: 6px; font: inherit; cursor: pointer; }
+.md-consent .md-consent-note { font-size: .78rem; margin: .8rem 0 0; }
+.md-consent button:focus-visible, .md-consent a:focus-visible, .md-consent input:focus-visible,
+[data-cookie-preferences]:focus-visible { outline: 3px solid #0c9384; outline-offset: 3px; }
+@media (max-width: 600px) {
+  .md-consent-options { grid-template-columns: 1fr; }
+  .md-consent-actions button { flex: 1 1 40%; }
+  .md-consent-actions button:last-of-type { flex-basis: 100%; }
+  .md-consent-inner { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+}
