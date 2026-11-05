@@ -79,6 +79,8 @@
 
   <link rel="stylesheet" href="shared-styles.css">
   <link rel="stylesheet" href="privacy-consent.css">
+  <link rel="stylesheet" href="portfolio-filters.css">
+  <script src="portfolio-filters.js" defer></script>
   <script src="privacy-consent.js" defer></script>
 </head>
 <body>
@@ -119,125 +121,161 @@
       </div>
     </section>
 
+    <!-- ===== Optional county filters ===== -->
+    <section class="project-browser" data-project-browser aria-label="Browse active sites">
+      <div class="container">
+        <div class="project-filter-bar">
+          <p class="project-filter-total">22 active sites</p>
+          <label class="county-switch" data-county-toggle-wrap hidden>
+            <span>Filter by county</span>
+            <span class="county-switch-control">
+              <input type="checkbox" role="switch" data-county-toggle aria-controls="project-filter-panel">
+              <span class="county-switch-track" aria-hidden="true"></span>
+            </span>
+            <span class="county-switch-state" data-filter-state aria-hidden="true">Off</span>
+          </label>
+        </div>
+        <div class="project-filter-panel" id="project-filter-panel" data-county-panel hidden>
+          <p class="project-filter-intro">Browse active website and WordPress projects by Irish county, or find a site by name.</p>
+          <div class="project-filter-fields">
+            <div class="project-filter-field">
+              <label for="project-county">Irish county</label>
+              <select id="project-county" data-county-select><option value="">All counties</option></select>
+            </div>
+            <div class="project-filter-field">
+              <label for="project-search">Search sites</label>
+              <input type="search" id="project-search" data-project-search placeholder="Business or project name" autocomplete="off">
+            </div>
+            <button class="project-filter-reset" type="button" data-filter-reset>Clear filters</button>
+          </div>
+          <p class="project-filter-status" role="status" aria-live="polite" aria-atomic="true" data-filter-status></p>
+        </div>
+        <div class="project-filter-empty" data-filter-empty hidden>
+          <h2>No matching sites.</h2>
+          <p>Try another county or site name, or clear the filters to see all active sites.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Work grid ===== -->
-    <section style="padding-top:0">
+    <section style="padding-top:0" data-county-group id="active-websites">
       <div class="container">
         <div class="work-grid">
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/mbuildz-live.png" alt="M-Buildz Shopify store by Morey Digital, featuring drift and JDM performance parts" loading="lazy" width="3250" height="1662" style="object-fit:contain;background:#0e1112"></div>
             <div class="work-body"><h3>M-Buildz</h3><span class="tag">Shopify · Live</span></div>
             <a class="work-link" href="https://m-buildz.com/" target="_blank" rel="noopener" aria-label="Visit the M-Buildz online store"></a>
           </article>
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Kerry">
             <div class="work-thumb"><img src="images/redline-events-live.png" alt="Redline Events website by Morey Digital, featuring corporate fitness and outdoor events" loading="lazy" width="3680" height="1672" style="object-fit:contain;background:#111"></div>
             <div class="work-body"><h3>Redline Events</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://redlineevents.ie/" target="_blank" rel="noopener" aria-label="Visit Redline Events"></a>
           </article>
-          <article class="work reveal d2">
+          <article class="work reveal d2" data-county-project data-county="Limerick">
             <div class="work-thumb"><img src="images/performance-vehicles.jpg" alt="Performance Vehicles website by Morey Digital, featuring a Lamborghini Aventador SVJ" loading="lazy" width="3628" height="1640" style="object-fit:contain;background:#111"></div>
             <div class="work-body"><h3>Performance Vehicles</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://performancevehicles.ie/" target="_blank" rel="noopener" aria-label="Visit Performance Vehicles"></a>
           </article>
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/banner-padel-live.png" alt="Banner Padel website by Morey Digital" loading="lazy" width="2330" height="1612"></div>
             <div class="work-body"><h3>Banner Padel</h3><span class="tag">Website · Live</span></div>
             <a class="work-link" href="https://bannerpadel.ie/" target="_blank" rel="noopener" aria-label="Visit Banner Padel"></a>
           </article>
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Cork">
             <div class="work-thumb"><img src="images/brampic.png" alt="Bramley Lodge website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Bramley Lodge</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://bramleylodge.ie/" target="_blank" rel="noopener" aria-label="Visit Bramley Lodge"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Limerick">
             <div class="work-thumb"><img src="images/vamp_up.webp" alt="Vamp Lingerie Shopify store by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Vamp Lingerie</h3><span class="tag">Shopify</span></div>
             <a class="work-link" href="https://vamplingerie.com/" target="_blank" rel="noopener" aria-label="Visit Vamp Lingerie"></a>
           </article>
 
-          <article class="work reveal d2">
+          <article class="work reveal d2" data-county-project data-county="Dublin">
             <div class="work-thumb"><img src="images/roadworks.webp" alt="Roadworks IRE traffic management website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Roadworks IRE</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://roadworksire.ie/" target="_blank" rel="noopener" aria-label="Visit Roadworks IRE"></a>
           </article>
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/motor.webp" alt="Motor Meets event platform website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Motor Meets</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://motormeets.ie/" target="_blank" rel="noopener" aria-label="Visit Motor Meets"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/sixmilebridge.webp" alt="Sixmilebridge Town community website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Sixmilebridge Town</h3><span class="tag">Community</span></div>
             <a class="work-link" href="https://sixmilebridgetown.ie/" target="_blank" rel="noopener" aria-label="Visit Sixmilebridge Town"></a>
           </article>
 
-          <article class="work reveal d2">
+          <article class="work reveal d2" data-county-project data-county="Cork">
             <div class="work-thumb"><img src="images/cruzMain.webp" alt="Cruz Ireland website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Cruz Ireland</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://www.cruzireland.com/" target="_blank" rel="noopener" aria-label="Visit Cruz Ireland"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/eec.png" alt="EEC Energy Efficient Consultancy website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Energy Efficient Consultancy</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://eec.ie/" target="_blank" rel="noopener" aria-label="Visit Energy Efficient Consultancy"></a>
           </article>
 
-          <article class="work reveal d2">
+          <article class="work reveal d2" data-county-project data-county="Kildare">
             <div class="work-thumb"><img src="images/86fest.png" alt="86 Fest 2026 event website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>86 Fest 2026</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://86fest.ie/" target="_blank" rel="noopener" aria-label="Visit 86 Fest 2026"></a>
           </article>
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/moreyenv.png" alt="Morey Environmental Services website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Morey Environmental Services</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://moreyenvironmentalservices.ie/" target="_blank" rel="noopener" aria-label="Visit Morey Environmental Services"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Galway">
             <div class="work-thumb"><img src="images/skylark-site.png" alt="Skylark Lodge website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Skylark Lodge</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://skylarklodge.ie/" target="_blank" rel="noopener" aria-label="Visit Skylark Lodge"></a>
           </article>
 
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/sanisafe.png" alt="Sanisafe website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Sanisafe</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://sanisafe.ie/" target="_blank" rel="noopener" aria-label="Visit Sanisafe"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/ros-cafe.png" alt="The Ros Cafe website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>The Ros Cafe</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://www.theroscafe.ie/" target="_blank" rel="noopener" aria-label="Visit The Ros Cafe"></a>
           </article>
 
-          <article class="work reveal d2">
+          <article class="work reveal d2" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/Atlantic%20Way%20Executive%20Travel.png" alt="Atlantic Way Executive Travel website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Atlantic Way Executive Travel</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://atlanticwayexecutivetravel.ie/" target="_blank" rel="noopener" aria-label="Visit Atlantic Way Executive Travel"></a>
           </article>
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Fermanagh">
             <div class="work-thumb"><img src="images/cresta-new.png" alt="Cresta Collective website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Cresta Collective</h3><span class="tag">Shopify</span></div>
             <a class="work-link" href="https://thecrestacollective.com/" target="_blank" rel="noopener" aria-label="Visit Cresta Collective"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Clare">
             <div class="work-thumb"><img src="images/doconfire.png" alt="DOCON Fire Safety Engineering website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>DOCON Fire Safety Engineering</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://doconfire.ie/" target="_blank" rel="noopener" aria-label="Visit DOCON Fire Safety Engineering"></a>
           </article>
 
-          <article class="work reveal d2">
+          <article class="work reveal d2" data-county-project data-county="Limerick">
             <div class="work-thumb"><img src="images/cylinder-site.png" alt="Cylinder Testing Services website by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Cylinder Testing Services</h3><span class="tag">Website</span></div>
             <a class="work-link" href="https://cylindertestingservices.ie/" target="_blank" rel="noopener" aria-label="Visit Cylinder Testing Services"></a>
@@ -248,7 +286,7 @@
     </section>
 
     <!-- ===== WordPress help & upkeep ===== -->
-    <section class="bg-mist">
+    <section class="bg-mist" data-county-group id="wordpress-projects">
       <div class="container">
         <div class="section-head center">
           <span class="eyebrow">Ongoing care</span>
@@ -258,13 +296,13 @@
         </div>
         <div class="work-grid">
 
-          <article class="work reveal">
+          <article class="work reveal" data-county-project data-county="Kerry">
             <div class="work-thumb"><img src="images/parts.png" alt="Paul's Parts WordPress maintenance and improvements by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Paul's Parts</h3><span class="tag">WordPress</span></div>
             <a class="work-link" href="https://paulsparts.ie/" target="_blank" rel="noopener" aria-label="Visit Paul's Parts"></a>
           </article>
 
-          <article class="work reveal d1">
+          <article class="work reveal d1" data-county-project data-county="Galway">
             <div class="work-thumb"><img src="images/zombiebarber.jpg" alt="ZombieBarber WordPress website featuring its barber shop and men's grooming services" loading="lazy" width="3762" height="1654" style="object-fit:contain;background:#292c2f"></div>
             <div class="work-body"><h3>ZombieBarber</h3><span class="tag">WordPress</span></div>
             <a class="work-link" href="https://zombiebarber.com/" target="_blank" rel="noopener" aria-label="Visit ZombieBarber"></a>
@@ -334,6 +372,12 @@
             <div class="work-thumb"><img src="images/cylinder-soc.png" alt="Cylinder Testing Services social media management by Morey Digital" loading="lazy" width="800" height="550"></div>
             <div class="work-body"><h3>Cylinder Testing Services</h3><span class="tag">Social</span></div>
             <a class="work-link" href="https://www.instagram.com/cylindertesting/" target="_blank" rel="noopener" aria-label="Visit Cylinder Testing Services on Instagram"></a>
+          </article>
+
+          <article class="work reveal d2">
+            <div class="work-thumb"><img src="images/sanisafe-social.jpg" alt="SaniSafe Solutions Facebook page and floor restoration services" loading="lazy" width="2582" height="1402" style="object-fit:contain;background:#fff"></div>
+            <div class="work-body"><h3>SaniSafe Solutions</h3><span class="tag">Social</span></div>
+            <a class="work-link" href="https://www.facebook.com/SaniSafeSolutions" target="_blank" rel="noopener" aria-label="Visit SaniSafe Solutions on Facebook"></a>
           </article>
 
         </div>

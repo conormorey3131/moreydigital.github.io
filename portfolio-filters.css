@@ -1,0 +1,26 @@
+.project-browser { padding-top: 0; padding-bottom: 1.5rem; }
+.project-filter-bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.project-filter-total { color: var(--muted); font-size: .9rem; }
+.county-switch { display: inline-flex; align-items: center; gap: .75rem; cursor: pointer; color: var(--ink); font-weight: 600; font-size: .9rem; }
+.county-switch-control { position: relative; display: block; flex: none; width: 46px; height: 26px; }
+.county-switch input { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.county-switch-track { position: relative; display: block; width: 46px; height: 26px; border-radius: var(--radius-pill); background: #7d8b95; transition: background .2s ease; }
+.county-switch-track::after { content: ''; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; transition: transform .2s ease; }
+.county-switch input:checked + .county-switch-track { background: var(--accent-700); }
+.county-switch input:checked + .county-switch-track::after { transform: translateX(20px); }
+.county-switch input:focus-visible + .county-switch-track { outline: 3px solid var(--ink); outline-offset: 3px; }
+.county-switch-state { min-width: 1.7rem; color: var(--muted); font-size: .8rem; font-weight: 500; }
+.project-filter-panel { margin-top: 1.25rem; padding: clamp(1.1rem, 3vw, 1.75rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--mist); }
+.project-filter-intro { margin-bottom: 1rem; font-size: .92rem; }
+.project-filter-fields { display: grid; gap: 1rem; align-items: end; }
+.project-filter-field label { display: block; margin-bottom: .4rem; font-size: .85rem; font-weight: 600; color: var(--ink); }
+.project-filter-field input, .project-filter-field select { width: 100%; min-height: 48px; padding: .7rem .85rem; border: 1px solid #aebbc4; border-radius: var(--radius-sm); background: #fff; color: var(--ink); font: inherit; font-size: .95rem; }
+.project-filter-reset { min-height: 48px; padding: .7rem 1rem; border: 1px solid #aebbc4; border-radius: var(--radius-sm); background: #fff; color: var(--ink); font-size: .9rem; font-weight: 600; }
+.project-filter-reset:hover:not(:disabled) { border-color: var(--accent-700); color: var(--accent-700); }
+.project-filter-reset:disabled { color: var(--muted); cursor: default; opacity: .65; }
+.project-filter-status { margin-top: 1rem; color: var(--ink); font-size: .9rem; }
+.project-filter-empty { padding: 2.5rem 0 1rem; }
+.project-filter-empty h2 { margin-bottom: .75rem; font-size: 1.6rem; }
+[data-county-toggle-wrap][hidden], [data-county-panel][hidden], [data-filter-empty][hidden], [data-county-project][hidden], [data-county-group][hidden] { display: none !important; }
+@media (min-width: 720px) { .project-filter-fields { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) auto; } }
+@media (prefers-reduced-motion: reduce) { .county-switch-track, .county-switch-track::after { transition: none; } }
